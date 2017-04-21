@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+        android:id="@+id/layout_groups"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true" >
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#000000" >
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/button01"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:background="@drawable/menu_home_btn_bg"
+                android:button="@null"
+                android:checked="true"
+                android:tag="home" />
+
+            <RadioButton
+                android:id="@+id/button02"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:background="@drawable/menu_home_btn_bg"
+                android:button="@null"
+                android:tag="category" />
+
+            <RadioButton
+                android:id="@+id/button03"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:background="@drawable/menu_home_btn_bg"
+                android:button="@null"
+                android:tag="cart" />
+
+            <RadioButton
+                android:id="@+id/button04"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:background="@drawable/menu_home_btn_bg"
+                android:button="@null"
+                android:tag="personal" />
+
+            <RadioButton
+                android:id="@+id/button05"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_weight="1"
+                android:background="@drawable/menu_home_btn_bg"
+                android:button="@null"
+                android:tag="personal" />
+        </RadioGroup>
+    </LinearLayout>
+
+</RelativeLayout>

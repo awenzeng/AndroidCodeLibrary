@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal_color"
+        style="@style/progressBarHorizontal_color"
+        android:layout_width="200dip"
+        android:layout_height="10dip"
+        android:layout_margin="20dp"
+        android:indeterminate="true"
+        android:max="100"
+        android:progress="41" />
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal_left"
+        style="@style/progressBarHorizontal"
+        android:layout_width="200dip"
+        android:layout_height="10dip"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progress="60" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="20dp"/>
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal_right"
+        style="@style/progressBarHorizontal_arabia"
+         android:layout_margin="20dp"
+        android:layout_width="200dip"
+        android:layout_height="10dip"
+        android:max="100"
+        android:progress="41" />
+
+    <ProgressBar
+        android:id="@+id/progress_horizontal_indeter"
+        style="@style/progressBarHorizontal_indeter"
+        android:layout_width="200dip"
+        android:layout_height="10dip"
+         android:layout_margin="20dp"
+        android:indeterminate="true"
+        android:max="100"
+        android:progress="41" />
+
+</LinearLayout>

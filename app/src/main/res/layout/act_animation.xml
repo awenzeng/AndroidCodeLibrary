@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget33"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/back"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/widget36"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center_horizontal"
+        android:background="@drawable/bt_group_back" >
+
+        <Button
+            android:id="@+id/button_Last"
+            android:layout_width="64dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_cmd_last" >
+        </Button>
+
+        <Button
+            android:id="@+id/button_Replay"
+            android:layout_width="64dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_cmd_replay" >
+        </Button>
+
+        <Button
+            android:id="@+id/button_Next"
+            android:layout_width="64dp"
+            android:layout_height="fill_parent"
+            android:background="@drawable/ic_cmd_next" >
+        </Button>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/favorite" >
+    </Button>
+
+    <Button
+        android:id="@+id/Button02"
+        android:layout_width="90dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:background="#aa00aa" >
+    </Button>
+
+</LinearLayout>

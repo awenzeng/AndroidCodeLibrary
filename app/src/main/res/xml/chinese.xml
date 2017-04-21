@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard android:keyWidth="25.000002%p" android:keyHeight="50dp"
+	android:horizontalGap="0.0px" android:verticalGap="0.0px"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<Row>
+        <Key android:codes="19968" android:keyLabel="一" />
+        <Key android:codes="20108" android:keyLabel="二" />
+        <Key android:codes="19977" android:keyLabel="三" />
+		<Key android:codes="-5" android:isRepeatable="true"
+			android:keyIcon="@drawable/sym_keyboard_delete" />
+	</Row>
+	
+	<Row>
+        <Key android:codes="22235" android:keyLabel="四" />
+        <Key android:codes="20116" android:keyLabel="五" />
+        <Key android:codes="20845" android:keyLabel="六" />
+		<Key android:codes="-2" android:keyLabel="数字" />
+	</Row>
+	
+	<Row>
+        <Key android:codes="24180" android:keyLabel="年" />
+        <Key android:codes="32423" android:keyLabel="级" />
+        <Key android:codes="29677" android:keyLabel="班" />
+     	<Key android:keyWidth="25.000004%p" android:codes="-3"
+			android:keyEdgeFlags="right" android:keyLabel="完成" />   
+	</Row>
+	
+</Keyboard>

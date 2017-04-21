@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+     <item type="drawable" name="sidebar_background_normal">#00E1F9FF</item>
+	<item type="drawable" name="sidebar_background_press">#FF303030</item>
+</resources>

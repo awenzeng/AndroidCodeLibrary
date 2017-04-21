@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="#1586FF" >
+        <TextView
+        android:id="@+id/myTextView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#0000FF" />
+
+    <!-- 专门用来绘制画面的 视频画面是绘制到此控件上，游戏 -->
+
+    <SurfaceView
+        android:id="@+id/mSurfaceView1"
+        android:layout_width="320px"
+        android:layout_height="240px" >
+    </SurfaceView>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始" />
+
+        <Button
+            android:id="@+id/pauseButtion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/startButton"
+            android:layout_marginLeft="10px"
+            android:layout_toRightOf="@id/startButton"
+            android:text="暂停" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/pauseButtion"
+            android:layout_marginLeft="10px"
+            android:layout_toRightOf="@id/pauseButtion"
+            android:text="重新播放" />
+
+        <Button
+            android:id="@+id/stopButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/pauseButtion"
+            android:layout_marginLeft="10px"
+            android:layout_toRightOf="@id/reset"
+            android:text="停止" />
+    </RelativeLayout>
+
+</LinearLayout>

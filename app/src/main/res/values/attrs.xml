@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="PullScrollView">
+        <attr name="header" format="reference" />
+        <attr name="headerHeight" format="dimension" />
+        <attr name="headerVisibleHeight" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="RoundIndicatorView">
+        <!--最大数值-->
+        <attr name="maxNum" format="integer"/>
+        <!--圆盘起始角度-->
+        <attr name="startAngle" format="integer"/>
+        <!--圆盘扫过的角度-->
+        <attr name="sweepAngle" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="SwipeFlingAdapterView">
+        <attr name="SwipeFlingStyle" format="reference"/>
+        <attr name="rotation_degrees" format="float"/>
+        <attr name="min_adapter_stack" format="integer"/>
+        <attr name="max_visible" format="integer"/>
+    </declare-styleable>
+</resources>

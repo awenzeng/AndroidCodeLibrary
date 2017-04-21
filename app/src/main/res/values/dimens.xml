@@ -1,0 +1,20 @@
+<resources>
+
+    <dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+  <dimen name="title">19sp</dimen>
+     <dimen name="pulldown_headerview_height">70dp</dimen>
+    <dimen name="pulldown_move_deviation">38dp</dimen>
+    <dimen name="pulldown_auto_incremental">6dp</dimen>
+    
+    <dimen name = "margin_rec_button">20dp</dimen>
+    <dimen name = "padding_video_buttons">7dp</dimen>
+    <dimen name = "text_size_video_select">17dp</dimen>
+    <dimen name = "padding_up_down_text">4dip</dimen>
+
+    <dimen name="MOSAIC_VIEW_PADDING">5.0sp</dimen>
+    <dimen name="MOSAIC_VIEW_ITEM_BOTTOM_PADDING">1.0sp</dimen>
+    <dimen name="MOSAIC_VIEW_TEXT_LEFT_PADDING">6.0sp</dimen>
+    
+</resources>
