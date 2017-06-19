@@ -17,6 +17,7 @@ import com.awen.codebase.activity.MiLaucherActivity;
 import com.awen.codebase.activity.ProgressBarsActivity;
 import com.awen.codebase.activity.SwipeCardActivity;
 import com.awen.codebase.activity.SwitchButtonActivity;
+import com.awen.codebase.activity.XRecyleviewActivity;
 
 /**
  * Created by AwenZeng on 2017/3/6.
@@ -33,6 +34,7 @@ public class MainAdapter extends BaseAdapter {
     private static final int CREDI_ROUND_ACTIVITY = 7;
     private static final int SWIPE_CARD_ACTIVITY = 8;
     private static final int KEYBORD_ACTIVITY = 9;
+    private static final int XRECYLEVIEW_ACTIVITY = 10;
     private String[] iStrings;
     private Context mContext;
 
@@ -98,6 +100,9 @@ public class MainAdapter extends BaseAdapter {
                         break;
                     case KEYBORD_ACTIVITY:
                         intent.setClass(mContext, KeybordActivity.class);
+                        break;
+                    case XRECYLEVIEW_ACTIVITY:
+                        intent.setClass(mContext, XRecyleviewActivity.class);
                         break;
                     default:
                         break;
