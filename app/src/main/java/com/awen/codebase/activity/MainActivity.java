@@ -18,11 +18,11 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
-//import com.awen.codebase.lbs.LBSLocationManager;
-//import com.awen.codebase.lbs.LBSLocationManager.LocationPlaceCallBack;
 import com.awen.codebase.CodeBaseApp;
 import com.awen.codebase.R;
 import com.awen.codebase.adapter.MainAdapter;
+import com.awen.codebase.model.AnnotationReflectModel;
+import com.awen.codebase.service.ChangeService;
 
 public class MainActivity extends Activity {
     private TextView myPlaceTextView;
@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
     private AnimationDrawable animationDrawable;
     private String[] iStrings = {"FloatCycleView", "GroupsActivity",
             "FragmentsActivity", "MiLaucherActivity",
-            "AnimationActivity", "ProgressBarsActivity", "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity","KeybordActivity","XRecycleView"};
+            "AnimationActivity", "ProgressBarsActivity", "SwitchButtoonActivity", "CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView"};
     private Handler handler = new Handler() {
 
         @Override
@@ -51,27 +51,12 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         initView();
-
-//	//在界面上加指引层
-//	addWindow();
-
-//	//通知栏
-//	showNotify();
+        AnnotationReflectModel.invokeAnnotation();//获取注解
+        AnnotationReflectModel.invokeReflect();//调用反射
 
         handler.sendEmptyMessageDelayed(0, 300);
-
-        //获取位置
-//	LBSLocationManager lbsLocationManager = new LBSLocationManager(this);
-//	lbsLocationManager.setLocationPlaceCallback(this);
-
-
-        //启动一个服务
-//	Intent intent = new Intent(this,ChangeService.class);
-//	pendingIntent = PendingIntent.getService(this, 0, intent, 0);
-//	alarmManager = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
-//	alarmManager.setRepeating(AlarmManager.RTC, 0, 15000, pendingIntent);
-
     }
+
 
     private void initView() {
         listView = (ListView) this.findViewById(R.id.listView);
@@ -85,6 +70,14 @@ public class MainActivity extends Activity {
         animationImageView = (ImageView) view.findViewById(R.id.ImageView01);
         myPlaceTextView = (TextView) view.findViewById(R.id.myplace);
         return view;
+    }
+
+    private void startService() {
+        //  启动一个服务
+        Intent intent = new Intent(this, ChangeService.class);
+        pendingIntent = PendingIntent.getService(this, 0, intent, 0);
+        alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
+        alarmManager.setRepeating(AlarmManager.RTC, 0, 15000, pendingIntent);
     }
 
     /**
@@ -118,6 +111,7 @@ public class MainActivity extends Activity {
         manager.notify(0, notice);
     }
 
+
     /**
      * gif图片播放
      */
@@ -126,10 +120,11 @@ public class MainActivity extends Activity {
         animationDrawable.start();
     }
 
+
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(alarmManager!=null){
+        if (alarmManager != null) {
             alarmManager.cancel(pendingIntent);
         }
     }
