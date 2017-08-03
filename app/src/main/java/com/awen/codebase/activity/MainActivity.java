@@ -5,6 +5,7 @@ import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import android.widget.TextView;
 
 //import com.awen.codebase.lbs.LBSLocationManager;
 //import com.awen.codebase.lbs.LBSLocationManager.LocationPlaceCallBack;
+import com.awen.codebase.CodeBaseApp;
 import com.awen.codebase.R;
 import com.awen.codebase.adapter.MainAdapter;
 
@@ -89,7 +91,7 @@ public class MainActivity extends Activity {
      * 在界面上加指引层
      */
     private void addWindow() {
-        final WindowManager windowManager = (WindowManager) getSystemService("window");
+        final WindowManager windowManager = (WindowManager) CodeBaseApp.getInstance().getSystemService(Context.WINDOW_SERVICE);
         final ImageView view = new ImageView(this);
         view.setImageResource(R.drawable.guide_recommend);
         WindowManager.LayoutParams windowParams = new WindowManager.LayoutParams();

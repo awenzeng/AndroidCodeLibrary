@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+	<!-- 圆角 -->
+	<corners
+		android:radius="9dp"
+		android:topLeftRadius="2dp"
+		android:topRightRadius="2dp"
+		android:bottomLeftRadius="2dp"
+		android:bottomRightRadius="2dp"/><!-- 设置圆角半径 -->
+
+	<!-- 渐变 -->
+	<gradient
+		android:startColor="@android:color/white"
+		android:centerColor="@android:color/black"
+		android:endColor="@android:color/black"
+		android:useLevel="true"
+		android:angle="45"
+		android:type="radial"
+		android:centerX="0"
+		android:centerY="0"
+		android:gradientRadius="90"/>
+
+	<!-- 间隔 -->
+	<padding
+		android:left="2dp"
+		android:top="2dp"
+		android:right="2dp"
+		android:bottom="2dp"/><!-- 各方向的间隔 -->
+
+	<!-- 大小 -->
+	<size
+		android:width="50dp"
+		android:height="50dp"/><!-- 宽度和高度 -->
+
+	<!-- 填充 -->
+	<solid
+		android:color="@android:color/white"/><!-- 填充的颜色 -->
+
+	<!-- 描边 -->
+
+	<!-- android:width="20dp"                  设置边边的宽度
+         android:color="@android:color/black"  设置边边的颜色
+         android:dashWidth="2dp"               设置虚线的宽度
+         android:dashGap="20dp"                设置虚线的间隔宽度 -->
+
+	<!-- dashWidth和dashGap属性，只要其中一个设置为0dp，则边框为实现边框 -->
+	<stroke
+		android:width="2dp"
+		android:color="@android:color/black"
+		android:dashWidth="1dp"
+		android:dashGap="2dp"/>
+
+</shape>

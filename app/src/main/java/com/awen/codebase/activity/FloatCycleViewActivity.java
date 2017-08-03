@@ -65,7 +65,7 @@ public class FloatCycleViewActivity extends Activity {
                 case R.id.next: {
 
                     LayoutInflater inflater = getLayoutInflater();
-                    View layout = inflater.inflate(R.layout.customtoast, (ViewGroup) findViewById(R.id.llToast));
+                    View layout = inflater.inflate(R.layout.customtoast, null);
                     ImageView image = (ImageView) layout.findViewById(R.id.tvImageToast);
                     image.setImageResource(R.drawable.one);
                     TextView title = (TextView) layout.findViewById(R.id.tvTitleToast);
