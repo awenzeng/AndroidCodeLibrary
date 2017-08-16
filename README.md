@@ -20,6 +20,16 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。 I
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_switchbutton.png)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_processbar.png)
 
+# Thanks
+[Github](https://github.com/)
+
+[SwitchButton](https://github.com/kyleduo/SwitchButton)
+
+[Swipecards](https://github.com/Diolor/Swipecards)
+
+...
+
+
 # License
 ```java
 Copyright 2017 AwenZeng
