@@ -60,6 +60,6 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="50dp"
         app:cancel_back_icon="@drawable/close"
-        app:continue_back_icon="@drawable/play"
-        app:stop_back_icon="@drawable/stop" />
+        app:continue_back_icon="@drawable/play360"
+        app:stop_back_icon="@drawable/stop360" />
 </RelativeLayout>

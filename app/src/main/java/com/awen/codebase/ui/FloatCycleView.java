@@ -53,7 +53,7 @@ public class FloatCycleView extends SurfaceView implements SurfaceHolder.Callbac
     private Boolean dataUpdate = false;    //是否有数据更新
     private Boolean click = true;
     private DataUpThread mWorkThread;      //圆圈移动判断线程
-    private int intervel = 1000 / 20;
+    private int intervel = 1000 / 500;
     private int yOffset = 0;
     private int xOffset = 0;
     public static final int FLING_MIN_DISTANCE = 100;
@@ -459,7 +459,7 @@ public class FloatCycleView extends SurfaceView implements SurfaceHolder.Callbac
                     }
                 }
                 try {
-                    Thread.sleep(50);
+                    Thread.sleep(15);
                 } catch (Exception e) {
                 }
             }

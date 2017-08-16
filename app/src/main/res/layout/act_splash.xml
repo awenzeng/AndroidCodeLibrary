@@ -10,7 +10,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"
         android:orientation="vertical">
-        <com.awen.codebase.ui.CircularImage
+        <com.awen.codebase.ui.CircleImage
             android:id="@+id/iconImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
