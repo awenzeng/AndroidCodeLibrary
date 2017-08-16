@@ -1,5 +1,5 @@
 # AndroidCodeLibrary
-Android代码库-各种控件-框架-动画效果
+Android代码库-各种控件-框架-动画效果，是作者在几年开发中笔记及积累，不定期的也还会更新。如果有你喜欢的，欢迎你star或fork.Thanks~~~
 
 # Demo
 
