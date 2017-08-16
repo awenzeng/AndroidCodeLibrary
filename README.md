@@ -1,5 +1,5 @@
 # AndroidCodeLibrary
-AndroidCodeLibrary项目，既是作者开发笔记也是积累，不定期的也还会更新。 If you like it,welcome to Star and Fork.
+AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。 If you like it,welcome to Star and Fork.
 
 # Demo
 
