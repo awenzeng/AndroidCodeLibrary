@@ -3,7 +3,7 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。 I
 
 # Demo
 
-[APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk)
+[APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
 
 1.gif效果
 
