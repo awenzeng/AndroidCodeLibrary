@@ -1,30 +1,38 @@
 # AndroidCodeLibrary
 Android代码库-各种控件-框架-动画效果
 
-# Demo效果
+# Demo
 
 1.FloatCycleView
+
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_floatcycleview.gif)
 
 2.GroupsActivity
+
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_groups.gif)
 
 3.FramentsActivity
+
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_fragments.gif)
 
 4.MiLaucherActivity
+
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_milaucher.gif)
 
 5.AnimationActivity
+
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_animation.gif)
 
 6.SwipeCardActivity
+
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_swipecard.gif)
 
 7.XRecyleviewActivity
+
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_xrecycleview.gif)
 
 8.PoccessBar&SwitchButton&credit&mask
+
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_credit.png)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_switchbutton.png)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_processbar.png)
