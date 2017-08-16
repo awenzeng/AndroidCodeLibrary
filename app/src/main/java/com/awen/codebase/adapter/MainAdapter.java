@@ -13,7 +13,6 @@ import com.awen.codebase.activity.FloatCycleViewActivity;
 import com.awen.codebase.activity.FragmentsActivity;
 import com.awen.codebase.activity.GroupsActivity;
 import com.awen.codebase.activity.KeybordActivity;
-import com.awen.codebase.activity.MiLaucherActivity;
 import com.awen.codebase.activity.ProgressBarsActivity;
 import com.awen.codebase.activity.SwipeCardActivity;
 import com.awen.codebase.activity.SwitchButtonActivity;
@@ -27,14 +26,13 @@ public class MainAdapter extends BaseAdapter {
     private static final int FLOATCYCLEVIEW = 0;
     private static final int GROUPSACTIVITY = 1;
     private static final int FRAGMNETSACTIVITY = 2;
-    private static final int MILAUCHERACTIVITY = 3;
-    private static final int ANIMATIONACTIVITY = 4;
-    private static final int PROGRESSBARSACTIVITY = 5;
-    private static final int SWITCH_BUTTON_ACTIVITY = 6;
-    private static final int CREDI_ROUND_ACTIVITY = 7;
-    private static final int SWIPE_CARD_ACTIVITY = 8;
-    private static final int KEYBORD_ACTIVITY = 9;
-    private static final int XRECYLEVIEW_ACTIVITY = 10;
+    private static final int ANIMATIONACTIVITY = 3;
+    private static final int PROGRESSBARSACTIVITY = 4;
+    private static final int SWITCH_BUTTON_ACTIVITY = 5;
+    private static final int CREDI_ROUND_ACTIVITY = 6;
+    private static final int SWIPE_CARD_ACTIVITY = 7;
+    private static final int KEYBORD_ACTIVITY = 8;
+    private static final int XRECYLEVIEW_ACTIVITY = 9;
     private String[] iStrings;
     private Context mContext;
 
@@ -79,9 +77,6 @@ public class MainAdapter extends BaseAdapter {
                         break;
                     case FRAGMNETSACTIVITY:
                         intent.setClass(mContext, FragmentsActivity.class);
-                        break;
-                    case MILAUCHERACTIVITY:
-                        intent.setClass(mContext, MiLaucherActivity.class);
                         break;
                     case ANIMATIONACTIVITY:
                         intent.setClass(mContext, AnimationActivity.class);

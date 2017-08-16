@@ -19,14 +19,12 @@ public class AniGridFragment extends Fragment{
 	private TranslateAnimation left, right;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 	}
 
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
 		View view = inflater.inflate(R.layout.fragment_anigrid, container);
 		 Configure.init(getActivity());
 			gridView = (AniGridDragGrid)view.findViewById(R.id.gridview);
@@ -41,7 +39,6 @@ public class AniGridFragment extends Fragment{
 
 	@Override
 	public void onDestroy() {
-		// TODO Auto-generated method stub
 		super.onDestroy();
 	}
 

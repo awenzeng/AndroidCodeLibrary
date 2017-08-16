@@ -13,9 +13,6 @@ import com.awen.codebase.ui.explosion.ExplosionField;
 public class ExplosionFragment extends Fragment {
 	private ExplosionField mExplosionField;
 
-	public ExplosionFragment() {
-	}
-
 	@Override
 	public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_explosion,container);

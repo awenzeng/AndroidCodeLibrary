@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
     private PendingIntent pendingIntent;
     private AnimationDrawable animationDrawable;
     private String[] iStrings = {"FloatCycleView", "GroupsActivity",
-            "FragmentsActivity", "MiLaucherActivity",
+            "FragmentsActivity",
             "AnimationActivity", "ProgressBarsActivity", "SwitchButtoonActivity", "CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView"};
     private Handler handler = new Handler() {
 

@@ -39,7 +39,6 @@ public class MultiTouchScaleFragment extends Fragment {
     private PointF mid = new PointF();
     private int width;
     private int height;
-    private Context mContext;
 
     public MultiTouchScaleFragment() {
     }
@@ -129,11 +128,5 @@ public class MultiTouchScaleFragment extends Fragment {
         });
 
         return super.onCreateView(inflater, container, savedInstanceState);
-    }
-
-    @Override
-    public void onPause() {
-        // TODO Auto-generated method stub
-        super.onPause();
     }
 }

@@ -14,7 +14,24 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            proguardFiles 'proguard-rules.pro'
+        }
+    }
+    //签名配置
+    signingConfigs {
+        release {
+            v2SigningEnabled false
+        }
+    }
+
+
+    productFlavors {
+        Awen_release {
+            applicationId 'com.awen.codebase'
+            minSdkVersion 14
+            targetSdkVersion 23
+            versionCode 1
+            versionName '1.0.0'
         }
     }
 }

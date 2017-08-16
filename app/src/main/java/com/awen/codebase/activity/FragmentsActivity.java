@@ -21,7 +21,6 @@ public class FragmentsActivity extends FragmentActivity implements OnClickListen
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fragment_activitygroups_main);
         layout = (FrameLayout) this.findViewById(R.id.layout_groups);
@@ -41,7 +40,7 @@ public class FragmentsActivity extends FragmentActivity implements OnClickListen
         //第二种为高于android版本3.0的用法。
 //	FragmentTransaction ft = getFragmentManager().beginTransaction();
         layout.removeAllViews();
-        fragment = new PopupWindowFragment(FragmentsActivity.this);
+        fragment = new PopupWindowFragment();
         ft.add(R.id.layout_groups, fragment);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.commit();
@@ -49,13 +48,12 @@ public class FragmentsActivity extends FragmentActivity implements OnClickListen
 
     @Override
     public void onClick(View v) {
-        // TODO Auto-generated method stub
         Fragment fragment = null;
         FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
         switch (v.getId()) {
             case R.id.button01:
                 layout.removeAllViews();
-                fragment = new PopupWindowFragment(this);
+                fragment = new PopupWindowFragment();
                 ft.add(R.id.layout_groups, fragment);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 ft.commit();
