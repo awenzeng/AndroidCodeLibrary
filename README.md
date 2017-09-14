@@ -1,14 +1,15 @@
 # AndroidCodeLibrary
-Android代码库-各种控件-框架-动画效果，是作者在几年开发中笔记及积累，不定期的也还会更新。如果有你喜欢的，欢迎你star或fork.Thanks~~~
+AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。欢迎star，fork
 
 # Demo
+
+[APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
 
 1.gif效果
 
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_floatcycleview.gif)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_groups.gif)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_fragments.gif)
-![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_milaucher.gif)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_animation.gif)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_swipecard.gif)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_xrecycleview.gif)
@@ -18,6 +19,16 @@ Android代码库-各种控件-框架-动画效果，是作者在几年开发中�
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_credit.png)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_switchbutton.png)
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_processbar.png)
+
+# Thanks
+[Github](https://github.com/)
+
+[SwitchButton](https://github.com/kyleduo/SwitchButton)
+
+[Swipecards](https://github.com/Diolor/Swipecards)
+
+...
+
 
 # License
 ```java
