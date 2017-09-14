@@ -41,13 +41,6 @@
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_releaseDebug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_releaseDebug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_releaseDebug/shaders" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/res" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/resources" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/assets" type="java-test-resource" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/aidl" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/java" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/rs" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
@@ -55,6 +48,13 @@
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/Awen_release/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/Awen_release/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_release/res" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_release/resources" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_release/assets" type="java-resource" />
@@ -124,7 +124,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/restart-dex" />
@@ -134,7 +133,6 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
-      <excludeFolder url="file://$MODULE_DIR$/build/reports" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />

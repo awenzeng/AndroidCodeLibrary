@@ -52,7 +52,7 @@
         <activity android:name=".activity.MainActivity"/>
         <activity android:name=".activity.RotateActivity" />
         <activity android:name=".activity.SearchFlyActivity" />
-        <activity android:name=".activity.MiLaucherActivity" />
+        <activity android:name=".activity.VerticalViewPagerActivity" />
         <activity android:name=".activity.FloatCycleViewActivity" />
         <activity android:name=".activity.SwitchButtonActivity" />
         <activity android:name=".activity.SwipeCardActivity" />

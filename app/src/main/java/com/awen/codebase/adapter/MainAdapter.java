@@ -16,6 +16,7 @@ import com.awen.codebase.activity.KeybordActivity;
 import com.awen.codebase.activity.ProgressBarsActivity;
 import com.awen.codebase.activity.SwipeCardActivity;
 import com.awen.codebase.activity.SwitchButtonActivity;
+import com.awen.codebase.activity.VerticalViewPagerActivity;
 import com.awen.codebase.activity.XRecyleviewActivity;
 
 /**
@@ -33,6 +34,7 @@ public class MainAdapter extends BaseAdapter {
     private static final int SWIPE_CARD_ACTIVITY = 7;
     private static final int KEYBORD_ACTIVITY = 8;
     private static final int XRECYLEVIEW_ACTIVITY = 9;
+    private static final int VERTICALVIEWPAGER_ACTIVITY =10;
     private String[] iStrings;
     private Context mContext;
 
@@ -98,6 +100,9 @@ public class MainAdapter extends BaseAdapter {
                         break;
                     case XRECYLEVIEW_ACTIVITY:
                         intent.setClass(mContext, XRecyleviewActivity.class);
+                        break;
+                    case VERTICALVIEWPAGER_ACTIVITY:
+                        intent.setClass(mContext, VerticalViewPagerActivity.class);
                         break;
                     default:
                         break;
