@@ -12,6 +12,7 @@ import com.awen.codebase.activity.CreditRoundActivity;
 import com.awen.codebase.activity.FloatCycleViewActivity;
 import com.awen.codebase.activity.FragmentsActivity;
 import com.awen.codebase.activity.GroupsActivity;
+import com.awen.codebase.activity.InfiniteViewActivity;
 import com.awen.codebase.activity.KeybordActivity;
 import com.awen.codebase.activity.ProgressBarsActivity;
 import com.awen.codebase.activity.SwipeCardActivity;
@@ -35,6 +36,7 @@ public class MainAdapter extends BaseAdapter {
     private static final int KEYBORD_ACTIVITY = 8;
     private static final int XRECYLEVIEW_ACTIVITY = 9;
     private static final int VERTICALVIEWPAGER_ACTIVITY =10;
+    private static final int INFINITEVIEW_ACTIVITY =11;
     private String[] iStrings;
     private Context mContext;
 
@@ -103,6 +105,9 @@ public class MainAdapter extends BaseAdapter {
                         break;
                     case VERTICALVIEWPAGER_ACTIVITY:
                         intent.setClass(mContext, VerticalViewPagerActivity.class);
+                        break;
+                    case INFINITEVIEW_ACTIVITY:
+                        intent.setClass(mContext, InfiniteViewActivity.class);
                         break;
                     default:
                         break;

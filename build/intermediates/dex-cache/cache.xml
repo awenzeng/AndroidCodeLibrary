@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="E:\MyProject\AndroidCodeLibrary\app\build\intermediates\incremental-runtime-classes\Awen_release\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="E:\MyProject\AndroidCodeLibrary\app\build\intermediates\transforms\dex\Awen_release\debug\folders\1000\10000\instant-run_294ddbd2143de0e1ff4c359ac807022c55a464c4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\MyProject\AndroidCodeLibrary\app\build\intermediates\incremental-classes\Awen_release\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a240c93ce9535bb32641f106561f7834f9127228">
+        <dex dex="E:\MyProject\AndroidCodeLibrary\app\build\intermediates\transforms\dex\Awen_release\debug\folders\1000\10000\instant-run-bootstrap_25bdc1f7c357f2d3703a72bc09c78d0e2c2854bc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\MyProject\AndroidCodeLibrary\app\libs\zxing-core-2.3.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a8a5104ee2ed0d443242dbda1cb10674e75aa3b2">
+        <dex dex="E:\MyProject\AndroidCodeLibrary\app\build\intermediates\transforms\dex\Awen_release\debug\folders\1000\2\zxing-core-2.3_50ec66ccebc7789d30533c02c05e5c8a9c8cf168\classes.dex" />
+    </item>
+
+</items>

@@ -66,6 +66,7 @@
         <activity android:name=".activity.CreditRoundActivity" />
         <activity android:name=".activity.KeybordActivity" />
         <activity android:name=".activity.XRecyleviewActivity" />
+        <activity android:name=".activity.InfiniteViewActivity" />
     </application>
 
 </manifest>

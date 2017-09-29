@@ -33,7 +33,7 @@ public class MainActivity extends Activity {
     private AnimationDrawable animationDrawable;
     private String[] iStrings = {"FloatCycleView", "GroupsActivity",
             "FragmentsActivity",
-            "AnimationActivity", "ProgressBarsActivity", "SwitchButtoonActivity", "CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView","VerticalViewPagerActivity"};
+            "AnimationActivity", "ProgressBarsActivity", "SwitchButtoonActivity", "CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView","VerticalViewPagerActivity","InfiniteViewActivity"};
     private Handler handler = new Handler() {
 
         @Override
