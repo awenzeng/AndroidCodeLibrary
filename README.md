@@ -5,6 +5,9 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
 
+# 更新内容
+[2017-11-29]增加了桌面快捷图标红点功能
+
 1.gif效果
 
 ![](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/resource/basecode_floatcycleview.gif)
@@ -26,6 +29,9 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 [SwitchButton](https://github.com/kyleduo/SwitchButton)
 
 [Swipecards](https://github.com/Diolor/Swipecards)
+
+[BadgeNumberManager](https://github.com/beiliao-mobile/BadgeNumberManager)
+
 
 ...
 
