@@ -27,7 +27,6 @@ public class ChangeService extends Service{
 
     @Override
     public void onStart(Intent intent, int startId) {
-	// TODO Auto-generated method stub
 	super.onStart(intent, startId);
 	if(index == 5){
 	    index = 0;

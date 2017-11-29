@@ -8,19 +8,25 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.v4.app.NotificationCompat;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.awen.codebase.CodeBaseApp;
 import com.awen.codebase.R;
 import com.awen.codebase.adapter.MainAdapter;
+import com.awen.codebase.badge.BadgeNumberManager;
+import com.awen.codebase.badge.BadgeNumberManagerXiaoMi;
+import com.awen.codebase.badge.MobileBrand;
 import com.awen.codebase.model.AnnotationReflectModel;
 import com.awen.codebase.service.ChangeService;
 
@@ -53,7 +59,7 @@ public class MainActivity extends Activity {
         initView();
         AnnotationReflectModel.invokeAnnotation();//获取注解
         AnnotationReflectModel.invokeReflect();//调用反射
-
+        showBadgeIcon();
         handler.sendEmptyMessageDelayed(0, 300);
     }
 
@@ -111,6 +117,29 @@ public class MainActivity extends Activity {
         manager.notify(0, notice);
     }
 
+    /**
+     * 快捷图标上显示红点
+     */
+    private void showBadgeIcon(){
+        //设置应用在桌面上显示的角标
+        if (!Build.MANUFACTURER.equalsIgnoreCase(MobileBrand.XIAOMI)) {
+            BadgeNumberManager.from(MainActivity.this).setBadgeNumber(10);
+            Toast.makeText(MainActivity.this, "设置桌面角标成功", Toast.LENGTH_SHORT).show();
+        } else {
+            BadgeNumberManagerXiaoMi.setXiaomiBadgeNumber(MainActivity.this,10);
+        }
+    }
+
+    /**
+     * 清理快捷图标上的红点
+     */
+    private void clearBadgeIcon(){
+        //设置应用在桌面上显示的角标,小米机型只要用户点击了应用图标进入应用，会自动清除掉角标
+        if (!Build.MANUFACTURER.equalsIgnoreCase(MobileBrand.XIAOMI)) {
+            BadgeNumberManager.from(MainActivity.this).setBadgeNumber(0);
+            Toast.makeText(MainActivity.this, "清除桌面角标成功", Toast.LENGTH_SHORT).show();
+        }
+    }
 
     /**
      * gif图片播放
