@@ -1,9 +1,13 @@
 # AndroidCodeLibrary
 AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。欢迎star，fork
 
+# Update
+[2017-11-29]增加了桌面快捷图标红点功能
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
+
 
 1.gif效果
 
@@ -26,6 +30,9 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 [SwitchButton](https://github.com/kyleduo/SwitchButton)
 
 [Swipecards](https://github.com/Diolor/Swipecards)
+
+[BadgeNumberManager](https://github.com/beiliao-mobile/BadgeNumberManager)
+
 
 ...
 
