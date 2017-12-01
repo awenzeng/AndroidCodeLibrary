@@ -44,7 +44,7 @@
         </receiver>
 
         <service android:name=".widget.UpdateWeatherService"></service>
-        <service android:name=".service.ChangeService"></service>
+        <service android:name=".service.NormalService"></service>
 
         <activity android:name=".activity.SplashActivity">
             <intent-filter>

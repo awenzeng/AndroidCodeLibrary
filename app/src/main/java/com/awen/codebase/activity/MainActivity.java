@@ -12,10 +12,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.app.NotificationCompat;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -28,19 +26,17 @@ import com.awen.codebase.badge.BadgeNumberManager;
 import com.awen.codebase.badge.BadgeNumberManagerXiaoMi;
 import com.awen.codebase.badge.MobileBrand;
 import com.awen.codebase.model.AnnotationReflectModel;
-import com.awen.codebase.service.ChangeService;
+import com.awen.codebase.service.NormalService;
 
 public class MainActivity extends Activity {
-    private TextView myPlaceTextView;
     private ListView listView;
     private ImageView animationImageView;
-    private AlarmManager alarmManager;
-    private PendingIntent pendingIntent;
     private AnimationDrawable animationDrawable;
-    private String[] iStrings = {"FloatCycleView", "GroupsActivity",
-            "FragmentsActivity",
-            "AnimationActivity", "ProgressBarsActivity", "SwitchButtoonActivity", "CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView","VerticalViewPagerActivity","InfiniteViewActivity"};
-    private Handler handler = new Handler() {
+    private String[] iStrings = {"FloatCycleView", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
+            "SwitchButtoonActivity", "CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
+            "VerticalViewPagerActivity","InfiniteViewActivity"};
+
+    private   Handler handler = new Handler() {
 
         @Override
         public void handleMessage(Message msg) {
@@ -74,16 +70,7 @@ public class MainActivity extends Activity {
     private View initHeadView() {
         View view = getLayoutInflater().inflate(R.layout.headview_main, null);
         animationImageView = (ImageView) view.findViewById(R.id.ImageView01);
-        myPlaceTextView = (TextView) view.findViewById(R.id.myplace);
         return view;
-    }
-
-    private void startService() {
-        //  启动一个服务
-        Intent intent = new Intent(this, ChangeService.class);
-        pendingIntent = PendingIntent.getService(this, 0, intent, 0);
-        alarmManager = (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-        alarmManager.setRepeating(AlarmManager.RTC, 0, 15000, pendingIntent);
     }
 
     /**
@@ -101,20 +88,6 @@ public class MainActivity extends Activity {
                 windowManager.removeView(view);
             }
         });
-    }
-
-    /**
-     * 通知栏显示View
-     */
-    private void showNotify() {
-        Notification notice = new Notification();
-        notice.icon = R.drawable.icon;
-        notice.tickerText = "您有一条新的信息";
-        notice.defaults = Notification.DEFAULT_SOUND;
-        notice.when = 10L;
-//        notice.setLatestEventInfo(this, "通知", "开会啦", PendingIntent.getActivity(this, 0, new Intent(this, FloatCycleViewActivity.class), 0));//即将跳转页面，还没跳转
-        NotificationManager manager = (NotificationManager) getSystemService(this.NOTIFICATION_SERVICE);
-        manager.notify(0, notice);
     }
 
     /**
@@ -153,8 +126,5 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (alarmManager != null) {
-            alarmManager.cancel(pendingIntent);
-        }
     }
 }
