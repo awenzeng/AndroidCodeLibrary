@@ -4,7 +4,7 @@ xmlns:android="http://schemas.android.com/apk/res/android"
 android:shareInterpolator="false"
 >
     <alpha
-        android:interpolator="@android:res/anim/accelerate_decelerate_interpolator"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
         android:fromAlpha="0.0"
         android:toAlpha="1.0"
         android:duration="2000"

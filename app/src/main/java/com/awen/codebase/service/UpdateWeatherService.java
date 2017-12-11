@@ -1,4 +1,4 @@
-package com.awen.codebase.widget;
+package com.awen.codebase.service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -26,6 +26,9 @@ import com.awen.codebase.activity.FragmentsActivity;
 import com.awen.codebase.activity.GroupsActivity;
 import com.awen.codebase.activity.MainActivity;
 import com.awen.codebase.R;
+import com.awen.codebase.widget.CityWeather;
+import com.awen.codebase.widget.CodeBaseWidget;
+import com.awen.codebase.widget.WeatherBean;
 
 /**
  * @author way
@@ -181,7 +184,6 @@ public class UpdateWeatherService extends Service {
 	/**
 	 * 判断手机网络是否可用
 	 * 
-	 * @param context
 	 * @return
 	 */
 	private boolean isNetworkAvailable() {

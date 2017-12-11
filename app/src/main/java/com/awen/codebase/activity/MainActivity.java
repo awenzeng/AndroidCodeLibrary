@@ -5,12 +5,15 @@ import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.IBinder;
 import android.os.Message;
 import android.view.View;
 import android.view.WindowManager;
@@ -26,6 +29,8 @@ import com.awen.codebase.badge.BadgeNumberManager;
 import com.awen.codebase.badge.BadgeNumberManagerXiaoMi;
 import com.awen.codebase.badge.MobileBrand;
 import com.awen.codebase.model.AnnotationReflectModel;
+import com.awen.codebase.service.AIDLService;
+import com.awen.codebase.service.AIDLServiceConnection;
 import com.awen.codebase.service.NormalService;
 
 public class MainActivity extends Activity {
@@ -53,10 +58,19 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         initView();
-        AnnotationReflectModel.invokeAnnotation();//获取注解
-        AnnotationReflectModel.invokeReflect();//调用反射
         showBadgeIcon();
+
+        //获取注解
+        AnnotationReflectModel.invokeAnnotation();
+        //调用反射
+        AnnotationReflectModel.invokeReflect();
+
         handler.sendEmptyMessageDelayed(0, 300);
+
+        //AIDL跨进程通信
+        Intent intent = new Intent(this, AIDLService.class);
+        AIDLServiceConnection connection = new AIDLServiceConnection();
+        bindService(intent,connection,BIND_AUTO_CREATE);
     }
 
 

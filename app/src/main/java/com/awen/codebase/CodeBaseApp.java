@@ -1,11 +1,13 @@
 package com.awen.codebase;
 
 import android.app.Application;
+import android.content.Context;
 import android.graphics.Typeface;
 
 public class CodeBaseApp extends Application {
     private static CodeBaseApp instance;
     private Typeface mGobalFont = null;
+    public static final boolean DEBUG = BuildConfig.DEBUG;
     public static boolean bUseFont = true;
     public static int SDK_VERSION = android.os.Build.VERSION.SDK_INT;
 
@@ -17,6 +19,14 @@ public class CodeBaseApp extends Application {
     }
 
     public static CodeBaseApp getInstance() {
+        return instance;
+    }
+
+    public static Context getAppContext() {
+        return instance.getApplicationContext();
+    }
+
+    public static CodeBaseApp getApplication() {
         return instance;
     }
 

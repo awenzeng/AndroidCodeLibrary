@@ -27,11 +27,11 @@
     <output-test url="file://$MODULE_DIR$/build/intermediates/classes/test/Awen_release/debug" />
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/Awen_release/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/Awen_release/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/Awen_release/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/Awen_release/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/Awen_release/debug" isTestSource="false" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/Awen_release/debug" isTestSource="false" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/Awen_release/debug" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/Awen_release/debug" type="java-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_releaseDebug/res" type="java-resource" />
@@ -41,13 +41,21 @@
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_releaseDebug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_releaseDebug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/Awen_releaseDebug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/r/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/aidl/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/buildConfig/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/source/rs/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
-      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/androidTest/Awen_release/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/rs/androidTest/Awen_release/debug" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/build/generated/res/resValues/androidTest/Awen_release/debug" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAwen_releaseDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAwen_releaseDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAwen_releaseDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAwen_releaseDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAwen_releaseDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAwen_releaseDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestAwen_releaseDebug/shaders" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/build/generated/source/apt/test/Awen_release/debug" isTestSource="true" generated="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testAwen_releaseDebug/assets" type="java-test-resource" />
@@ -83,6 +91,13 @@
       <sourceFolder url="file://$MODULE_DIR$/src/debug/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/rs" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/debug/shaders" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/res" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/resources" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/assets" type="java-test-resource" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/aidl" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/rs" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/androidTestDebug/shaders" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/res" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/resources" type="java-test-resource" />
       <sourceFolder url="file://$MODULE_DIR$/src/testDebug/assets" type="java-test-resource" />
@@ -113,7 +128,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/androidTest/shaders" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/blame" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/build-info" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/builds" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/check-manifest" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/classes" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-classes" />
@@ -122,34 +139,39 @@
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/incremental-verifier" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-resources" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/instant-run-support" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/javaPrecompile" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/jniLibs" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/lint" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/manifests" />
-      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/pre-dexed" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/prebuild" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/reload-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/restart-dex" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/shaders" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/split-apk" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/splits-support" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/symbols" />
+      <excludeFolder url="file://$MODULE_DIR$/build/intermediates/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/build/intermediates/transforms" />
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 23 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="io.reactivex:rxandroid-1.1.0" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-vector-drawable-23.4.0" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-v4-23.4.0" level="project" />
-    <orderEntry type="library" exported="" name="io.reactivex:rxjava:1.1.0@jar" level="project" />
-    <orderEntry type="library" exported="" name="__local_jars__:E.\MyProject\AndroidCodeLibrary\app\libs\zxing-core-2.3.jar:unspecified@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.jakewharton:butterknife-8.4.0" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:appcompat-v7-23.4.0" level="project" />
-    <orderEntry type="library" exported="" name="com.kyleduo.switchbutton:library-1.4.5" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:animated-vector-drawable-23.4.0" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:recyclerview-v7-23.1.0" level="project" />
-    <orderEntry type="library" exported="" name="com.android.support:support-annotations:24.1.0@jar" level="project" />
-    <orderEntry type="library" exported="" name="com.jakewharton:butterknife-annotations:8.4.0@jar" level="project" />
-    <orderEntry type="module" module-name="infinitelib" exported="" />
+    <orderEntry type="library" name="com.android.support:support-vector-drawable-23.4.0" level="project" />
+    <orderEntry type="library" name="com.android.support:support-v4-23.4.0" level="project" />
+    <orderEntry type="library" name="com.jakewharton:butterknife-8.4.0" level="project" />
+    <orderEntry type="library" name="com.orhanobut:logger-1.15" level="project" />
+    <orderEntry type="library" name="com.android.support:appcompat-v7-23.4.0" level="project" />
+    <orderEntry type="library" name="com.android.support:animated-vector-drawable-23.4.0" level="project" />
+    <orderEntry type="library" name="com.jakewharton:butterknife-annotations:8.4.0@jar" level="project" />
+    <orderEntry type="library" name="io.reactivex:rxandroid-1.1.0" level="project" />
+    <orderEntry type="library" name="io.reactivex:rxjava:1.1.0@jar" level="project" />
+    <orderEntry type="library" name="com.kyleduo.switchbutton:library-1.4.5" level="project" />
+    <orderEntry type="library" name="__local_aars__:E.\MyProject\AndroidCodeLibrary\app\libs\zxing-core-2.3.jar:unspecified@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:support-annotations:24.1.0@jar" level="project" />
+    <orderEntry type="library" name="com.android.support:recyclerview-v7-23.4.0" level="project" />
+    <orderEntry type="module" module-name="infinitelib" />
   </component>
 </module>

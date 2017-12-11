@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.IBinder;
 
 import com.awen.codebase.R;
+import com.awen.codebase.utils.LogUtil;
 import com.awen.codebase.utils.ToastUtil;
 
 /**
@@ -22,14 +23,14 @@ public class NormalService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
-        System.out.println("=========onCreate======");
+        LogUtil.androidLog("=========onCreate======");
     }
     /**
      * 服务启动的时候调用
      */
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        System.out.println("=========onStartCommand======");
+        LogUtil.androidLog("=========onStartCommand======");
         return super.onStartCommand(intent, flags, startId);
     }
     /**
@@ -37,7 +38,7 @@ public class NormalService extends Service {
      */
     @Override
     public void onDestroy() {
-        System.out.println("=========onDestroy======");
+        LogUtil.androidLog("=========onDestroy======");
         super.onDestroy();
     }
 

@@ -6,6 +6,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 
 import com.awen.codebase.IMainService;
+import com.awen.codebase.utils.LogUtil;
 
 /**
  * AIDLService可以实现跨进程间交互
@@ -15,20 +16,20 @@ import com.awen.codebase.IMainService;
 public class AIDLService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        System.out.println("Received start command.");
+        LogUtil.androidLog("Received start command.");
         return START_STICKY;
     }
 
     @Override
     public IBinder onBind(Intent intent) {
-        System.out.println("Received binding.");
+        LogUtil.androidLog("Received binding.");
         return mBinder;
     }
 
     private final IMainService.Stub mBinder = new IMainService.Stub() {
         @Override
         public void start(String temp) throws RemoteException {
-            System.out.println("AIDLService服务端打印日志："+temp);
+            LogUtil.androidLog("AIDLService服务端打印日志："+temp);
         }
     };
 }

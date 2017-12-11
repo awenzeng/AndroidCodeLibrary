@@ -5,7 +5,7 @@ android:shareInterpolator="false"
 >
     
     <scale
-        android:interpolator="@android:res/anim/accelerate_decelerate_interpolator"
+        android:interpolator="@android:anim/accelerate_decelerate_interpolator"
         android:fromXScale="0.0"
         android:toXScale="1.0"
         android:fromYScale="0.0"

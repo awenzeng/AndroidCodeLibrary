@@ -7,6 +7,7 @@ import com.awen.codebase.annotition.UserInterface;
 import com.awen.codebase.annotition.UserMethod;
 import com.awen.codebase.annotition.UserParam;
 import com.awen.codebase.bean.User;
+import com.awen.codebase.utils.LogUtil;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -31,7 +32,7 @@ public class AnnotationReflectModel {
             Method method =  c1.getDeclaredMethod("getName");
             UserMethod userMethod = method.getAnnotation(UserMethod.class);
             if (userMethod != null) {
-                Log.e(TAG, "注解方法：" + userMethod.title() + "\n");
+                LogUtil.androidLog("注解方法：" + userMethod.title() + "\n");
             }
 
             Method method1 =  c1.getDeclaredMethod("print",String.class);//获取单个方法
@@ -41,7 +42,7 @@ public class AnnotationReflectModel {
                     Annotation[] annotations = parameterAnnotationsArray[i];
                     if (annotations != null && annotations.length != 0) {
                         UserParam userParam = (UserParam) annotations[0];
-                        Log.e(TAG, "注解参数2：" + userParam.name() + "," + userParam.phone() + "\n");
+                        LogUtil.androidLog("注解参数2：" + userParam.name() + "," + userParam.phone() + "\n");
                     }
                 }
             }
@@ -50,7 +51,7 @@ public class AnnotationReflectModel {
 
                 UserMethod userMethod1 = method2.getAnnotation(UserMethod.class);
                 if (userMethod1 != null) {
-                    Log.e(TAG,method2.getName()+ "的注解方法：" + userMethod1.title() + "\n");
+                    LogUtil.androidLog(method2.getName()+ "的注解方法：" + userMethod1.title() + "\n");
                 }
 
                 Annotation[][] temp = method2.getParameterAnnotations();//拿到参数注解
@@ -59,7 +60,7 @@ public class AnnotationReflectModel {
                         Annotation[] annotations = temp[i];
                         if (annotations != null && annotations.length != 0) {
                             UserParam userParam = (UserParam) annotations[0];
-                            Log.e(TAG, method2.getName()+"的注解参数2：" + userParam.name() + "," + userParam.phone() + "\n");
+                            LogUtil.androidLog(method2.getName()+"的注解参数2：" + userParam.name() + "," + userParam.phone() + "\n");
                         }
                     }
                 }
@@ -71,11 +72,87 @@ public class AnnotationReflectModel {
     }
 
     /**
-     * 反射调用
+     *
+     * 反射调用常用方法总结
+     *
+     1.实例化Class对象，有三种方式，
+     Class.forName(类名全路径); //通过Class的静态方法
+     对象.getClass() //通过对象.getClass方法
+     int.class //基本数据类型及基本数据类型的封装了，例如Integer
+
+     2.获取父类
+     Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
+     Class<?> superclass = clazz.getSuperclass();
+
+     3.获取实现接口
+     Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
+     Class<?>[] interfaces = clazz.getInterfaces()
+
+
+     4.获取指定参数构造函数及实例化
+     Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
+     Constructor<?> constructor = clazz.getConstructor(Class<?>  ... class);//获取公共的
+     Constructor<?> constructor = clazz.getDeclaredConstructor()//获取私有的
+     constructor.newInstance(Object args);
+
+     5.获取所有构造函数及构造参数的类型
+     Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
+     Constructor<?>[] constructors = clazz.getConstructors();//公共的
+     Constructor<?>[] constructors = clazz.getDeclaredConstructors()//包括私有的
+
+     for (int i = 0; i < constructors.length; i++) {
+     Class<?> clazzs[] = constructors[i].getParameterTypes();//获取类型
+     System.out.print("constructors[" + i + "] (");
+     for (int j = 0; j < clazzs.length; j++) {
+     if (j == clazzs.length - 1)
+     System.out.print(clazzs[j].getName());
+     else
+     System.out.print(clazzs[j].getName() + ",");
+     }
+     System.out.println(")");
+     }
+
+
+     6.通过无参实例化对象
+     Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
+     class.newInstance();
+
+
+     7.获取字段，修改字段
+     Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
+
+     Field field = clazz.getField(String name);//获取公共字段
+     Field field = clazz.getDeclaredField(String name);//获取私有公共字段
+     Field[] field = clazz.getFields();//获取所有公共字段
+     Field[] field = clazz.getDeclaredFields();//获取包括私有所有字段
+
+     Field field = clazz.getDeclaredField("heihei");
+     field.setAccessible(true);//设置java取消访问检查，也就是说如果是私有的也可以访问,
+     field.set(obj, "Java反射机制");
+
+     8.获取方法,运行方法
+     Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
+
+     clazz.getMethod(String name ,Class<?> ... parame);//获取公共指定方法
+     clazz.getDeclaredMethod(String name ,Class<?> ... parame)//获取私有指定方法
+     clazz.getMethods()//获取公共所有方法
+     clazz.getDeclaredMethods();//获取包括私有全部方法
+
+     Method method = clazz.getMethod("add");
+     method.invoke(clazz.newInstance());
+
+     method = clazz.getMethod("getInfo", int.class, String.class);
+     method.setAccessible(true)//设置java取消访问检查，也就是说如果是私有的也可以访问,
+     method.invoke(clazz.newInstance(), 20, "张三");
+
+
+     9.获取数组或者list中的类型,如果不是数组或集合返回null
+     Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
+     Class<?> componentType = clazz.getComponentType();
+
      */
     public static void invokeReflect() {
         try {
-
             StringBuffer sb = new StringBuffer();
 
             /********************************反射获取类的三种方法start****************/
@@ -94,11 +171,7 @@ public class AnnotationReflectModel {
 
             //c.getModifiers:类的权限类型（public或private)   c.getSimpleName():类的名字（User)
             sb.append(Modifier.toString(c.getModifiers()) + " class " + c.getSimpleName() + "{\n");
-
-
             Object o = c.newInstance();//对象初始化
-
-
 
 
             /************************属性变量start****************/
@@ -139,12 +212,14 @@ public class AnnotationReflectModel {
             }
 
             sb.append("}");
-            Log.e("good", sb.toString());
+            LogUtil.androidLog(sb.toString());
             /************************类的方法end****************/
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+
 
     }
 }

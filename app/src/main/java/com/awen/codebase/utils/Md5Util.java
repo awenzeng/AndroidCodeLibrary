@@ -4,71 +4,66 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 /**
- * A utility class for computing MD5 hashes.
- * 
+ * Created by AwenZeng on 2017/2/14.
  */
+
 public class Md5Util {
-
-    private static MessageDigest sMd5MessageDigest;
-    private static StringBuilder sStringBuilder;
-
-    static {
-        try {
-            sMd5MessageDigest = MessageDigest.getInstance("md5");
-        } catch (NoSuchAlgorithmException e) {
-            
+    public static String hashKeyForDisk(String key)
+    {
+        String cacheKey;
+        try
+        {
+            final MessageDigest mDigest = MessageDigest.getInstance("MD5");
+            mDigest.update(key.getBytes());
+            cacheKey = bytesToHexString(mDigest.digest());
+        } catch (NoSuchAlgorithmException e)
+        {
+            cacheKey = String.valueOf(key.hashCode());
         }
-        sStringBuilder = new StringBuilder();
+        return cacheKey;
     }
 
-    private Md5Util() {
+    public static String bytesToHexString(byte[] bytes)
+    {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < bytes.length; i++)
+        {
+            String hex = Integer.toHexString(0xFF & bytes[i]);
+            if (hex.length() == 1)
+            {
+                sb.append('0');
+            }
+            sb.append(hex);
+        }
+        return sb.toString();
     }
 
     /**
-     * Return a hash according to the MD5 algorithm of the given String.
-     * 
-     * @param s The String whose hash is required
-     * @return The MD5 hash of the given String
+     * 32位MD5加密方法
+     * 16位小写加密只需getMd5Value("xxx").substring(8, 24);即可
+     *
+     * @param sSecret
+     * @return
      */
-    public synchronized static String md5(String s) {
-
-        sMd5MessageDigest.reset();
-        sMd5MessageDigest.update(s.getBytes());
-
-        byte digest[] = sMd5MessageDigest.digest();
-
-        sStringBuilder.setLength(0);
-        for (int i = 0; i < digest.length; i++) {
-            final int b = digest[i] & 255;
-            if (b < 16) {
-                sStringBuilder.append('0');
+    public static String encode(String sSecret) {
+        try {
+            MessageDigest md5 = MessageDigest.getInstance("MD5");
+            md5.update(sSecret.getBytes());
+            int i;
+            StringBuffer buf = new StringBuffer();
+            byte[] b = md5.digest();// 加密
+            for (int offset = 0; offset < b.length; offset++) {
+                i = b[offset];
+                if (i < 0)
+                    i += 256;
+                if (i < 16)
+                    buf.append("0");
+                buf.append(Integer.toHexString(i));
             }
-            sStringBuilder.append(Integer.toHexString(b));
+            return buf.toString();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
         }
-
-        return sStringBuilder.toString();
-    }
-    
-    public static String compute(String s) {
-
-        char[] charArray = s.toCharArray();
-
-        byte[] byteArray = new byte[charArray.length];
-
-        for (int i = 0; i < charArray.length; i++)
-            byteArray[i] = (byte) charArray[i];
-
-        sMd5MessageDigest.reset();
-        byte[] md5Bytes = sMd5MessageDigest.digest(byteArray);
-
-        for (int i = 0; i < md5Bytes.length; i++) {
-            int val = md5Bytes[i] & 0xff;
-            if (val < 16)
-                sStringBuilder.append("0");
-            sStringBuilder.append(Integer.toHexString(val));
-        }
-
-        return sStringBuilder.toString();
+        return "";
     }
 }
-

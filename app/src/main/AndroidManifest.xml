@@ -23,7 +23,7 @@
 
 
     <!--华为手机更新应用桌面角标需要的权限-->
-    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE"/>
+    <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
 
     <application
         android:name="com.awen.codebase.CodeBaseApp"
@@ -43,8 +43,13 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".widget.UpdateWeatherService"></service>
+        <service android:name=".service.UpdateWeatherService"></service>
         <service android:name=".service.NormalService"></service>
+        <service android:name=".service.InterectService"></service>
+        <service
+            android:name=".service.AIDLService"
+            android:process=":remote"></service>
+
 
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
@@ -53,7 +58,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity"/>
+        <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.RotateActivity" />
         <activity android:name=".activity.SearchFlyActivity" />
         <activity android:name=".activity.VerticalViewPagerActivity" />
