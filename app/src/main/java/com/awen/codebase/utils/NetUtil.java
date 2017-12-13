@@ -9,8 +9,6 @@ import android.telephony.TelephonyManager;
 /**
  * 与网络相关的类,用于网络的检测
  * 
- * @author 杨龙辉 2012.04.07
- * 
  */
 public class NetUtil {
 	public static boolean isNetConnected(Context context) {

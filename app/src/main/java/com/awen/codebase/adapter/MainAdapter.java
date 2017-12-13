@@ -25,18 +25,6 @@ import com.awen.codebase.activity.XRecyleviewActivity;
  */
 
 public class MainAdapter extends BaseAdapter {
-    private static final int FLOATCYCLEVIEW = 0;
-    private static final int GROUPSACTIVITY = 1;
-    private static final int FRAGMNETSACTIVITY = 2;
-    private static final int ANIMATIONACTIVITY = 3;
-    private static final int PROGRESSBARSACTIVITY = 4;
-    private static final int SWITCH_BUTTON_ACTIVITY = 5;
-    private static final int CREDI_ROUND_ACTIVITY = 6;
-    private static final int SWIPE_CARD_ACTIVITY = 7;
-    private static final int KEYBORD_ACTIVITY = 8;
-    private static final int XRECYLEVIEW_ACTIVITY = 9;
-    private static final int VERTICALVIEWPAGER_ACTIVITY =10;
-    private static final int INFINITEVIEW_ACTIVITY =11;
     private String[] iStrings;
     private Context mContext;
 
@@ -67,46 +55,45 @@ public class MainAdapter extends BaseAdapter {
         button.setText(iStrings[position]);
         button.setTag(position);
         button.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent();
                 int pos = (Integer) v.getTag();
-                switch (pos) {
-                    case FLOATCYCLEVIEW:
+                switch (iStrings[pos]){
+                    case "FloatCycleViewActivity":
                         intent.setClass(mContext, FloatCycleViewActivity.class);
                         break;
-                    case GROUPSACTIVITY:
+                    case "GroupsActivity":
                         intent.setClass(mContext, GroupsActivity.class);
                         break;
-                    case FRAGMNETSACTIVITY:
+                    case "FragmentsActivity":
                         intent.setClass(mContext, FragmentsActivity.class);
                         break;
-                    case ANIMATIONACTIVITY:
+                    case "AnimationActivity":
                         intent.setClass(mContext, AnimationActivity.class);
                         break;
-                    case PROGRESSBARSACTIVITY:
+                    case "ProgressBarsActivity":
                         intent.setClass(mContext, ProgressBarsActivity.class);
                         break;
-                    case SWITCH_BUTTON_ACTIVITY:
+                    case "SwitchButtoonActivity":
                         intent.setClass(mContext, SwitchButtonActivity.class);
                         break;
-                    case CREDI_ROUND_ACTIVITY:
+                    case "CreditRoundActivity":
                         intent.setClass(mContext, CreditRoundActivity.class);
                         break;
-                    case SWIPE_CARD_ACTIVITY:
+                    case "SwipeCardActivity":
                         intent.setClass(mContext, SwipeCardActivity.class);
                         break;
-                    case KEYBORD_ACTIVITY:
+                    case "KeybordActivity":
                         intent.setClass(mContext, KeybordActivity.class);
                         break;
-                    case XRECYLEVIEW_ACTIVITY:
+                    case "XRecycleView":
                         intent.setClass(mContext, XRecyleviewActivity.class);
                         break;
-                    case VERTICALVIEWPAGER_ACTIVITY:
+                    case "VerticalViewPagerActivity":
                         intent.setClass(mContext, VerticalViewPagerActivity.class);
                         break;
-                    case INFINITEVIEW_ACTIVITY:
+                    case "InfiniteViewActivity":
                         intent.setClass(mContext, InfiniteViewActivity.class);
                         break;
                     default:

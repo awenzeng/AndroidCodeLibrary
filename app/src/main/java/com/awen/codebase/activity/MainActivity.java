@@ -37,7 +37,7 @@ public class MainActivity extends Activity {
     private ListView listView;
     private ImageView animationImageView;
     private AnimationDrawable animationDrawable;
-    private String[] iStrings = {"FloatCycleView", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
+    private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
             "SwitchButtoonActivity", "CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
             "VerticalViewPagerActivity","InfiniteViewActivity"};
 
