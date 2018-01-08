@@ -37,7 +37,6 @@ import com.awen.codebase.utils.ScreenSizeUtil;
 
 public class FloatCycleView extends SurfaceView implements SurfaceHolder.Callback {
     private int mCount = 0; //圆圈的个数
-    private Handler mainHandler;
     private int diameter;//画的圆圈直径
     private ArrayList<DataHolder> mData; //用链表来存储每个圆圈
     private Drawable backgroud;
@@ -58,6 +57,20 @@ public class FloatCycleView extends SurfaceView implements SurfaceHolder.Callbac
     private int xOffset = 0;
     public static final int FLING_MIN_DISTANCE = 100;
     public static final int FLING_MIN_VELOCITY = 200;
+    private Handler mainHandler = new Handler() {
+
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            if (msg.what == 0) {
+                update();
+                this.sendEmptyMessageDelayed(0, intervel);
+            } else if (msg.what == 1) {
+                mWorkThread.start();
+            }
+        }
+
+    };
 
     //贴图
     private int[] SOURCE_MAP = new int[]{
@@ -91,7 +104,7 @@ public class FloatCycleView extends SurfaceView implements SurfaceHolder.Callbac
         setFocusable(Boolean.TRUE);
         setClickable(Boolean.TRUE);
         setLongClickable(Boolean.TRUE);
-        mData = new ArrayList<FloatCycleView.DataHolder>();
+        mData = new ArrayList<>();
         mGestureDetector = new GestureDetector(new MyGestureListener());
         getHolder().addCallback(this);
         final Resources res = getResources();
@@ -99,20 +112,6 @@ public class FloatCycleView extends SurfaceView implements SurfaceHolder.Callbac
         diameter = d.getBitmap().getWidth();
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         frame = makeDst(diameter, diameter);
-        mainHandler = new Handler() {
-
-            @Override
-            public void handleMessage(Message msg) {
-                super.handleMessage(msg);
-                if (msg.what == 0) {
-                    update();
-                    this.sendEmptyMessageDelayed(0, intervel);
-                } else if (msg.what == 1) {
-                    mWorkThread.start();
-                }
-            }
-
-        };
         mWorkThread = new DataUpThread();
         backgroud = res.getDrawable(R.drawable.background);
         mScreenHeight = res.getDisplayMetrics().heightPixels;

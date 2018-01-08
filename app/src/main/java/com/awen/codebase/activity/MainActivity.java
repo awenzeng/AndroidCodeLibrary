@@ -15,6 +15,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Message;
+import android.os.RemoteException;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -23,6 +24,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.awen.codebase.CodeBaseApp;
+import com.awen.codebase.IMainService;
 import com.awen.codebase.R;
 import com.awen.codebase.adapter.MainAdapter;
 import com.awen.codebase.badge.BadgeNumberManager;
@@ -32,14 +34,15 @@ import com.awen.codebase.model.AnnotationReflectModel;
 import com.awen.codebase.service.AIDLService;
 import com.awen.codebase.service.AIDLServiceConnection;
 import com.awen.codebase.service.NormalService;
+import com.awen.codebase.utils.LogUtil;
 
 public class MainActivity extends Activity {
     private ListView listView;
     private ImageView animationImageView;
     private AnimationDrawable animationDrawable;
     private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
-            "SwitchButtoonActivity", "CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
-            "VerticalViewPagerActivity","InfiniteViewActivity"};
+            "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
+            "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity"};
 
     private   Handler handler = new Handler() {
 

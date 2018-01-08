@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbars="none"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.awen.codebase.activity.BannerActivity">
+
+        <com.awen.codebase.widget.banner.BannerLayout
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+        <com.awen.codebase.widget.banner.BannerLayout
+            android:id="@+id/banner1"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            app:orientation="vertical"
+            app:showIndicator="false" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="基础版"
+            android:textSize="25sp" />
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="1dp"
+            android:background="@color/black"></View>
+
+        <com.awen.codebase.widget.banner.RecyclerViewBannerNormal
+            android:id="@+id/bannerNormal"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:orientation="horizontal" />
+
+        <com.awen.codebase.widget.banner.RecyclerViewBannerNormal
+            android:id="@+id/bannerNormal2"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="20dp"
+            app:orientation="vertical" />
+    </LinearLayout>
+
+</ScrollView>
