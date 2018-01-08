@@ -6,6 +6,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2017-12-14]增加了AIDL跨进程通信
 
+[2018-01-08]增加Banner效果
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
@@ -34,6 +36,9 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 [Swipecards](https://github.com/Diolor/Swipecards)
 
 [BadgeNumberManager](https://github.com/beiliao-mobile/BadgeNumberManager)
+
+[RecyclerBanner](https://github.com/renjianan/RecyclerBanner)
+
 
 
 ...
