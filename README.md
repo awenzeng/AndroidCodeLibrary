@@ -4,6 +4,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 # Update
 [2017-11-29]增加了桌面快捷图标红点功能
 
+[2017-12-14]增加了AIDL跨进程通信
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
