@@ -76,6 +76,7 @@
         <activity android:name=".activity.XRecyleviewActivity" />
         <activity android:name=".activity.InfiniteViewActivity" />
         <activity android:name=".activity.BannerActivity"></activity>
+        <activity android:name=".activity.DrawAnimActivity"></activity>
     </application>
 
 </manifest>

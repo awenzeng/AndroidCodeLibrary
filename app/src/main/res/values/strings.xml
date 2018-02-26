@@ -4,6 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">CodeBase</string>
+    <string name="loading">加载中</string>
     <!-- style title -->
     <string name="style_default">Default Style</string>
     <string name="style_text">With Status Text</string>

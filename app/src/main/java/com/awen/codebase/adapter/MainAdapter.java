@@ -10,6 +10,7 @@ import android.widget.Button;
 import com.awen.codebase.activity.AnimationActivity;
 import com.awen.codebase.activity.BannerActivity;
 import com.awen.codebase.activity.CreditRoundActivity;
+import com.awen.codebase.activity.DrawAnimActivity;
 import com.awen.codebase.activity.FloatCycleViewActivity;
 import com.awen.codebase.activity.FragmentsActivity;
 import com.awen.codebase.activity.GroupsActivity;
@@ -99,6 +100,9 @@ public class MainAdapter extends BaseAdapter {
                         break;
                     case "BannerActivity":
                         intent.setClass(mContext, BannerActivity.class);
+                        break;
+                    case "DrawAnimActivity":
+                        intent.setClass(mContext, DrawAnimActivity.class);
                         break;
                     default:
                         break;
