@@ -14,7 +14,7 @@ import java.lang.reflect.Type;
  */
 
 public class AnnotionProxy {
-    public static  <T> T create(final Class<T> service) {
+    public static <T> T create(final Class<T> service) {
         return (T) Proxy.newProxyInstance(service.getClassLoader(), new Class<?>[]{service},
                 new InvocationHandler() {
 
@@ -30,7 +30,7 @@ public class AnnotionProxy {
                             Annotation[] annotations = parameterAnnotationsArray[i];
                             if (annotations != null) {
                                 UserParam userParam = (UserParam) annotations[0];
-                                Log.e("good", "UserParam---userParam->" + userParam.name()+ ","+userParam.phone()+ "," + args[i]);
+                                Log.e("good", "UserParam---userParam->" + userParam.name() + "," + userParam.phone() + "," + args[i]);
                             }
                         }
                         return "";

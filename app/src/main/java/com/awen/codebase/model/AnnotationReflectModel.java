@@ -1,12 +1,10 @@
 package com.awen.codebase.model;
 
-import android.util.Log;
-
 import com.awen.codebase.annotition.AnnotionProxy;
 import com.awen.codebase.annotition.UserInterface;
 import com.awen.codebase.annotition.UserMethod;
 import com.awen.codebase.annotition.UserParam;
-import com.awen.codebase.bean.User;
+import com.awen.codebase.annotition.User;
 import com.awen.codebase.utils.LogUtil;
 
 import java.lang.annotation.Annotation;
@@ -25,10 +23,14 @@ public class AnnotationReflectModel {
      * 注解调用
      */
     public static void invokeAnnotation() {
+
+        //动态代理方式来
         UserInterface userInterface = AnnotionProxy.create(UserInterface.class);
         userInterface.getUser("我之存在，因为有你。");
+
+        //反射方式
         try{
-            Class c1 = Class.forName("com.awen.codebase.bean.User");
+            Class c1 = Class.forName("com.awen.codebase.annotition.User");
             Method method =  c1.getDeclaredMethod("getName");
             UserMethod userMethod = method.getAnnotation(UserMethod.class);
             if (userMethod != null) {
@@ -87,7 +89,6 @@ public class AnnotationReflectModel {
      3.获取实现接口
      Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
      Class<?>[] interfaces = clazz.getInterfaces()
-
 
      4.获取指定参数构造函数及实例化
      Class<?> clazz  = Class.forName(类名全路径); //通过Class的静态方法
@@ -157,7 +158,7 @@ public class AnnotationReflectModel {
 
             /********************************反射获取类的三种方法start****************/
             //第一种方式：
-            Class c = Class.forName("com.awen.codebase.bean.User");
+            Class c = Class.forName("com.awen.codebase.annotition.User");
 
             //第二种方式：
             Class c2 = User.class;

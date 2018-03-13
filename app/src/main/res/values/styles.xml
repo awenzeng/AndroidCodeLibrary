@@ -3,6 +3,10 @@
     <style name="AppTheme" parent="android:Theme.Light" >
         <item name="android:windowAnimationStyle">@style/activityAnim</item>
     </style>
+
+    <style name="AppTheme_NoAppBar" parent="Theme.AppCompat.NoActionBar" >
+    </style>
+
 	<style name="animStyle" parent="@android:style/Widget.ProgressBar.Large">
 		<item name="android:indeterminateDrawable">@anim/test</item>
 	</style>

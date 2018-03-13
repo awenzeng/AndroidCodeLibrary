@@ -18,5 +18,17 @@
     <string name="style_disable_opt">Toggle the others\' enable state</string>
     <string name="enable_title">enable/disable other SwitchButtons</string>
     <string name="disable_no_event">The right SwitchButton was checked in code using setCheckedImmediatelyNoEvent when first enter, so no effects there.</string>
+    <string name="content">Material Design：谷歌拿出媲美苹果的设计[2]
+过去Google的产品线，每一个都相当的独立，在产品的设计上反映得尤为明显，甚至不必看产品设计，只要看一下Google每款产品的LOGO都能发现许多不同风格的设计。这种混乱难以体现出Google的风格，如果Google的风格不是混乱和无序的话。
+2011年，拉里·佩奇成为Google CEO之后，他管理公司的政策从过去的自由、放任，变为紧密、整合。根据我们的报道，在Google发展的早期，因为鼓励观点的碰撞，结果发展成一种不留情面的争论氛围，高管之间冲突不断，甚至会拒绝合作。佩奇决心要改变公司的氛围，2013年2月，在纳帕山谷的卡内罗斯客栈酒店里，他对所有Google高管说，Google要实现10倍的发展速度，要用全新的方法来解决问题，因此高管之间要学会合作。从现在开始，Google要对争斗零容忍。
+
+除了Google不同产品线相互之间变得更加开放、合作外，佩奇还大胆改变[2]  Google“以工程师为主导”的文化。2011年，公司启动代号为“肯尼迪”的项目，召集公司里所有重要的设计师，重新设计Google里的每一项产品，寻找一种共同的设计语言。最终他们找到跨产品的设计是“卡片式设计”。不仅如此，2012年，佩奇大胆地作出一项决定，让设计师参与到早期产品的设计开发中，这项产品是我们看到的Google Now——一项典型采用卡片式设计的跨设备产品，从Android到Chrome，它的表现都几乎一致。
+可以这么说，从Google Now上，Google的设计师们通过整合Google现有的技术和能力，再加上对跨设备界面与交互思考，结合卡片式设计，终于设计出在不同设备上界面和体验都相对统一的产品。而这种跨界的设计经验，经过两年的努力，复用在一致饱受割裂、碎片化困扰的Android平台上。
+
+Android一开始充满着旧Google时代的风格：自由、放任。开发者可以任意上传自己的应用，而不必通过审核；开发者可以随意按照自己的想法设计应用，Google方面不予任何限制。可以说，Android一开始就是一片Google开辟的荒地，他允许每个人都可以随意使用，结果是所有人都各行其是，让这块荒地乱糟糟的。直到Android 4.0，从Palm跳槽到Google担任Android用户体验副总裁的马蒂亚斯·杜瓦迪（Matias Duarte）上任后，才真正提出设计指导。
+而Google I/O 2014上着重展示的Material Design，以非常高调的方式，宣布了Google Design的存在：不欣赏设计，对设计毫无感觉的Google已是昨日。在发布会当时，Google还上线名为Google Design的网站。从Android到衍生的Android Wear、Auto和TV，Material Design贯穿其中，成为沟通不同平台、设备的灵魂，让用户在不同平台上也有连贯的体验。为了维护这种一致性，Google甚至不允许第三方修改Android Wear、Auto和TV的界面以及交互，十分强势。
+Material Design不能简单地归纳为平面化设计（Flat Design）。实际上，Android 4.0的设计风格，也不是纯粹的平面化设计，在经过仔细观察之下，我们可以看到Android 4.0在细节上并没有反对高光、阴影、纹理，换言之它并不反对立体感。不过，它也不能归类为拟物化设计，毕竟它所使用的图案、形状并非是对现实实体的模拟，而是按照自己对数字世界的理解，以色彩、图案、形状进行视觉信息上的划分。
+根据Hi-iD之前在《花样,形式,风格,氛围,主义……设计》中总结设计当中不同的层次，以Google过去各个产品而言，都充满了不同的花样和形式，但无法统一为一种风格。而Material Design则结合卡片式设计，又结合现实世界里纸张的隐喻，统一了Google在设计上的表达，从而展示出一种强烈的风格。这种风格不会因为我们使用Android Wear或Android TV等不同的设备，而感到不同。Hi-iD说得好，“风格既是自我表达也是一种记名和品牌”。
+Material Design在设计上并没有完全抛弃Google过去在设计上取得的成果。Material Design和Google的标志一样，崇尚多彩，但它并不使用那种很艳丽的颜色，反而似乎是为了让图案变得沉稳，而有意令原本很晃眼的色彩混入一点点的灰色，让图案变得活泼之余，又不会因为过于艳丽而让人感觉到俗套和嬉皮。它也没有抛弃阴影，仔细观察Android 4.0的下拉菜单，我们可以看到底部和右侧有着淡淡的阴影。</string>
 
 </resources>

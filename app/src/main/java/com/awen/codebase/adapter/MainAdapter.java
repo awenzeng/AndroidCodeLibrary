@@ -16,6 +16,7 @@ import com.awen.codebase.activity.FragmentsActivity;
 import com.awen.codebase.activity.GroupsActivity;
 import com.awen.codebase.activity.InfiniteViewActivity;
 import com.awen.codebase.activity.KeybordActivity;
+import com.awen.codebase.activity.MaterialDesignActivity;
 import com.awen.codebase.activity.ProgressBarsActivity;
 import com.awen.codebase.activity.SwipeCardActivity;
 import com.awen.codebase.activity.SwitchButtonActivity;
@@ -103,6 +104,9 @@ public class MainAdapter extends BaseAdapter {
                         break;
                     case "DrawAnimActivity":
                         intent.setClass(mContext, DrawAnimActivity.class);
+                        break;
+                    case "MaterialDesignActivity":
+                        intent.setClass(mContext, MaterialDesignActivity.class);
                         break;
                     default:
                         break;

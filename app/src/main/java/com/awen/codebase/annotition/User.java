@@ -1,4 +1,4 @@
-package com.awen.codebase.bean;
+package com.awen.codebase.annotition;
 
 import android.util.Log;
 

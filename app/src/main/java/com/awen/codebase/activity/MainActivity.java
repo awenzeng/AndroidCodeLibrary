@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
     private AnimationDrawable animationDrawable;
     private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
-            "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity"};
+            "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity"};
 
     private   Handler handler = new Handler() {
 

@@ -77,6 +77,8 @@
         <activity android:name=".activity.InfiniteViewActivity" />
         <activity android:name=".activity.BannerActivity"></activity>
         <activity android:name=".activity.DrawAnimActivity"></activity>
+        <activity android:name=".activity.MaterialDesignActivity"
+                  android:theme="@style/AppTheme_NoAppBar"></activity>
     </application>
 
 </manifest>
