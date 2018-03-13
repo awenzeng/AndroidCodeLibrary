@@ -10,6 +10,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2018-02-26]增加多种动画效果，如：多帧动画，素材切割动画等
 
+[2018-03-13]增加Material Design相关类容(Android Design Support Library)
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
