@@ -4,6 +4,8 @@ import android.app.Application;
 import android.content.Context;
 import android.graphics.Typeface;
 
+import com.awen.codebase.utils.AutoScreenUtils;
+
 public class CodeBaseApp extends Application {
     private static CodeBaseApp instance;
     private Typeface mGobalFont = null;
@@ -16,6 +18,7 @@ public class CodeBaseApp extends Application {
         super.onCreate();
         instance = this;
         bUseFont = false;
+        AutoScreenUtils.AdjustDensity(this);
     }
 
     public static CodeBaseApp getInstance() {

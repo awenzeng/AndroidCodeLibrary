@@ -27,7 +27,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Describe:
+ * Describe: Activity,ListView,RecyleView,ScrollView截屏
+ * 特注：需要在界面渲染之后，方能获取截图
+ *
  * Created by AwenZeng on 2018/1/4.
  */
 public class ScreenUtil {

@@ -33,6 +33,7 @@ import android.view.SurfaceView;
 import android.widget.Toast;
 
 import com.awen.codebase.R;
+import com.awen.codebase.utils.LogUtil;
 import com.awen.codebase.utils.ScreenSizeUtil;
 
 public class FloatCycleView extends SurfaceView implements SurfaceHolder.Callback {
@@ -110,6 +111,7 @@ public class FloatCycleView extends SurfaceView implements SurfaceHolder.Callbac
         final Resources res = getResources();
         BitmapDrawable d = (BitmapDrawable) res.getDrawable(SOURCE_MAP[0]);
         diameter = d.getBitmap().getWidth();
+        LogUtil.androidLog("密度 图片分辨率："+diameter);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         frame = makeDst(diameter, diameter);
         mWorkThread = new DataUpThread();
