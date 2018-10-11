@@ -4,7 +4,9 @@ import android.app.Application;
 import android.content.Context;
 import android.graphics.Typeface;
 
+import com.awen.codebase.activity.ProxyActivity;
 import com.awen.codebase.utils.AutoScreenUtils;
+import com.awen.codebase.utils.HookAmsUtil;
 
 public class CodeBaseApp extends Application {
     private static CodeBaseApp instance;
@@ -19,6 +21,11 @@ public class CodeBaseApp extends Application {
         instance = this;
         bUseFont = false;
         AutoScreenUtils.AdjustDensity(this);
+
+        //这个ProxyActivity在清单文件中注册过，以后所有的Activitiy都可以用ProxyActivity无需声明，绕过监测
+        HookAmsUtil hookAmsUtil = new HookAmsUtil(ProxyActivity.class, this);
+        hookAmsUtil.hookSystemHandler();
+        hookAmsUtil.hookAms();
     }
 
     public static CodeBaseApp getInstance() {
