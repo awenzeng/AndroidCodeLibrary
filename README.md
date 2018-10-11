@@ -14,6 +14,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2018-06-19]多分辨率机型适配方案
 
+[2018-10-11]Hook技术实现启动免注册的Activity
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
