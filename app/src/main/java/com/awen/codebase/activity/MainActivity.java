@@ -37,6 +37,7 @@ import com.awen.codebase.model.AnnotationReflectModel;
 import com.awen.codebase.service.AIDLService;
 import com.awen.codebase.service.AIDLServiceConnection;
 import com.awen.codebase.service.NormalService;
+import com.awen.codebase.service.WorkService;
 import com.awen.codebase.utils.LogUtil;
 
 public class MainActivity extends Activity {
@@ -77,6 +78,8 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, AIDLService.class);
         AIDLServiceConnection connection = new AIDLServiceConnection();
         bindService(intent,connection,BIND_AUTO_CREATE);
+
+        startService(new Intent(this, WorkService.class));
     }
 
 
@@ -146,5 +149,6 @@ public class MainActivity extends Activity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        stopService(new Intent(this, WorkService.class));
     }
 }

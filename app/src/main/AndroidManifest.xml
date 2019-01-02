@@ -26,6 +26,8 @@
     <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
     <application
         android:name=".CodeBaseApp"
         android:icon="@drawable/ic_launcher"
@@ -49,14 +51,22 @@
             android:name=".service.AIDLService"
             android:process=":remote" />
 
-        <activity android:name=".activity.SplashActivity">
+        <service android:name="com.awen.codebase.service.WorkService" />
+
+        <service android:name=".service.WorkJobGuardService"
+            android:permission="android.permission.BIND_JOB_SERVICE"/>
+
+        <service android:name=".service.WorkGuardService"
+            android:process="com.awen.codebase.guard.service"/>
+
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity" />
+        <!--<activity android:name=".activity.MainActivity" />-->
         <activity android:name=".activity.RotateActivity" />
         <activity android:name=".activity.SearchFlyActivity" />
         <activity android:name=".activity.VerticalViewPagerActivity" />
