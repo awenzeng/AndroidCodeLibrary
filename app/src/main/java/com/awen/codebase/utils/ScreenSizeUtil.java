@@ -30,6 +30,11 @@ public class ScreenSizeUtil {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, sp, displayMetrics);
     }
 
+    public static int px2sp(float pxValue) {
+        final float fontScale = displayMetrics.scaledDensity;
+        return (int) (pxValue / fontScale + 0.5f);
+    }
+
     public static int px2dp(int px) {
         float scale = displayMetrics.density;
         return (int) (px / scale + 0.5f);

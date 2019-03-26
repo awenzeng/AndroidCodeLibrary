@@ -16,6 +16,7 @@ import com.awen.codebase.activity.FragmentsActivity;
 import com.awen.codebase.activity.GroupsActivity;
 import com.awen.codebase.activity.InfiniteViewActivity;
 import com.awen.codebase.activity.KeybordActivity;
+import com.awen.codebase.activity.MarqueeTextActivity;
 import com.awen.codebase.activity.MaterialDesignActivity;
 import com.awen.codebase.activity.ProgressBarsActivity;
 import com.awen.codebase.activity.SwipeCardActivity;
@@ -60,53 +61,56 @@ public class MainAdapter extends BaseAdapter {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent();
+                Intent intent = null;
                 int pos = (Integer) v.getTag();
                 switch (iStrings[pos]){
                     case "FloatCycleViewActivity":
-                        intent.setClass(mContext, FloatCycleViewActivity.class);
+                        intent = new Intent(mContext,FloatCycleViewActivity.class);
                         break;
                     case "GroupsActivity":
-                        intent.setClass(mContext, GroupsActivity.class);
+                        intent = new Intent(mContext,GroupsActivity.class);
                         break;
                     case "FragmentsActivity":
-                        intent.setClass(mContext, FragmentsActivity.class);
+                        intent = new Intent(mContext,FragmentsActivity.class);
                         break;
                     case "AnimationActivity":
-                        intent.setClass(mContext, AnimationActivity.class);
+                        intent = new Intent(mContext,AnimationActivity.class);
                         break;
                     case "ProgressBarsActivity":
-                        intent.setClass(mContext, ProgressBarsActivity.class);
+                        intent = new Intent(mContext,ProgressBarsActivity.class);
                         break;
                     case "SwitchButtoonActivity":
-                        intent.setClass(mContext, SwitchButtonActivity.class);
+                        intent = new Intent(mContext,SwitchButtonActivity.class);
                         break;
                     case "CreditRoundActivity":
-                        intent.setClass(mContext, CreditRoundActivity.class);
+                        intent = new Intent(mContext,CreditRoundActivity.class);
                         break;
                     case "SwipeCardActivity":
-                        intent.setClass(mContext, SwipeCardActivity.class);
+                        intent = new Intent(mContext,SwipeCardActivity.class);
                         break;
                     case "KeybordActivity":
-                        intent.setClass(mContext, KeybordActivity.class);
+                        intent = new Intent(mContext,KeybordActivity.class);
                         break;
                     case "XRecycleView":
-                        intent.setClass(mContext, XRecyleviewActivity.class);
+                        intent = new Intent(mContext,XRecyleviewActivity.class);
                         break;
                     case "VerticalViewPagerActivity":
-                        intent.setClass(mContext, VerticalViewPagerActivity.class);
+                        intent = new Intent(mContext,VerticalViewPagerActivity.class);
                         break;
                     case "InfiniteViewActivity":
-                        intent.setClass(mContext, InfiniteViewActivity.class);
+                        intent = new Intent(mContext,InfiniteViewActivity.class);
                         break;
                     case "BannerActivity":
-                        intent.setClass(mContext, BannerActivity.class);
+                        intent = new Intent(mContext,BannerActivity.class);
                         break;
                     case "DrawAnimActivity":
-                        intent.setClass(mContext, DrawAnimActivity.class);
+                        intent = new Intent(mContext,DrawAnimActivity.class);
                         break;
                     case "MaterialDesignActivity":
-                        intent.setClass(mContext, MaterialDesignActivity.class);
+                        intent = new Intent(mContext,MaterialDesignActivity.class);
+                        break;
+                    case "MarqueeTextActivity":
+                        intent = new Intent(mContext,MarqueeTextActivity.class);
                         break;
                     default:
                         break;
