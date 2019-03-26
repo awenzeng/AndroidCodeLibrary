@@ -16,6 +16,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2018-10-11]Hook技术实现启动免注册的Activity
 
+[2019-1-2]进程保活，5.0以下守护进程保活，5.0以上通过JobScheduler调度保活
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
