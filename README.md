@@ -18,6 +18,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2019-1-2]进程保活，5.0以下守护进程保活，5.0以上通过JobScheduler调度保活
 
+[2019-3-26]添加了滚动的
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
