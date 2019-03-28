@@ -57,13 +57,13 @@
         <service android:name=".service.WorkGuardService"
             android:process="com.awen.codebase.guard.service"/>
 
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.MainActivity"/>
         <activity android:name=".activity.RotateActivity"/>
         <activity android:name=".activity.SearchFlyActivity"/>
         <activity android:name=".activity.VerticalViewPagerActivity"/>
