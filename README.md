@@ -58,7 +58,7 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 # License
 ```java
-Copyright 2017 AwenZeng
+Copyright 2019 AwenZeng
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
