@@ -3,9 +3,12 @@ package com.awen.codebase.utils;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+
+import com.awen.codebase.CodeBaseApp;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationHandler;
@@ -93,7 +96,7 @@ public class HookAmsUtil {
         @Override
         public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
 
-            if ("startActivity".contains(method.getName())) {
+            if (method.getName().contains("startActivity")) {
                 //换掉
                 Intent intent = null;
                 int index = 0;
@@ -106,15 +109,14 @@ public class HookAmsUtil {
                         index = i;
                     }
                 }
-
-                //伪造一个代理的Intent，代理Intent启动的是proxyActivity
-                Intent proxyIntent = new Intent();
-                ComponentName componentName = new ComponentName(context, proxyActivity);
-                proxyIntent.setComponent(componentName);
-                proxyIntent.putExtra("oldIntent", intent);
-                args[index] = proxyIntent;
+                if(!checkActivityInManifest(intent)){
+                    Intent proxyIntent = new Intent();
+                    ComponentName componentName = new ComponentName(context, proxyActivity);
+                    proxyIntent.setComponent(componentName);
+                    proxyIntent.putExtra("originIntent", intent);
+                    args[index] = proxyIntent;
+                }
             }
-
             return method.invoke(iActivityManagerObject, args);
         }
     }
@@ -146,7 +148,7 @@ public class HookAmsUtil {
                 Field intentField = obj.getClass().getDeclaredField("intent");
                 intentField.setAccessible(true);
                 Intent proxyInent = (Intent) intentField.get(obj);
-                Intent realIntent = proxyInent.getParcelableExtra("oldIntent");
+                Intent realIntent = proxyInent.getParcelableExtra("originIntent");
                 if (realIntent != null) {
                     proxyInent.setComponent(realIntent.getComponent());
                 }
@@ -155,5 +157,21 @@ public class HookAmsUtil {
             }
 
         }
+    }
+
+
+    /**
+     * 检测Activity是否在Manifest中注册
+     * @param intent
+     * @return
+     */
+    private boolean checkActivityInManifest(Intent intent){
+        try {
+            CodeBaseApp.getAppContext().getPackageManager().getActivityInfo(intent.getComponent(),
+                    PackageManager.GET_META_DATA);
+        } catch (PackageManager.NameNotFoundException e) {
+            return false;
+        }
+     return true;
     }
 }

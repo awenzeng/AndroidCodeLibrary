@@ -22,7 +22,7 @@ import java.util.TimeZone;
  */
 public class LogUtil {
     private static final String TAG = "AWEN-CODEBASE";
-    public static Boolean isDebug = CodeBaseApp.DEBUG; // 日志文件总开关
+    public static Boolean isDebug = CodeBaseApp.DEBUG; /* 日志文件总开关*/
     public static Boolean isSaveLogToSD = false;// 日志写入文件开关
     public static String logFilePath = FileUtil.getAppFileSaveRootDri() + CodeBaseApp.getAppContext().getPackageName()+"/error_log";// 日志文件在sdcard中的路径
     private static int saveDays = 3;// sd卡中日志文件的最多保存天数

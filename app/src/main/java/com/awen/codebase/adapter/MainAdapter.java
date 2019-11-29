@@ -2,6 +2,7 @@ package com.awen.codebase.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Message;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -23,6 +24,7 @@ import com.awen.codebase.activity.SwipeCardActivity;
 import com.awen.codebase.activity.SwitchButtonActivity;
 import com.awen.codebase.activity.VerticalViewPagerActivity;
 import com.awen.codebase.activity.XRecyleviewActivity;
+import com.awen.messagebus.MessageBus;
 
 /**
  * Created by AwenZeng on 2017/3/6.
@@ -116,6 +118,13 @@ public class MainAdapter extends BaseAdapter {
                         break;
                 }
                 mContext.startActivity(intent);
+                Message message = new Message();
+                message.obj = iStrings[pos];
+                MessageBus.getDefault().sendMessage(message);
+
+                Message msg = new Message();
+                msg.obj = "延迟消息："+iStrings[pos];
+                MessageBus.getDefault().sendMessageDelayed(msg,1500);
             }
         });
         return button;

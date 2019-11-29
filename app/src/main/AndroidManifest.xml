@@ -74,7 +74,7 @@
         <activity android:name=".activity.TabDemoActivity"/>
         <activity android:name=".activity.ShadeActivity"/>
         <activity android:name=".activity.AnimationActivity"/>
-        <activity android:name=".activity.ProgressBarsActivity"/>
+        <activity android:name=".activity.ProgressBarsActivity" />
         <activity android:name=".activity.FragmentsActivity"/>
         <activity android:name=".activity.GroupsActivity"/>
         <activity android:name=".activity.CreditRoundActivity"/>
@@ -85,7 +85,7 @@
         <activity android:name=".activity.DrawAnimActivity"/>
         <activity android:name=".activity.MaterialDesignActivity"
                   android:theme="@style/AppTheme_NoAppBar"/>
-        <activity android:name=".activity.MarqueeTextActivity"/>
+        <!--<activity android:name=".activity.MarqueeTextActivity"/>-->
         <activity android:name=".activity.ProxyActivity"/>
     </application>
 

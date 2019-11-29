@@ -79,7 +79,7 @@ public class MainActivity extends Activity {
         AIDLServiceConnection connection = new AIDLServiceConnection();
         bindService(intent,connection,BIND_AUTO_CREATE);
 
-        startService(new Intent(this, WorkService.class));
+//        startService(new Intent(this, WorkService.class));
     }
 
 
