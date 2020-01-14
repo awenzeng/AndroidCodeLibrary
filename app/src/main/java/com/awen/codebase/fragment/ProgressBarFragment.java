@@ -28,6 +28,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.awen.codebase.R;
+import com.awen.codebase.ui.LoadingCircleView;
 import com.awen.codebase.widget.Down360LoadingView;
 import com.awen.codebase.widget.Down360ViewGroup;
 import com.google.zxing.BarcodeFormat;
@@ -42,6 +43,7 @@ public class ProgressBarFragment extends Fragment implements Down360LoadingView.
     private TextView persent;
     private ImageView img_progress;
     private ImageView show2codeImg;
+    private LoadingCircleView loadingCircleView;
     private int num = 100;
     private boolean minus = true;
     private float progess = 0;
@@ -55,6 +57,7 @@ public class ProgressBarFragment extends Fragment implements Down360LoadingView.
     private int progress;
     private static final String TAG = ProgressBarFragment.class.getSimpleName();
     private Handler handler = new Handler() {
+        @Override
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case 1:
@@ -74,6 +77,7 @@ public class ProgressBarFragment extends Fragment implements Down360LoadingView.
                 case 2:
                     img_progress.setImageBitmap(getRoundedCornerBitmap(bmp, (float) 0.8));
                     break;
+                    default:
             }
         }
     };
@@ -97,6 +101,7 @@ public class ProgressBarFragment extends Fragment implements Down360LoadingView.
         persent = (TextView) view.findViewById(R.id.persent);
         text = (TextView) view.findViewById(R.id.text);
         Button button = (Button) view.findViewById(R.id.button);
+        loadingCircleView = view.findViewById(R.id.loadingCircleView);
         down360ViewGroup = (Down360ViewGroup) view.findViewById(R.id.down_loading_viewgroup);
 
         // 这里是3个不同状态的时候的图片资源
@@ -136,6 +141,7 @@ public class ProgressBarFragment extends Fragment implements Down360LoadingView.
                                 progress++;
                                 Log.d(TAG, "DownActivity:" + progress);
                                 down360ViewGroup.setProgress(progress);
+                                loadingCircleView.setProgress(progress,true);
                             }
                         }
                     }

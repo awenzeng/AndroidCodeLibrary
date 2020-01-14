@@ -45,13 +45,24 @@
         android:layout_below="@id/layout"
         android:text="开始动画" />
 
-    <ImageView 
+    <com.awen.codebase.ui.LoadingCircleView
+        android:id="@+id/loadingCircleView"
+        android:layout_below="@id/button"
+        android:layout_marginTop="50dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"/>
+
+    <ImageView
         android:id="@+id/show2code"
+        android:layout_toRightOf="@+id/loadingCircleView"
+        android:layout_alignBottom="@+id/loadingCircleView"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@id/button"
         android:background="#000000"
         />
+
 
     <com.awen.codebase.widget.Down360ViewGroup
         android:id="@+id/down_loading_viewgroup"
