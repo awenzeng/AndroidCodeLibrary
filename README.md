@@ -22,6 +22,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2020-1-14]增加图片下载进度效果
 
+[2020-1-20]AccessibilityService辅助DEMO添加
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
