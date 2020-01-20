@@ -20,6 +20,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2019-3-26]添加了滚动的TextView,上下滚动，左右滚动
 
+[2020-1-14]增加图片下载进度效果
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
