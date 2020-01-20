@@ -146,6 +146,16 @@ public class LogUtil {
         }
     }
 
+    /**
+     * Android原生log
+     * @param msg
+     */
+    public static void androidLog(String tag,String msg) {
+        if (isDebug) {
+            Log.i(tag,msg);
+        }
+    }
+
 
     /**
      * 打开日志文件并写入日志

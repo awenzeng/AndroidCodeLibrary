@@ -57,6 +57,18 @@
         <service android:name=".service.WorkGuardService"
             android:process="com.awen.codebase.guard.service"/>
 
+        <service
+            android:name=".service.AppMonitorService"
+            android:label="应用监听"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessible_service_config" />
+        </service>
+
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
