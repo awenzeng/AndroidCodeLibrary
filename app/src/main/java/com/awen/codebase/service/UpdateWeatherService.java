@@ -26,9 +26,9 @@ import com.awen.codebase.activity.FragmentsActivity;
 import com.awen.codebase.activity.GroupsActivity;
 import com.awen.codebase.activity.MainActivity;
 import com.awen.codebase.R;
-import com.awen.codebase.widget.CityWeather;
-import com.awen.codebase.widget.CodeBaseWidget;
-import com.awen.codebase.widget.WeatherBean;
+import com.awen.codebase.common.widget.CityWeather;
+import com.awen.codebase.common.widget.CodeBaseWidget;
+import com.awen.codebase.common.widget.WeatherBean;
 
 /**
  * @author way

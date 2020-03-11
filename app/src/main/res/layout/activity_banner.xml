@@ -12,12 +12,12 @@
         android:orientation="vertical"
         tools:context="com.awen.codebase.activity.BannerActivity">
 
-        <com.awen.codebase.widget.banner.BannerLayout
+        <com.awen.codebase.common.widget.banner.BannerLayout
             android:id="@+id/banner"
             android:layout_width="match_parent"
             android:layout_height="200dp" />
 
-        <com.awen.codebase.widget.banner.BannerLayout
+        <com.awen.codebase.common.widget.banner.BannerLayout
             android:id="@+id/banner1"
             android:layout_width="match_parent"
             android:layout_height="200dp"
@@ -37,13 +37,13 @@
             android:layout_height="1dp"
             android:background="@color/black"></View>
 
-        <com.awen.codebase.widget.banner.RecyclerViewBannerNormal
+        <com.awen.codebase.common.widget.banner.RecyclerViewBannerNormal
             android:id="@+id/bannerNormal"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             app:orientation="horizontal" />
 
-        <com.awen.codebase.widget.banner.RecyclerViewBannerNormal
+        <com.awen.codebase.common.widget.banner.RecyclerViewBannerNormal
             android:id="@+id/bannerNormal2"
             android:layout_width="match_parent"
             android:layout_height="200dp"

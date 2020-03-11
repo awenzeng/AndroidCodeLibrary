@@ -5,7 +5,7 @@ package com.awen.codebase.activity;
 import android.app.Activity;
 import android.os.Bundle;
 
-import com.awen.codebase.ui.ImageEffect;
+import com.awen.codebase.common.ui.ImageEffect;
 public class ShadeActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

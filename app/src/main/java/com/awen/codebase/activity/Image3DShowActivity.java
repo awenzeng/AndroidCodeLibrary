@@ -4,8 +4,8 @@ import android.app.Activity;
 import android.os.Bundle;
 
 import com.awen.codebase.R;
-import com.awen.codebase.adapter.Image3DAdapter;
-import com.awen.codebase.ui.MyMirrorGallery;
+import com.awen.codebase.activity.adapter.Image3DAdapter;
+import com.awen.codebase.common.ui.MyMirrorGallery;
 
 public class Image3DShowActivity extends Activity {
 	public MyMirrorGallery gallery;

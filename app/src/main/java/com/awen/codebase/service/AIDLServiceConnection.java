@@ -6,7 +6,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 
 import com.awen.codebase.IMainService;
-import com.awen.codebase.utils.LogUtil;
+import com.awen.codebase.common.utils.LogUtil;
 
 /**
  * Created by Administrator on 2017/12/11.

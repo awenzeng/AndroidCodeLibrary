@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.awen.codebase.R;
-import com.awen.codebase.ui.KeywordsFlow;
+import com.awen.codebase.common.ui.KeywordsFlow;
 
 public class SearchFlyActivity extends Activity implements OnClickListener {
     public static final String[] keywords = { "QQ", "Sodino", "APK", "GFW",

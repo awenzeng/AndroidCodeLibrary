@@ -4,7 +4,7 @@ import android.accessibilityservice.AccessibilityService;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 
-import com.awen.codebase.utils.LogUtil;
+import com.awen.codebase.common.utils.LogUtil;
 
 import java.util.List;
 

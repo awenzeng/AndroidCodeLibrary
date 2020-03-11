@@ -2,20 +2,18 @@ package com.awen.codebase.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 
 import com.awen.codebase.R;
-import com.awen.codebase.widget.banner.BannerLayout;
-import com.awen.codebase.widget.banner.RecyclerViewBannerBase;
-import com.awen.codebase.widget.banner.RecyclerViewBannerNormal;
+import com.awen.codebase.common.widget.banner.BannerLayout;
+import com.awen.codebase.common.widget.banner.RecyclerViewBannerBase;
+import com.awen.codebase.common.widget.banner.RecyclerViewBannerNormal;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.OnClick;
 
 public class BannerActivity extends Activity  implements BannerLayout.OnBannerItemClickListener,RecyclerViewBannerBase.OnBannerItemClickListener{
 

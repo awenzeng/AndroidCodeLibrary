@@ -10,8 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.awen.codebase.R;
-import com.awen.codebase.ui.RoundIndicatorView;
-import com.awen.codebase.utils.FastBlurUtil;
+import com.awen.codebase.common.ui.RoundIndicatorView;
+import com.awen.codebase.common.utils.FastBlurUtil;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;

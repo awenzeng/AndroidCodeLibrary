@@ -6,7 +6,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 
 import com.awen.codebase.IMainService;
-import com.awen.codebase.utils.LogUtil;
+import com.awen.codebase.common.utils.LogUtil;
 
 /**
  * AIDLService可以实现跨进程间交互

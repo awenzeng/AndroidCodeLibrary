@@ -19,7 +19,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 
 import com.awen.codebase.R;
-import com.awen.codebase.utils.KeyboardUtil;
+import com.awen.codebase.common.utils.KeyboardUtil;
 
 import java.lang.reflect.Method;
 

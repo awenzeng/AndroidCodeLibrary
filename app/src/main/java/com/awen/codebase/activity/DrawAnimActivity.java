@@ -20,13 +20,13 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.awen.codebase.R;
-import com.awen.codebase.anim.BoomView;
-import com.awen.codebase.anim.ChipsView;
-import com.awen.codebase.anim.CoinsView;
-import com.awen.codebase.anim.LoadingView;
-import com.awen.codebase.anim.MergeView;
-import com.awen.codebase.anim.MoreFrameView;
-import com.awen.codebase.anim.ShowViewManager;
+import com.awen.codebase.common.anim.BoomView;
+import com.awen.codebase.common.anim.ChipsView;
+import com.awen.codebase.common.anim.CoinsView;
+import com.awen.codebase.common.anim.LoadingView;
+import com.awen.codebase.common.anim.MergeView;
+import com.awen.codebase.common.anim.MoreFrameView;
+import com.awen.codebase.common.anim.ShowViewManager;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,44 +1,30 @@
 package com.awen.codebase.activity;
 
 import android.app.Activity;
-import android.app.AlarmManager;
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.content.res.AssetManager;
-import android.content.res.Resources;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.IBinder;
 import android.os.Message;
-import android.os.RemoteException;
-import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.awen.codebase.CodeBaseApp;
-import com.awen.codebase.IMainService;
 import com.awen.codebase.R;
-import com.awen.codebase.adapter.MainAdapter;
-import com.awen.codebase.badge.BadgeNumberManager;
-import com.awen.codebase.badge.BadgeNumberManagerXiaoMi;
-import com.awen.codebase.badge.MobileBrand;
+import com.awen.codebase.activity.adapter.MainAdapter;
+import com.awen.codebase.common.badge.BadgeNumberManager;
+import com.awen.codebase.common.badge.BadgeNumberManagerXiaoMi;
+import com.awen.codebase.common.badge.MobileBrand;
 import com.awen.codebase.model.AnnotationReflectModel;
+import com.awen.codebase.model.SynchronizedTestModel;
 import com.awen.codebase.service.AIDLService;
 import com.awen.codebase.service.AIDLServiceConnection;
-import com.awen.codebase.service.NormalService;
 import com.awen.codebase.service.WorkService;
-import com.awen.codebase.utils.LogUtil;
 
 public class MainActivity extends Activity {
     private ListView listView;
@@ -48,7 +34,7 @@ public class MainActivity extends Activity {
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
             "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity","MarqueeTextActivity"};
 
-    private   Handler handler = new Handler() {
+    private Handler handler = new Handler() {
 
         @Override
         public void handleMessage(Message msg) {
@@ -78,6 +64,10 @@ public class MainActivity extends Activity {
         Intent intent = new Intent(this, AIDLService.class);
         AIDLServiceConnection connection = new AIDLServiceConnection();
         bindService(intent,connection,BIND_AUTO_CREATE);
+
+        SynchronizedTestModel test = new SynchronizedTestModel();
+        test.new TestThread(false).start();
+        test.new TestThread(true).start();
 
 //        startService(new Intent(this, WorkService.class));
     }

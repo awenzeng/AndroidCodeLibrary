@@ -3,23 +3,20 @@ package com.awen.codebase.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.awen.codebase.R;
-import com.awen.codebase.ui.FloatCycleView;
-import com.awen.codebase.utils.ToastUtil;
+import com.awen.codebase.common.ui.FloatCycleView;
+import com.awen.codebase.common.utils.ToastUtil;
 
 public class FloatCycleViewActivity extends Activity {
 

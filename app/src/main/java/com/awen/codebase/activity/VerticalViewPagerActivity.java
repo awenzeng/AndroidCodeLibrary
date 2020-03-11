@@ -1,21 +1,17 @@
 package com.awen.codebase.activity;
 
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 import com.awen.codebase.R;
-import com.awen.codebase.ui.VerticalViewPager;
-import com.awen.codebase.utils.ScreenSizeUtil;
+import com.awen.codebase.common.ui.VerticalViewPager;
 
 import java.util.Locale;
 

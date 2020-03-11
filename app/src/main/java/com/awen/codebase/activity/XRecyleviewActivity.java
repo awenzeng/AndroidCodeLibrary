@@ -6,9 +6,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 
 import com.awen.codebase.R;
-import com.awen.codebase.adapter.SwipeAdapter;
-import com.awen.codebase.widget.SwipeDividerDecoration;
-import com.awen.codebase.widget.SwipeRecycleView;
+import com.awen.codebase.activity.adapter.SwipeAdapter;
+import com.awen.codebase.common.widget.SwipeDividerDecoration;
+import com.awen.codebase.common.widget.SwipeRecycleView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

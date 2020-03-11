@@ -45,7 +45,7 @@
         android:layout_below="@id/layout"
         android:text="开始动画" />
 
-    <com.awen.codebase.ui.LoadingCircleView
+    <com.awen.codebase.common.ui.LoadingCircleView
         android:id="@+id/loadingCircleView"
         android:layout_below="@id/button"
         android:layout_marginTop="50dp"
@@ -64,7 +64,7 @@
         />
 
 
-    <com.awen.codebase.widget.Down360ViewGroup
+    <com.awen.codebase.common.widget.Down360ViewGroup
         android:id="@+id/down_loading_viewgroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

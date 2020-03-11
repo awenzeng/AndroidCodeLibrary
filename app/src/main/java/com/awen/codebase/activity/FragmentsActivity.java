@@ -10,11 +10,11 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 
 import com.awen.codebase.R;
-import com.awen.codebase.fragment.AniGridFragment;
-import com.awen.codebase.fragment.ExplosionFragment;
-import com.awen.codebase.fragment.MultiTouchScaleFragment;
-import com.awen.codebase.fragment.PopupWindowFragment;
-import com.awen.codebase.fragment.ProgressBarFragment;
+import com.awen.codebase.activity.fragment.AniGridFragment;
+import com.awen.codebase.activity.fragment.ExplosionFragment;
+import com.awen.codebase.activity.fragment.MultiTouchScaleFragment;
+import com.awen.codebase.activity.fragment.PopupWindowFragment;
+import com.awen.codebase.activity.fragment.ProgressBarFragment;
 
 public class FragmentsActivity extends FragmentActivity implements OnClickListener {
     private FrameLayout layout;

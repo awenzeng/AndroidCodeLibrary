@@ -14,8 +14,8 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
 import com.awen.codebase.R;
-import com.awen.codebase.ui.RotateAnimations;
-import com.awen.codebase.ui.Rotate3D;
+import com.awen.codebase.common.ui.RotateAnimations;
+import com.awen.codebase.common.ui.Rotate3D;
 
 public class RotateActivity extends Activity implements OnTouchListener {
     private ViewGroup layoutmain;

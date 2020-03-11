@@ -17,8 +17,8 @@ import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.awen.codebase.R;
-import com.awen.codebase.utils.AnimatioinUtil;
-import com.awen.codebase.utils.DimensionUtil;
+import com.awen.codebase.common.utils.AnimatioinUtil;
+import com.awen.codebase.common.utils.DimensionUtil;
 
 public class GroupsActivity extends ActivityGroup implements OnClickListener {
     private FrameLayout layout;

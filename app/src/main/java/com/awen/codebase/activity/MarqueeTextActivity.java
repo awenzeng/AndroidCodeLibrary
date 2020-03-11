@@ -7,12 +7,11 @@ import android.support.annotation.Nullable;
 import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.ForegroundColorSpan;
-import android.text.style.URLSpan;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.awen.codebase.R;
-import com.awen.codebase.ui.MarqueeView;
+import com.awen.codebase.common.ui.MarqueeView;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     >
 
-    <com.awen.codebase.ui.RoundIndicatorView
+    <com.awen.codebase.common.ui.RoundIndicatorView
         android:id="@+id/my_view"
         android:layout_width="match_parent"
         android:layout_height="300dp" />

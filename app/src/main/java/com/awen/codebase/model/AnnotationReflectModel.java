@@ -1,11 +1,11 @@
 package com.awen.codebase.model;
 
-import com.awen.codebase.annotition.AnnotionProxy;
-import com.awen.codebase.annotition.UserInterface;
-import com.awen.codebase.annotition.UserMethod;
-import com.awen.codebase.annotition.UserParam;
-import com.awen.codebase.annotition.User;
-import com.awen.codebase.utils.LogUtil;
+import com.awen.codebase.common.annotition.AnnotionProxy;
+import com.awen.codebase.common.annotition.UserInterface;
+import com.awen.codebase.common.annotition.UserMethod;
+import com.awen.codebase.common.annotition.UserParam;
+import com.awen.codebase.common.annotition.User;
+import com.awen.codebase.common.utils.LogUtil;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
@@ -18,19 +18,17 @@ import java.lang.reflect.Modifier;
 
 public class AnnotationReflectModel {
     private static final String TAG = "AnnotationReflectModel";
-
     /**
      * 注解调用
      */
     public static void invokeAnnotation() {
-
         //动态代理方式来
         UserInterface userInterface = AnnotionProxy.create(UserInterface.class);
         userInterface.getUser("我之存在，因为有你。");
 
         //反射方式
         try {
-            Class c1 = Class.forName("com.awen.codebase.annotition.User");
+            Class c1 = Class.forName("com.awen.codebase.common.annotition.User");
             Method method = c1.getDeclaredMethod("getName");
             UserMethod userMethod = method.getAnnotation(UserMethod.class);
             if (userMethod != null) {
@@ -156,7 +154,7 @@ public class AnnotationReflectModel {
 
             /********************************反射获取类的三种方法start****************/
             //第一种方式：
-            Class c = Class.forName("com.awen.codebase.annotition.User");
+            Class c = Class.forName("com.awen.codebase.common.annotition.User");
 
             //第二种方式：
             Class c2 = User.class;

@@ -4,9 +4,8 @@ import android.app.Service;
 import android.content.Intent;
 import android.os.IBinder;
 
-import com.awen.codebase.R;
-import com.awen.codebase.utils.LogUtil;
-import com.awen.codebase.utils.ToastUtil;
+import com.awen.codebase.common.utils.LogUtil;
+import com.awen.codebase.common.utils.ToastUtil;
 
 /**
  *  一般Service

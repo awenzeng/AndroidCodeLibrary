@@ -19,7 +19,7 @@
 
     </FrameLayout>
 
-    <com.awen.codebase.widget.Down360LoadingView
+    <com.awen.codebase.common.widget.Down360LoadingView
         android:id="@+id/down_load"
         android:layout_width="280dp"
         android:layout_height="45dp"

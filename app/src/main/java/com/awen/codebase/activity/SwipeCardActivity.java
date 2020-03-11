@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.awen.codebase.R;
-import com.awen.codebase.ui.swipecard.SwipeFlingAdapterView;
+import com.awen.codebase.common.ui.swipecard.SwipeFlingAdapterView;
 
 import java.util.ArrayList;
 

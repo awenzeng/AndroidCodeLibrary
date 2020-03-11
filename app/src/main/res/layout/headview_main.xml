@@ -6,7 +6,7 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity" >
 
-    <com.awen.codebase.ui.CircleImage
+    <com.awen.codebase.common.ui.CircleImage
         android:id="@+id/circularImage1"
         android:layout_width="100dp"
         android:layout_height="100dp"

@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     tools:ignore="MergeRootFrame">
 
-    <com.awen.codebase.ui.VerticalViewPager
+    <com.awen.codebase.common.ui.VerticalViewPager
         android:id="@+id/verticalviewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

@@ -7,9 +7,9 @@ import android.os.Message;
 
 import com.alibaba.fastjson.JSONObject;
 import com.awen.codebase.activity.ProxyActivity;
-import com.awen.codebase.utils.AutoScreenUtils;
-import com.awen.codebase.utils.HookAmsUtil;
-import com.awen.codebase.utils.LogUtil;
+import com.awen.codebase.common.utils.AutoScreenUtils;
+import com.awen.codebase.common.utils.HookAmsUtil;
+import com.awen.codebase.common.utils.LogUtil;
 import com.awen.messagebus.IHandleMessage;
 import com.awen.messagebus.MessageBus;
 

@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Binder;
 import android.os.IBinder;
 
-import com.awen.codebase.utils.LogUtil;
+import com.awen.codebase.common.utils.LogUtil;
 
 /**
  *  可以与Activity交互的Service

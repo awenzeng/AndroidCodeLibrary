@@ -5,7 +5,7 @@
     android:background="@drawable/notesbackground"
     android:gravity="center" >
 
-    <com.awen.codebase.ui.AniGridDragGrid
+    <com.awen.codebase.common.ui.AniGridDragGrid
         android:id="@+id/gridview"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -14,7 +14,7 @@
         android:scrollbars="vertical"
         android:stretchMode="columnWidth"
         android:verticalSpacing="25dp" >
-    </com.awen.codebase.ui.AniGridDragGrid>
+    </com.awen.codebase.common.ui.AniGridDragGrid>
     <!-- android:listSelector="@android:color/transparent" -->
 
 </RelativeLayout>
