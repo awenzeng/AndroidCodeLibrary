@@ -21,6 +21,7 @@ import com.awen.codebase.common.badge.BadgeNumberManager;
 import com.awen.codebase.common.badge.BadgeNumberManagerXiaoMi;
 import com.awen.codebase.common.badge.MobileBrand;
 import com.awen.codebase.model.AnnotationReflectModel;
+import com.awen.codebase.model.ClassLoadModel;
 import com.awen.codebase.model.SynchronizedTestModel;
 import com.awen.codebase.service.AIDLService;
 import com.awen.codebase.service.AIDLServiceConnection;
@@ -51,39 +52,64 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
 
         initView();
-        showBadgeIcon();
+        initData();
 
-        //获取注解
-        AnnotationReflectModel.invokeAnnotation();
-        //调用反射
-        AnnotationReflectModel.invokeReflect();
-
-        handler.sendEmptyMessageDelayed(0, 300);
-
-        //AIDL跨进程通信
-        Intent intent = new Intent(this, AIDLService.class);
-        AIDLServiceConnection connection = new AIDLServiceConnection();
-        bindService(intent,connection,BIND_AUTO_CREATE);
-
-        SynchronizedTestModel test = new SynchronizedTestModel();
-        test.new TestThread(false).start();
-        test.new TestThread(true).start();
-
-//        startService(new Intent(this, WorkService.class));
     }
 
 
     private void initView() {
-        listView = (ListView) this.findViewById(R.id.listView);
-        listView.addHeaderView(initHeadView());
+        listView = this.findViewById(R.id.listView);
+        View view = getLayoutInflater().inflate(R.layout.headview_main, null);
+        animationImageView =  view.findViewById(R.id.ImageView01);
+        listView.addHeaderView(view);
         MainAdapter myAdapter = new MainAdapter(this, iStrings);
         listView.setAdapter(myAdapter);
     }
 
-    private View initHeadView() {
-        View view = getLayoutInflater().inflate(R.layout.headview_main, null);
-        animationImageView = (ImageView) view.findViewById(R.id.ImageView01);
-        return view;
+    private void initData(){
+        showBadgeIcon();
+        handler.sendEmptyMessageDelayed(0, 300);
+        new ClassLoadModel();
+
+        testAnnotationReflect();
+        testAIDL();
+        testSynchronized();
+    }
+
+    /**
+     * 测试注解和反射
+     */
+    private void testAnnotationReflect(){
+        //获取注解
+        AnnotationReflectModel.invokeAnnotation();
+        //调用反射
+        AnnotationReflectModel.invokeReflect();
+    }
+
+    /**
+     * 测试AIDL跨进程通信
+     */
+    private void testAIDL(){
+        Intent intent = new Intent(this, AIDLService.class);
+        AIDLServiceConnection connection = new AIDLServiceConnection();
+        bindService(intent,connection,BIND_AUTO_CREATE);
+    }
+
+    /**
+     * 测试线程同步
+     */
+    private void testSynchronized(){
+        SynchronizedTestModel test = new SynchronizedTestModel();
+        SynchronizedTestModel.TestThread threadA =  test.new TestThread("线程A");
+        SynchronizedTestModel.TestThread threadB =  test.new TestThread("线程B");
+        threadA.start();
+        threadB.start();
+        try {
+            Thread.sleep(10000);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        test.isClose = true;
     }
 
     /**

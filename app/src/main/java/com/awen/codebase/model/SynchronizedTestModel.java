@@ -9,42 +9,34 @@ import com.awen.codebase.common.utils.LogUtil;
  * @Description:
  */
 public class SynchronizedTestModel {
-    private boolean ready = true;
-    private int result = 0;
     private int number = 1;
-
-    public void write() {
-        ready = true;
-        number = 2;
-    }
+    private byte[] a = new byte[0];
+    public volatile boolean isClose = false;
 
     public void read() {
-        if (ready) {
-            result = number * 3;
+        synchronized (a){
+            number++;
+            LogUtil.androidLog("SynchronizedTest", "Thread name:" + Thread.currentThread().getName() + ",number is " + number);
         }
-        LogUtil.androidLog("SynchronizedTest", "result is " + result);
     }
 
     public class TestThread extends Thread {
-        private boolean flag;
+        String name;
+        int time = 1000;
 
-        public TestThread(boolean flag) {
-            this.flag = flag;
+        public TestThread(String name) {
+            super(name);
+            this.name = name;
         }
 
         @Override
         public void run() {
             // TODO Auto-generated method stub
-            while (true) {
-                if (flag) {
-                    write();
-                } else {
-                    read();
-                }
-
+            while (!isClose) {
+                read();
                 try {
-                    Thread.sleep(1500);
-                }catch (Exception e){
+                    Thread.sleep(time);
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
