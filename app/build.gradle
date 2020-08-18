@@ -47,6 +47,8 @@ dependencies {
     implementation 'io.reactivex:rxjava:1.1.0'
     implementation 'io.reactivex:rxandroid:1.1.0'
     implementation 'com.android.support:appcompat-v7:26.+'
+    implementation 'com.google.android:flexbox:0.3.0-alpha3'
+    implementation 'com.zhy:base-rvadapter:3.0.3'
     implementation 'com.alibaba:fastjson:1.2.55'
     implementation 'com.github.awenzeng:MessageBus:v1.0'
     implementation 'com.android.support:recyclerview-v7:26.1.0'

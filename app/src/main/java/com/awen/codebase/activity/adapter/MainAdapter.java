@@ -12,6 +12,7 @@ import com.awen.codebase.activity.AnimationActivity;
 import com.awen.codebase.activity.BannerActivity;
 import com.awen.codebase.activity.CreditRoundActivity;
 import com.awen.codebase.activity.DrawAnimActivity;
+import com.awen.codebase.activity.FlexboxLayoutActivity;
 import com.awen.codebase.activity.FloatCycleViewActivity;
 import com.awen.codebase.activity.FragmentsActivity;
 import com.awen.codebase.activity.GroupsActivity;
@@ -113,6 +114,9 @@ public class MainAdapter extends BaseAdapter {
                         break;
                     case "MarqueeTextActivity":
                         intent = new Intent(mContext,MarqueeTextActivity.class);
+                        break;
+                    case "FlexboxLayoutActivity":
+                        intent = new Intent(mContext, FlexboxLayoutActivity.class);
                         break;
                     default:
                         break;
