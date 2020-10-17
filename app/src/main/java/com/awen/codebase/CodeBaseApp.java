@@ -28,10 +28,10 @@ public class CodeBaseApp extends Application {
         bUseFont = false;
         AutoScreenUtils.AdjustDensity(this);
 
-        //这个ProxyActivity在清单文件中注册过，以后所有的Activitiy都可以用ProxyActivity无需声明，绕过监测
-        HookAmsUtil hookAmsUtil = new HookAmsUtil(ProxyActivity.class, this);
-        hookAmsUtil.hookSystemHandler();
-        hookAmsUtil.hookAms();
+//        //这个ProxyActivity在清单文件中注册过，以后所有的Activitiy都可以用ProxyActivity无需声明，绕过监测
+//        HookAmsUtil hookAmsUtil = new HookAmsUtil(ProxyActivity.class, this);
+//        hookAmsUtil.hookSystemHandler();
+//        hookAmsUtil.hookAms();
 
         MessageBus.getDefault().handleMessage(new IHandleMessage() {
             @Override
