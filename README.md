@@ -26,6 +26,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2020-8-18]增加了FlexBoxLayout的使用例子
 
+[2020-8-18]增加了颜色透明百分比转16进制对应表
+
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)
