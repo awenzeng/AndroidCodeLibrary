@@ -100,6 +100,7 @@
                   android:theme="@style/AppTheme_NoAppBar"/>
         <activity android:name=".activity.MarqueeTextActivity"/>
         <activity android:name=".activity.ProxyActivity"/>
+        <activity android:name=".activity.SVGActivity"/>
     </application>
 
 </manifest>
