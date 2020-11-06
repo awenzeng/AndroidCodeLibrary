@@ -25,6 +25,7 @@ import com.awen.codebase.activity.SVGActivity;
 import com.awen.codebase.activity.SwipeCardActivity;
 import com.awen.codebase.activity.SwitchButtonActivity;
 import com.awen.codebase.activity.VerticalViewPagerActivity;
+import com.awen.codebase.activity.WebViewActivity;
 import com.awen.codebase.activity.XRecyleviewActivity;
 import com.awen.messagebus.MessageBus;
 
@@ -121,6 +122,9 @@ public class MainAdapter extends BaseAdapter {
                         break;
                     case "SVGActivity":
                         intent = new Intent(mContext, SVGActivity.class);
+                        break;
+                    case "WebViewActivity":
+                        intent = new Intent(mContext, WebViewActivity.class);
                         break;
                     default:
                         break;

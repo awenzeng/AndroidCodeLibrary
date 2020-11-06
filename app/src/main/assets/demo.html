@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>js调用android原生代码</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=gb2312">
+    <meta id="viewport" name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,minimal-ui">
+    <script type="text/javascript">
+
+        <!--这里取到的是 android端传过来的数据-->
+        function onReceiveMessage(event,data){
+             document.getElementById("content").innerHTML +=
+                 ("<br\>"+event+data);
+        }
+		
+		    <!--这里取到的是 android端传过来的数据-->
+        function onReceiveRoomDeviceList(data){
+             document.getElementById("content").innerHTML +=
+                 ("<br\>"+data);
+        }
+		
+		    <!--这里取到的是 android端传过来的数据-->
+        function onReceiveRoomDeviceChange(data){
+             document.getElementById("content").innerHTML +=
+                 ("<br\>"+data);
+        }
+    </script>
+</head>
+<body>
+<div id="title">Android WebView与js交互例子</div>
+    <br/><br/>
+    <button onClick="window.coocaaAppletJS.sendBroadcastMsg('https://www.baidu.com/')"> 发送广播</button>
+    <br/><br/>
+    <button onClick="window.coocaaAppletJS.sendBroadcastMsg('我要做事!!!')">发送一个新广播</button><br/>
+    <br/><br/>
+<div id="content">推送事件：</div>
+</body>
+</html>

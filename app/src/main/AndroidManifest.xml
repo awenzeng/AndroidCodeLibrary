@@ -101,6 +101,7 @@
         <activity android:name=".activity.MarqueeTextActivity"/>
         <activity android:name=".activity.ProxyActivity"/>
         <activity android:name=".activity.SVGActivity"/>
+        <activity android:name=".activity.WebViewActivity"/>
     </application>
 
 </manifest>
