@@ -28,6 +28,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2020-10-19]增加了SVG图片显示效果
 
+[2020-11-06]增加了WebView容器，JS与Web交互接口（JS推送及调用）
+
 
 # Demo
 
