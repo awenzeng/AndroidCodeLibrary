@@ -36,11 +36,16 @@ import com.awen.messagebus.MessageBus;
 public class MainAdapter extends BaseAdapter {
     private String[] iStrings;
     private Context mContext;
+    private ItemClickListener mOnClickListener;
 
     public MainAdapter(Context context, String[] iStrings) {
         super();
         this.iStrings = iStrings;
         mContext = context;
+    }
+
+    public void setItemClickListener(ItemClickListener clickListener) {
+        this.mOnClickListener = clickListener;
     }
 
     @Override
@@ -66,80 +71,17 @@ public class MainAdapter extends BaseAdapter {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = null;
                 int pos = (Integer) v.getTag();
-                switch (iStrings[pos]){
-                    case "FloatCycleViewActivity":
-                        intent = new Intent(mContext,FloatCycleViewActivity.class);
-                        break;
-                    case "GroupsActivity":
-                        intent = new Intent(mContext,GroupsActivity.class);
-                        break;
-                    case "FragmentsActivity":
-                        intent = new Intent(mContext,FragmentsActivity.class);
-                        break;
-                    case "AnimationActivity":
-                        intent = new Intent(mContext,AnimationActivity.class);
-                        break;
-                    case "ProgressBarsActivity":
-                        intent = new Intent(mContext,ProgressBarsActivity.class);
-                        break;
-                    case "SwitchButtoonActivity":
-                        intent = new Intent(mContext,SwitchButtonActivity.class);
-                        break;
-                    case "CreditRoundActivity":
-                        intent = new Intent(mContext,CreditRoundActivity.class);
-                        break;
-                    case "SwipeCardActivity":
-                        intent = new Intent(mContext,SwipeCardActivity.class);
-                        break;
-                    case "KeybordActivity":
-                        intent = new Intent(mContext,KeybordActivity.class);
-                        break;
-                    case "XRecycleView":
-                        intent = new Intent(mContext,XRecyleviewActivity.class);
-                        break;
-                    case "VerticalViewPagerActivity":
-                        intent = new Intent(mContext,VerticalViewPagerActivity.class);
-                        break;
-                    case "InfiniteViewActivity":
-                        intent = new Intent(mContext,InfiniteViewActivity.class);
-                        break;
-                    case "BannerActivity":
-                        intent = new Intent(mContext,BannerActivity.class);
-                        break;
-                    case "DrawAnimActivity":
-                        intent = new Intent(mContext,DrawAnimActivity.class);
-                        break;
-                    case "MaterialDesignActivity":
-                        intent = new Intent(mContext,MaterialDesignActivity.class);
-                        break;
-                    case "MarqueeTextActivity":
-                        intent = new Intent(mContext,MarqueeTextActivity.class);
-                        break;
-                    case "FlexboxLayoutActivity":
-                        intent = new Intent(mContext, FlexboxLayoutActivity.class);
-                        break;
-                    case "SVGActivity":
-                        intent = new Intent(mContext, SVGActivity.class);
-                        break;
-                    case "WebViewActivity":
-                        intent = new Intent(mContext, WebViewActivity.class);
-                        break;
-                    default:
-                        break;
+                if(mOnClickListener!=null){
+                    mOnClickListener.onClick(pos,iStrings[pos]);
                 }
-                mContext.startActivity(intent);
-                Message message = new Message();
-                message.obj = iStrings[pos];
-                MessageBus.getDefault().sendMessage(message);
-
-                Message msg = new Message();
-                msg.obj = "延迟消息："+iStrings[pos];
-                MessageBus.getDefault().sendMessageDelayed(msg,1500);
             }
         });
         return button;
+    }
+
+    public interface ItemClickListener{
+        void onClick(int position,String data);
     }
 
 }

@@ -26,6 +26,7 @@ import com.awen.codebase.model.SynchronizedTestModel;
 import com.awen.codebase.service.AIDLService;
 import com.awen.codebase.service.AIDLServiceConnection;
 import com.awen.codebase.service.WorkService;
+import com.awen.messagebus.MessageBus;
 
 public class MainActivity extends Activity {
     private ListView listView;
@@ -33,7 +34,7 @@ public class MainActivity extends Activity {
     private AnimationDrawable animationDrawable;
     private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
-            "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity","MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity"};
+            "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity","MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity"};
 
     private Handler handler = new Handler() {
 
@@ -64,6 +65,84 @@ public class MainActivity extends Activity {
         listView.addHeaderView(view);
         MainAdapter myAdapter = new MainAdapter(this, iStrings);
         listView.setAdapter(myAdapter);
+        myAdapter.setItemClickListener(new MainAdapter.ItemClickListener() {
+            @Override
+            public void onClick(int position, String data) {
+               Intent intent = null;
+                switch (data){
+                    case "FloatCycleViewActivity":
+                        intent = new Intent(MainActivity.this,FloatCycleViewActivity.class);
+                        break;
+                    case "GroupsActivity":
+                        intent = new Intent(MainActivity.this,GroupsActivity.class);
+                        break;
+                    case "FragmentsActivity":
+                        intent = new Intent(MainActivity.this,FragmentsActivity.class);
+                        break;
+                    case "AnimationActivity":
+                        intent = new Intent(MainActivity.this,AnimationActivity.class);
+                        break;
+                    case "ProgressBarsActivity":
+                        intent = new Intent(MainActivity.this,ProgressBarsActivity.class);
+                        break;
+                    case "SwitchButtoonActivity":
+                        intent = new Intent(MainActivity.this,SwitchButtonActivity.class);
+                        break;
+                    case "CreditRoundActivity":
+                        intent = new Intent(MainActivity.this,CreditRoundActivity.class);
+                        break;
+                    case "SwipeCardActivity":
+                        intent = new Intent(MainActivity.this,SwipeCardActivity.class);
+                        break;
+                    case "KeybordActivity":
+                        intent = new Intent(MainActivity.this,KeybordActivity.class);
+                        break;
+                    case "XRecycleView":
+                        intent = new Intent(MainActivity.this,XRecyleviewActivity.class);
+                        break;
+                    case "VerticalViewPagerActivity":
+                        intent = new Intent(MainActivity.this,VerticalViewPagerActivity.class);
+                        break;
+                    case "InfiniteViewActivity":
+                        intent = new Intent(MainActivity.this,InfiniteViewActivity.class);
+                        break;
+                    case "BannerActivity":
+                        intent = new Intent(MainActivity.this,BannerActivity.class);
+                        break;
+                    case "DrawAnimActivity":
+                        intent = new Intent(MainActivity.this,DrawAnimActivity.class);
+                        break;
+                    case "MaterialDesignActivity":
+                        intent = new Intent(MainActivity.this,MaterialDesignActivity.class);
+                        break;
+                    case "MarqueeTextActivity":
+                        intent = new Intent(MainActivity.this,MarqueeTextActivity.class);
+                        break;
+                    case "FlexboxLayoutActivity":
+                        intent = new Intent(MainActivity.this, FlexboxLayoutActivity.class);
+                        break;
+                    case "SVGActivity":
+                        intent = new Intent(MainActivity.this, SVGActivity.class);
+                        break;
+                    case "WebViewActivity":
+                        intent = new Intent(MainActivity.this, WebViewActivity.class);
+                        break;
+                    case "VueFrameActivity":
+                        intent = new Intent(MainActivity.this, VueFrameActivity.class);
+                        break;
+                    default:
+                        break;
+                }
+               startActivity(intent);
+                Message message = new Message();
+                message.obj = data;
+                MessageBus.getDefault().sendMessage(message);
+
+                Message msg = new Message();
+                msg.obj = "延迟消息："+data;
+                MessageBus.getDefault().sendMessageDelayed(msg,1500);
+            }
+        });
     }
 
     private void initData(){

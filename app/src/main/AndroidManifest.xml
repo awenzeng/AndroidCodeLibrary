@@ -102,6 +102,7 @@
         <activity android:name=".activity.ProxyActivity"/>
         <activity android:name=".activity.SVGActivity"/>
         <activity android:name=".activity.WebViewActivity"/>
+        <activity android:name=".activity.VueFrameActivity"/>
     </application>
 
 </manifest>

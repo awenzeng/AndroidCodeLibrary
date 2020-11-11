@@ -39,6 +39,7 @@ public class ShowViewManager {
 			mParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
 					| WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
 			mParams.format = PixelFormat.RGBA_8888;
+
 			view.setFocusable(false);
 		}
 		if(lastView!=null){
