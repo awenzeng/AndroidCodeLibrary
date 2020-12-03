@@ -8,6 +8,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.Choreographer;
+import android.view.Display;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
@@ -20,6 +22,7 @@ import com.awen.codebase.activity.adapter.MainAdapter;
 import com.awen.codebase.common.badge.BadgeNumberManager;
 import com.awen.codebase.common.badge.BadgeNumberManagerXiaoMi;
 import com.awen.codebase.common.badge.MobileBrand;
+import com.awen.codebase.common.utils.FPSFrameCallback;
 import com.awen.codebase.model.AnnotationReflectModel;
 import com.awen.codebase.model.ClassLoadModel;
 import com.awen.codebase.model.SynchronizedTestModel;
@@ -32,6 +35,7 @@ public class MainActivity extends Activity {
     private ListView listView;
     private ImageView animationImageView;
     private AnimationDrawable animationDrawable;
+    private FPSFrameCallback mFpsFrameCallback;
     private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
             "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity","MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity"};
@@ -151,6 +155,7 @@ public class MainActivity extends Activity {
         new ClassLoadModel();
 
         testAnnotationReflect();
+        addFPSMornitor();
 //        testAIDL();
 //        testSynchronized();
     }
@@ -164,6 +169,13 @@ public class MainActivity extends Activity {
         //调用反射
         AnnotationReflectModel.invokeReflect();
     }
+
+    private void addFPSMornitor(){
+        Display display = getWindowManager().getDefaultDisplay();
+        mFpsFrameCallback = new FPSFrameCallback(System.nanoTime(),display.getRefreshRate());
+        Choreographer.getInstance().postFrameCallback(mFpsFrameCallback);
+    }
+
 
     /**
      * 测试AIDL跨进程通信
@@ -245,5 +257,6 @@ public class MainActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         stopService(new Intent(this, WorkService.class));
+        Choreographer.getInstance().removeFrameCallback(mFpsFrameCallback);
     }
 }
