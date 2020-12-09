@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
     private FPSFrameCallback mFpsFrameCallback;
     private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
-            "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity","MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity"};
+            "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity","MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity","LottieActivity"};
 
     private Handler handler = new Handler() {
 
@@ -134,6 +134,8 @@ public class MainActivity extends Activity {
                     case "VueFrameActivity":
                         intent = new Intent(MainActivity.this, VueFrameActivity.class);
                         break;
+                    case "LottieActivity":
+                        intent = new Intent(MainActivity.this, LottieActivity.class);
                     default:
                         break;
                 }
