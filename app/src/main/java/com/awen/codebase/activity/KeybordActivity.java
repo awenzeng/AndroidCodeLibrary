@@ -19,6 +19,7 @@ import android.view.WindowManager;
 import android.widget.EditText;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.utils.KeyboardUtil;
 
 import java.lang.reflect.Method;
@@ -26,7 +27,7 @@ import java.lang.reflect.Method;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class KeybordActivity extends Activity {
+public class KeybordActivity extends BaseActivity {
     @BindView(R.id.keyboard_view)
     KeyboardView keyboardView;
     private Context ctx;
@@ -37,7 +38,7 @@ public class KeybordActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_keybord);
+        setActivityContentView(R.layout.act_keybord);
         ButterKnife.bind(this);
 
         //get the codes for xml

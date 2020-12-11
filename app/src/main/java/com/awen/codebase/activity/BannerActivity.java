@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.Toast;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.widget.banner.BannerLayout;
 import com.awen.codebase.common.widget.banner.RecyclerViewBannerBase;
 import com.awen.codebase.common.widget.banner.RecyclerViewBannerNormal;
@@ -15,7 +16,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class BannerActivity extends Activity  implements BannerLayout.OnBannerItemClickListener,RecyclerViewBannerBase.OnBannerItemClickListener{
+public class BannerActivity extends BaseActivity implements BannerLayout.OnBannerItemClickListener,RecyclerViewBannerBase.OnBannerItemClickListener{
 
     @BindView(R.id.banner)
     BannerLayout banner;
@@ -29,7 +30,7 @@ public class BannerActivity extends Activity  implements BannerLayout.OnBannerIt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_banner);
+        setActivityContentView(R.layout.activity_banner);
         ButterKnife.bind(this);
         List<String> list = new ArrayList<>();
         list.add("http://imglf2.nosdn.127.net/img/MUgydEdvOEdHeHZ4NjYwRjB5NDZBN3dmYUVXT2NyNXdpV2NleHhQeFNkWkwyTE4xVlF1MHB3PT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg");

@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.VerticalViewPager;
 
 import java.util.Locale;
@@ -19,7 +20,7 @@ import java.util.Locale;
  * Created by Administrator on 2017/9/14.
  */
 
-public class VerticalViewPagerActivity extends FragmentActivity {
+public class VerticalViewPagerActivity extends BaseActivity {
 
     private static final float MIN_SCALE = 0.75f;
     private static final float MIN_ALPHA = 0.75f;
@@ -27,7 +28,7 @@ public class VerticalViewPagerActivity extends FragmentActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_vertical_viewpager);
+        setActivityContentView(R.layout.act_vertical_viewpager);
         VerticalViewPager verticalViewPager = (VerticalViewPager) findViewById(R.id.verticalviewpager);
 
         verticalViewPager.setAdapter(new DummyAdapter(getSupportFragmentManager()));

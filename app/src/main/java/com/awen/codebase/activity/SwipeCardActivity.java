@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.swipecard.SwipeFlingAdapterView;
 
 import java.util.ArrayList;
@@ -22,7 +23,7 @@ import butterknife.OnClick;
  * Created by AwenZeng on 2017/3/6.
  */
 
-public class SwipeCardActivity extends Activity {
+public class SwipeCardActivity extends BaseActivity {
     @BindView(R.id.frame)
     SwipeFlingAdapterView flingContainer;
     @BindView(R.id.left)
@@ -37,7 +38,7 @@ public class SwipeCardActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_swipe_card);
+        setActivityContentView(R.layout.activity_swipe_card);
         ButterKnife.bind(this);
 
         dataList = new ArrayList<>();

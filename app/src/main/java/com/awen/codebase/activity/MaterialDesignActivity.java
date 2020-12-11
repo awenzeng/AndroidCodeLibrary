@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.ui.statusbar.StatusBarCompat;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,6 +38,7 @@ public class MaterialDesignActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        StatusBarCompat.setStatusBarColor(this,getResources().getColor(R.color.main_color));
         setContentView(R.layout.act_material_design);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setTitle("Welcome Material Design!!!");

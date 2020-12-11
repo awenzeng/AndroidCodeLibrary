@@ -77,15 +77,15 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.MainActivity"/>
-        <activity android:name=".activity.RotateActivity"/>
-        <activity android:name=".activity.SearchFlyActivity"/>
+        <activity android:name=".activity.group.RotateActivity"/>
+        <activity android:name=".activity.group.SearchFlyActivity"/>
         <activity android:name=".activity.VerticalViewPagerActivity"/>
         <activity android:name=".activity.FloatCycleViewActivity"/>
         <activity android:name=".activity.SwitchButtonActivity"/>
         <activity android:name=".activity.SwipeCardActivity"/>
-        <activity android:name=".activity.Image3DShowActivity"/>
-        <activity android:name=".activity.TabDemoActivity"/>
-        <activity android:name=".activity.ShadeActivity"/>
+        <activity android:name=".activity.group.Image3DShowActivity"/>
+        <activity android:name=".activity.group.TabDemoActivity"/>
+        <activity android:name=".activity.group.ShadeActivity"/>
         <activity android:name=".activity.AnimationActivity"/>
         <activity android:name=".activity.ProgressBarsActivity" />
         <activity android:name=".activity.FragmentsActivity"/>

@@ -91,4 +91,11 @@
             <enum name="left_to_right" value="3"/>
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="ActivityTitleBar">
+        <attr name="titleBarTitle" format="string"/>
+        <attr name="titleBarLeftImage" format="reference"/>
+        <attr name="titleBarRightImage" format="reference"/>
+        <attr name="titleBarBackground" format="reference|color"/>
+    </declare-styleable>
 </resources>

@@ -11,8 +11,9 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 
-public class ProgressBarsActivity extends Activity{
+public class ProgressBarsActivity extends BaseActivity {
 	
     private ProgressBar mColor = null;
     private ProgressBar mRight = null;
@@ -53,7 +54,7 @@ public class ProgressBarsActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.act_progressbars);
+		setActivityContentView(R.layout.act_progressbars);
 		colorProgressBar();
 		fromLeftProgressBar();
 		fromRightProgressBar();

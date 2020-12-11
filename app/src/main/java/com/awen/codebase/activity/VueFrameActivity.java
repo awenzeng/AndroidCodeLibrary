@@ -7,8 +7,9 @@ import android.widget.ListView;
 
 import com.awen.codebase.R;
 import com.awen.codebase.activity.adapter.MainAdapter;
+import com.awen.codebase.common.base.BaseActivity;
 
-public class VueFrameActivity extends Activity {
+public class VueFrameActivity extends BaseActivity {
     private ListView listView;
     private String[] iStrings = {"Vue移动端框架","Vant-有赞", "Mint-饿了么", "WotDesign-京东", "NutUI-京东", "vux",
             "vonic","Cube-滴滴", "Mand-金融", "vue-charts-图表", "vue-recyclerview",
@@ -18,7 +19,7 @@ public class VueFrameActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setActivityContentView(R.layout.activity_main);
         initView();
     }
 

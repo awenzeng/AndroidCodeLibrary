@@ -11,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.MarqueeView;
 
 import java.util.ArrayList;
@@ -20,7 +21,7 @@ import java.util.List;
  * Describe:
  * Created by AwenZeng on 2019/3/26
  */
-public class MarqueeTextActivity extends Activity {
+public class MarqueeTextActivity extends BaseActivity {
 
     private MarqueeView marqueeView;
     private MarqueeView marqueeView1;
@@ -31,7 +32,7 @@ public class MarqueeTextActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_marquee_text);
+        setActivityContentView(R.layout.act_marquee_text);
         marqueeView = findViewById(R.id.marqueeView);
         marqueeView1 = findViewById(R.id.marqueeView1);
         marqueeView2 = findViewById(R.id.marqueeView2);

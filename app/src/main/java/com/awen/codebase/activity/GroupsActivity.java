@@ -17,6 +17,12 @@ import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
 import com.awen.codebase.R;
+import com.awen.codebase.activity.group.Image3DShowActivity;
+import com.awen.codebase.activity.group.RotateActivity;
+import com.awen.codebase.activity.group.SearchFlyActivity;
+import com.awen.codebase.activity.group.ShadeActivity;
+import com.awen.codebase.activity.group.TabDemoActivity;
+import com.awen.codebase.common.ui.statusbar.StatusBarCompat;
 import com.awen.codebase.common.utils.AnimatioinUtil;
 import com.awen.codebase.common.utils.DimensionUtil;
 
@@ -34,6 +40,7 @@ public class GroupsActivity extends ActivityGroup implements OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
+        StatusBarCompat.setStatusBarColor(this,getResources().getColor(R.color.main_color));
         setContentView(R.layout.act_groups);
         layout = (FrameLayout) this.findViewById(R.id.layout_groups);
         button = (Button) this.findViewById(R.id.button01);

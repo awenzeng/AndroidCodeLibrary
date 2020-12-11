@@ -16,6 +16,7 @@ import com.awen.codebase.activity.webview.AppletJavascriptInterface;
 import com.awen.codebase.activity.webview.AppletWebChromeClient;
 import com.awen.codebase.activity.webview.AppletWebViewClinet;
 import com.awen.codebase.activity.webview.IAppletJsPushListener;
+import com.awen.codebase.common.base.BaseActivity;
 
 /**
  * @ClassName: WebViewActivity
@@ -23,7 +24,7 @@ import com.awen.codebase.activity.webview.IAppletJsPushListener;
  * @CreateDate: 2020/11/6 20:59
  * @Description:
  */
-public class WebViewActivity extends Activity implements IAppletJsPushListener {
+public class WebViewActivity extends BaseActivity implements IAppletJsPushListener {
     public static final String TAG = "WebView";
     private WebView mWebView;
     private ProgressBar mProgressBar;
@@ -36,7 +37,7 @@ public class WebViewActivity extends Activity implements IAppletJsPushListener {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_webview);
+        setActivityContentView(R.layout.act_webview);
         initData(getIntent());
         init();
     }

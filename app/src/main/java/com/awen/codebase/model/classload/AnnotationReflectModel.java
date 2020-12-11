@@ -1,4 +1,4 @@
-package com.awen.codebase.model;
+package com.awen.codebase.model.classload;
 
 import com.awen.codebase.common.annotition.AnnotionProxy;
 import com.awen.codebase.common.annotition.UserInterface;

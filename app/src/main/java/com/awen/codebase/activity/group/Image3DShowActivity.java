@@ -1,4 +1,4 @@
-package com.awen.codebase.activity;
+package com.awen.codebase.activity.group;
 
 import android.app.Activity;
 import android.os.Bundle;

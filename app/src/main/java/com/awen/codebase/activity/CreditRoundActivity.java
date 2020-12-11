@@ -10,6 +10,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.RoundIndicatorView;
 import com.awen.codebase.common.utils.FastBlurUtil;
 
@@ -23,7 +24,7 @@ import rx.schedulers.Schedulers;
  * Created by AwenZeng on 2017/2/28.
  */
 
-public class CreditRoundActivity extends Activity {
+public class CreditRoundActivity extends BaseActivity {
     private RoundIndicatorView roundIndicatorView;
     private EditText editText;
     private Button button;
@@ -32,7 +33,7 @@ public class CreditRoundActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_credit_round);
+        setActivityContentView(R.layout.act_credit_round);
         roundIndicatorView = (RoundIndicatorView) findViewById(R.id.my_view);
         editText = (EditText) findViewById(R.id.edit);
         button = (Button) findViewById(R.id.btn);

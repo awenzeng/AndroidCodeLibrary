@@ -27,6 +27,7 @@ import com.awen.codebase.common.anim.LoadingView;
 import com.awen.codebase.common.anim.MergeView;
 import com.awen.codebase.common.anim.MoreFrameView;
 import com.awen.codebase.common.anim.ShowViewManager;
+import com.awen.codebase.common.base.BaseActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -37,7 +38,7 @@ import butterknife.OnClick;
  * Created by AwenZeng on 2018/2/26.
  */
 
-public class DrawAnimActivity extends Activity {
+public class DrawAnimActivity extends BaseActivity {
 
     @BindView(R.id.layout01)
     RelativeLayout layout01;
@@ -52,7 +53,7 @@ public class DrawAnimActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_draw_anim);
+        setActivityContentView(R.layout.act_draw_anim);
         ButterKnife.bind(this);
         showViewManager = new ShowViewManager(this);
         stopTweenAnim();

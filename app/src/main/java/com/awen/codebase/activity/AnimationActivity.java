@@ -9,8 +9,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 
-public class AnimationActivity extends Activity implements OnClickListener {
+public class AnimationActivity extends BaseActivity implements OnClickListener {
 
 	/** Called when the activity is first created. */
 	private Button button_toTestAnimation,testAnimationButton;
@@ -22,7 +23,7 @@ public class AnimationActivity extends Activity implements OnClickListener {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.act_animation);
+		setActivityContentView(R.layout.act_animation);
 		
 		initData();
 		initView();

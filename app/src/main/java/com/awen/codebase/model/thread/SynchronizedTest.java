@@ -1,14 +1,11 @@
-package com.awen.codebase.model;
+package com.awen.codebase.model.thread;
 
 import com.awen.codebase.common.utils.LogUtil;
 
 /**
- * @ClassName: SynchronizedTestModel
- * @Author: AwenZeng
- * @CreateDate: 2020/3/11 18:17
- * @Description:
+ * synchronize--多线程锁操作
  */
-public class SynchronizedTestModel {
+public class SynchronizedTest {
     private int number = 1;
     private byte[] a = new byte[0];
     public volatile boolean isClose = false;
@@ -31,7 +28,6 @@ public class SynchronizedTestModel {
 
         @Override
         public void run() {
-            // TODO Auto-generated method stub
             while (!isClose) {
                 read();
                 try {

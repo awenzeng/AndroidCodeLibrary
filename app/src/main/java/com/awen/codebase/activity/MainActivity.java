@@ -1,6 +1,5 @@
 package com.awen.codebase.activity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
@@ -22,16 +21,17 @@ import com.awen.codebase.activity.adapter.MainAdapter;
 import com.awen.codebase.common.badge.BadgeNumberManager;
 import com.awen.codebase.common.badge.BadgeNumberManagerXiaoMi;
 import com.awen.codebase.common.badge.MobileBrand;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.utils.FPSFrameCallback;
-import com.awen.codebase.model.AnnotationReflectModel;
-import com.awen.codebase.model.ClassLoadModel;
-import com.awen.codebase.model.SynchronizedTestModel;
+import com.awen.codebase.model.classload.AnnotationReflectModel;
+import com.awen.codebase.model.classload.ClassLoadModel;
+import com.awen.codebase.model.thread.SynchronizedTest;
 import com.awen.codebase.service.AIDLService;
 import com.awen.codebase.service.AIDLServiceConnection;
 import com.awen.codebase.service.WorkService;
 import com.awen.messagebus.MessageBus;
 
-public class MainActivity extends Activity {
+public class MainActivity extends BaseActivity {
     private ListView listView;
     private ImageView animationImageView;
     private AnimationDrawable animationDrawable;
@@ -54,8 +54,9 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setActivityContentView(R.layout.activity_main);
+        hideLeftRightLayout();
+        setBarTitle("AWENCODEBASE");
         initView();
         initData();
 
@@ -192,9 +193,9 @@ public class MainActivity extends Activity {
      * 测试线程同步
      */
     private void testSynchronized(){
-        SynchronizedTestModel test = new SynchronizedTestModel();
-        SynchronizedTestModel.TestThread threadA =  test.new TestThread("线程A");
-        SynchronizedTestModel.TestThread threadB =  test.new TestThread("线程B");
+        SynchronizedTest test = new SynchronizedTest();
+        SynchronizedTest.TestThread threadA =  test.new TestThread("线程A");
+        SynchronizedTest.TestThread threadB =  test.new TestThread("线程B");
         threadA.start();
         threadB.start();
         try {

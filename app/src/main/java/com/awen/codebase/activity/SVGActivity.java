@@ -9,13 +9,14 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 
-public class SVGActivity extends Activity {
+public class SVGActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_svg);
+        setActivityContentView(R.layout.act_svg);
     }
 
     public void btnClick(View view) {

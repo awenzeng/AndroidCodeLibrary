@@ -15,10 +15,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.FloatCycleView;
 import com.awen.codebase.common.utils.ToastUtil;
 
-public class FloatCycleViewActivity extends Activity {
+public class FloatCycleViewActivity extends BaseActivity {
 
     private FloatCycleView cycleView;
     private GestureDetector mGestureDetector;
@@ -32,8 +33,8 @@ public class FloatCycleViewActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_show_play_acitivity);
+        setActivityContentView(R.layout.activity_show_play_acitivity);
+        hideActTitileBar();
         cycleView = (FloatCycleView) this.findViewById(R.id.SurfaceView);
         before = (ImageButton) this.findViewById(R.id.before);
         next = (ImageButton) this.findViewById(R.id.next);

@@ -12,6 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.Toast;
 import com.awen.codebase.R;
 
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.infinitelib.AnimationTransformer;
 import com.awen.infinitelib.CardItem;
 import com.awen.infinitelib.InfiniteCardView;
@@ -25,7 +26,7 @@ import com.awen.infinitelib.transformer.DefaultZIndexTransformerCommon;
  * Created by Administrator on 2017/9/29.
  */
 
-public class InfiniteViewActivity extends Activity {
+public class InfiniteViewActivity extends BaseActivity {
     private InfiniteCardView mCardView;
     private BaseAdapter mAdapter1, mAdapter2;
     private int[] resId = {R.drawable.pic1, R.drawable.pic2, R.drawable.pic3, R.drawable
@@ -35,7 +36,7 @@ public class InfiniteViewActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_infinite_view);
+        setActivityContentView(R.layout.act_infinite_view);
         mCardView = (InfiniteCardView) findViewById(R.id.view);
         mAdapter1 = new MyAdapter(resId);
         mAdapter2 = new MyAdapter(resId);

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/main_color"
+    android:gravity="center_vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    >
+
+    <RelativeLayout
+        android:id="@+id/left_layout"
+        android:layout_width="50dip"
+        android:layout_height="50dip"
+        android:background="@drawable/act_titile_tab_bg"
+        android:clickable="true" >
+
+        <ImageView
+            android:id="@+id/left_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:maxEms="10"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="16sp"
+        android:text="标题栏"
+        android:layout_marginLeft="50dp"
+        android:layout_centerInParent="true"
+        />
+
+    <RelativeLayout
+        android:id="@+id/right_layout"
+        android:layout_width="50dp"
+        android:layout_height="50dip"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/act_titile_tab_bg" >
+
+        <ImageView
+            android:id="@+id/right_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside" />
+
+
+        <TextView
+            android:id="@+id/right_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textColor="@color/white"
+            android:maxEms="2"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:text=""
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -6,16 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.CompoundButton;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.kyleduo.switchbutton.SwitchButton;
 
-public class SwitchButtonActivity extends Activity {
+public class SwitchButtonActivity extends BaseActivity {
 
 	private SwitchButton mFlymeSb, mMiuiSb, mCustomSb, mDefaultSb, mSB;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_style);
+		setActivityContentView(R.layout.activity_style);
 
 		SwitchButton disableSb = (SwitchButton) findViewById(R.id.sb_disable_control);
 		SwitchButton disableNoEventSb = (SwitchButton) findViewById(R.id.sb_disable_control_no_event);

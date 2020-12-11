@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.google.android.flexbox.AlignItems;
 import com.google.android.flexbox.FlexDirection;
 import com.google.android.flexbox.FlexWrap;
@@ -25,7 +26,7 @@ import java.util.Random;
  * @CreateDate: 2020/8/18 19:03
  * @Description:
  */
-public class FlexboxLayoutActivity extends Activity {
+public class FlexboxLayoutActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;
     private java.util.List<Integer> mDatas = new ArrayList<Integer>();
@@ -33,7 +34,7 @@ public class FlexboxLayoutActivity extends Activity {
     @Override
     protected void onCreate(android.os.Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flexboxlayout);
+        setActivityContentView(R.layout.activity_flexboxlayout);
 
         mDatas.add(R.drawable.bleach_1);
         mDatas.add(R.drawable.bleach_2);

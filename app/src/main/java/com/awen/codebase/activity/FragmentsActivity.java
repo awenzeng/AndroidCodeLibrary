@@ -15,14 +15,15 @@ import com.awen.codebase.activity.fragment.ExplosionFragment;
 import com.awen.codebase.activity.fragment.MultiTouchScaleFragment;
 import com.awen.codebase.activity.fragment.PopupWindowFragment;
 import com.awen.codebase.activity.fragment.ProgressBarFragment;
+import com.awen.codebase.common.base.BaseActivity;
 
-public class FragmentsActivity extends FragmentActivity implements OnClickListener {
+public class FragmentsActivity extends BaseActivity implements OnClickListener {
     private FrameLayout layout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_activitygroups_main);
+        setActivityContentView(R.layout.fragment_activitygroups_main);
         layout = (FrameLayout) this.findViewById(R.id.layout_groups);
         RadioButton button = (RadioButton) this.findViewById(R.id.button01);
         button.setOnClickListener(this);
