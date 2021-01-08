@@ -32,14 +32,6 @@ public class CodeBaseApp extends Application {
 //        HookAmsUtil hookAmsUtil = new HookAmsUtil(ProxyActivity.class, this);
 //        hookAmsUtil.hookSystemHandler();
 //        hookAmsUtil.hookAms();
-
-        MessageBus.getDefault().handleMessage(new IHandleMessage() {
-            @Override
-            public void handleMessage(Message msg) {
-                LogUtil.androidLog("handleMessage:"+ JSONObject.toJSONString(msg.obj));
-            }
-        });
-
     }
 
     public static CodeBaseApp getInstance() {

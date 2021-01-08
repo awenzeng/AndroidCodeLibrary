@@ -6,6 +6,8 @@
     <string name="title_activity_main">CodeBase</string>
     <string name="loading">加载中</string>
     <string name="test">AppMonitor测试</string>
+    <string name="open">打开</string>
+    <string name="close">关闭</string>
     <!-- style title -->
     <string name="style_default">Default Style</string>
     <string name="style_text">With Status Text</string>

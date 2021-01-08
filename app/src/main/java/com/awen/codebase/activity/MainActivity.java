@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.graphics.drawable.AnimationDrawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Handler;
 import android.os.Message;
 import android.view.Choreographer;
 import android.view.Display;
@@ -29,6 +28,7 @@ import com.awen.codebase.model.thread.SynchronizedTest;
 import com.awen.codebase.service.AIDLService;
 import com.awen.codebase.service.AIDLServiceConnection;
 import com.awen.codebase.service.WorkService;
+import com.awen.messagebus.IHandleMessage;
 import com.awen.messagebus.MessageBus;
 
 public class MainActivity extends BaseActivity {
@@ -40,16 +40,6 @@ public class MainActivity extends BaseActivity {
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
             "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity","MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity","LottieActivity"};
 
-    private Handler handler = new Handler() {
-
-        @Override
-        public void handleMessage(Message msg) {
-            super.handleMessage(msg);
-            //播放gif动画
-            playAnimation();
-        }
-
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +60,12 @@ public class MainActivity extends BaseActivity {
         listView.addHeaderView(view);
         MainAdapter myAdapter = new MainAdapter(this, iStrings);
         listView.setAdapter(myAdapter);
+        MessageBus.getDefault().handleMessage(new IHandleMessage() {
+            @Override
+            public void handleMessage(Message msg) {
+                playAnimation();
+            }
+        });
         myAdapter.setItemClickListener(new MainAdapter.ItemClickListener() {
             @Override
             public void onClick(int position, String data) {
@@ -141,22 +137,14 @@ public class MainActivity extends BaseActivity {
                         break;
                 }
                startActivity(intent);
-                Message message = new Message();
-                message.obj = data;
-                MessageBus.getDefault().sendMessage(message);
-
-                Message msg = new Message();
-                msg.obj = "延迟消息："+data;
-                MessageBus.getDefault().sendMessageDelayed(msg,1500);
             }
         });
     }
 
     private void initData(){
         showBadgeIcon();
-        handler.sendEmptyMessageDelayed(0, 300);
+        MessageBus.getDefault().sendEmptyMessageDelayed(0,300);
         new ClassLoadModel();
-
         testAnnotationReflect();
         addFPSMornitor();
 //        testAIDL();
