@@ -38,7 +38,9 @@ public class MainActivity extends BaseActivity {
     private FPSFrameCallback mFpsFrameCallback;
     private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
-            "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity","MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity","LottieActivity"};
+            "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity",
+            "MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity",
+            "LottieActivity","VideoAnimPlayerActivity"};
 
 
     @Override
@@ -133,6 +135,10 @@ public class MainActivity extends BaseActivity {
                         break;
                     case "LottieActivity":
                         intent = new Intent(MainActivity.this, LottieActivity.class);
+                        break;
+                    case "VideoAnimPlayerActivity":
+                        intent = new Intent(MainActivity.this, VideoAnimPlayerActivity.class);
+                        break;
                     default:
                         break;
                 }

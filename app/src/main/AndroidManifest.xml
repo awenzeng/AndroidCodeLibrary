@@ -105,6 +105,7 @@
         <activity android:name=".activity.WebViewActivity"/>
         <activity android:name=".activity.VueFrameActivity"/>
         <activity android:name=".activity.LottieActivity"/>
+        <activity android:name=".activity.VideoAnimPlayerActivity"/>
     </application>
 
 </manifest>
