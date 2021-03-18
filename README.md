@@ -38,6 +38,7 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2021-02-25]增加直播礼物动画效果
 
+[2021-03-18]增加排序算法(插入排序、冒泡排序、归并排序等)
 # Demo
 
 [APK下载](https://github.com/awenzeng/AndroidCodeLibrary/blob/master/app/app-Awen_release-release.apk?raw=true)

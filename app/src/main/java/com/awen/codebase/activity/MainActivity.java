@@ -22,6 +22,9 @@ import com.awen.codebase.common.badge.BadgeNumberManagerXiaoMi;
 import com.awen.codebase.common.badge.MobileBrand;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.utils.FPSFrameCallback;
+import com.awen.codebase.model.algorithm.CommonSort;
+import com.awen.codebase.model.algorithm.MergeSort;
+import com.awen.codebase.model.algorithm.SortTestHelper;
 import com.awen.codebase.model.classload.AnnotationReflectModel;
 import com.awen.codebase.model.classload.ClassLoadModel;
 import com.awen.codebase.model.thread.SynchronizedTest;
@@ -30,6 +33,9 @@ import com.awen.codebase.service.AIDLServiceConnection;
 import com.awen.codebase.service.WorkService;
 import com.awen.messagebus.IHandleMessage;
 import com.awen.messagebus.MessageBus;
+
+import static com.awen.codebase.model.algorithm.CommonSort.bubbleSort;
+import static com.awen.codebase.model.algorithm.CommonSort.shellSort;
 
 public class MainActivity extends BaseActivity {
     private ListView listView;
@@ -155,6 +161,9 @@ public class MainActivity extends BaseActivity {
         addFPSMornitor();
 //        testAIDL();
 //        testSynchronized();
+        testAlgorithm();
+
+
     }
 
     /**
@@ -198,6 +207,17 @@ public class MainActivity extends BaseActivity {
             e.printStackTrace();
         }
         test.isClose = true;
+    }
+
+    /**
+     * 测试算法
+     */
+    private void testAlgorithm(){
+        int N = 10;
+        CommonSort.insertSort(SortTestHelper.generateRandomArray(N, 0, 10));
+        shellSort(SortTestHelper.generateRandomArray(N, 0, 10));
+        bubbleSort(SortTestHelper.generateRandomArray(N, 0, 10));
+        SortTestHelper.printResult(MergeSort.mergeSort(SortTestHelper.generateRandomArray(N, 0, 10)));
     }
 
     /**
