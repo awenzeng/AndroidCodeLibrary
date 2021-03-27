@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity {
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
             "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity",
             "MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity",
-            "LottieActivity","VideoAnimPlayerActivity"};
+            "LottieActivity","VideoAnimPlayerActivity","LogcatActivity"};
 
 
     @Override
@@ -144,6 +144,9 @@ public class MainActivity extends BaseActivity {
                         break;
                     case "VideoAnimPlayerActivity":
                         intent = new Intent(MainActivity.this, VideoAnimPlayerActivity.class);
+                        break;
+                    case "LogcatActivity":
+                        intent = new Intent(MainActivity.this, LogcatActivity.class);
                         break;
                     default:
                         break;

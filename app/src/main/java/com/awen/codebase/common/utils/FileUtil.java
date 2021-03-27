@@ -3,6 +3,7 @@ package com.awen.codebase.common.utils;
 import android.content.Context;
 import android.os.Environment;
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.awen.codebase.CodeBaseApp;
 
@@ -14,7 +15,9 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.math.BigDecimal;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.UUID;
 
 import rx.Observable;
@@ -70,6 +73,39 @@ public class FileUtil {
         return filePath;
     };
 
+
+    /**
+     * 获取文件保存路径
+     * @param context
+     * @return
+     */
+    public static String getFilePath(Context context){
+        String filePath;
+        if (Environment.getExternalStorageState().equals(
+                Environment.MEDIA_MOUNTED)) {// 优先保存到SD卡中
+            filePath = Environment.getExternalStorageDirectory()
+                    .getAbsolutePath() + File.separator + "interprenter";
+        } else {// 如果SD卡不存在，就保存到本应用的目录下
+            filePath = context.getFilesDir().getAbsolutePath()
+                    + File.separator + "interprenter";
+        }
+        File file = new File(filePath);
+        if (!file.exists()) {
+            file.mkdirs();
+        }
+        return filePath;
+    }
+
+    /**
+     * 文件名生成
+     * @return
+     */
+    public static String getFileName() {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy年MM月dd日_HHmmss");
+        String date = format.format(new Date(System.currentTimeMillis()));
+        return date;// 2012年10月03日 23:41:31
+    }
+
     /**
      * 获取机身储存
      *
@@ -112,7 +148,7 @@ public class FileUtil {
     /**
      * 根据文件路径删除文件
      */
-    public static void deleterFile(String filePath){
+    public static void deleteFile(String filePath){
         File file = new File(filePath);
         if(file != null && file.exists()){
             try {

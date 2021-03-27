@@ -106,6 +106,8 @@
         <activity android:name=".activity.VueFrameActivity"/>
         <activity android:name=".activity.LottieActivity"/>
         <activity android:name=".activity.VideoAnimPlayerActivity"/>
+        <activity android:name=".activity.ShowLogActivity"/>
+        <activity android:name=".activity.LogcatActivity"/>
     </application>
 
 </manifest>
