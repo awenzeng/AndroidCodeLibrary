@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.awen.codebase.R;
 import com.awen.codebase.activity.adapter.ScanFileAdapter;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.system.LogcatHelper;
 
 import java.io.File;
@@ -26,7 +27,7 @@ import java.util.TimerTask;
  * Describe:日志文件Activity
  * Created by AwenZeng on 2021/03/02
  */
-public class LogcatActivity extends Activity {
+public class LogcatActivity extends BaseActivity {
     private TextView scanTv;
     private ProgressBar scanProgressbar;
     private RecyclerView mRecylerView;
@@ -43,7 +44,7 @@ public class LogcatActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.act_logcat);
+        setActivityContentView(R.layout.act_logcat);
         initData();
         initUI();
         startScan();

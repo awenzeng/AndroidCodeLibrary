@@ -108,6 +108,8 @@
         <activity android:name=".activity.VideoAnimPlayerActivity"/>
         <activity android:name=".activity.ShowLogActivity"/>
         <activity android:name=".activity.LogcatActivity"/>
+        <activity android:name=".activity.LargeImageViewActivity"/>
+
     </application>
 
 </manifest>
