@@ -236,4 +236,28 @@ public class LogUtil {
         return now.getTime();
     }
 
+
+    /**
+     * 打印当前线程堆栈信息
+     */
+    public static void printCurrentThreadHeapDump(){
+        StackTraceElement[] st = Thread.currentThread().getStackTrace();
+        if(st==null){
+            System.out.println("无堆栈...");
+            return;
+        }
+        StringBuffer sbf =new StringBuffer();
+        for(StackTraceElement e:st){
+            if(sbf.length()>0){
+                sbf.append(" <- ");
+                sbf.append(System.getProperty("line.separator"));
+            }
+            sbf.append(java.text.MessageFormat.format("{0}.{1}() {2}"
+                    ,e.getClassName()
+                    ,e.getMethodName()
+                    ,e.getLineNumber()));
+        }
+        log(sbf.toString(),'v');
+    }
+
 }
