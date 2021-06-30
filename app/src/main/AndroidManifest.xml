@@ -19,20 +19,20 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
-
-    <!-- 华为手机更新应用桌面角标需要的权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 华为手机更新应用桌面角标需要的权限 -->
     <uses-permission android:name="com.huawei.android.launcher.permission.CHANGE_BADGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 
     <application
         android:name=".CodeBaseApp"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity2"></activity>
+
         <receiver android:name=".common.widget.CodeBaseWidget">
+
             <!-- 指定桌面小控件的meta-data -->
             <meta-data
                 android:name="android.appwidget.provider"
@@ -49,15 +49,13 @@
         <service
             android:name=".service.AIDLService"
             android:process=":remote" />
-
-        <service android:name="com.awen.codebase.service.WorkService" />
-
-        <service android:name=".service.WorkJobGuardService"
-            android:permission="android.permission.BIND_JOB_SERVICE"/>
-
-        <service android:name=".service.WorkGuardService"
-            android:process="com.awen.codebase.guard.service"/>
-
+        <service android:name=".service.WorkService" />
+        <service
+            android:name=".service.WorkJobGuardService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <service
+            android:name=".service.WorkGuardService"
+            android:process="com.awen.codebase.guard.service" />
         <service
             android:name=".service.AppMonitorService"
             android:label="应用监听"
@@ -65,6 +63,7 @@
             <intent-filter>
                 <action android:name="android.accessibilityservice.AccessibilityService" />
             </intent-filter>
+
             <meta-data
                 android:name="android.accessibilityservice"
                 android:resource="@xml/accessible_service_config" />
@@ -73,43 +72,45 @@
         <activity android:name=".activity.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity"/>
-        <activity android:name=".activity.group.RotateActivity"/>
-        <activity android:name=".activity.group.SearchFlyActivity"/>
-        <activity android:name=".activity.VerticalViewPagerActivity"/>
-        <activity android:name=".activity.FloatCycleViewActivity"/>
-        <activity android:name=".activity.SwitchButtonActivity"/>
-        <activity android:name=".activity.SwipeCardActivity"/>
-        <activity android:name=".activity.group.Image3DShowActivity"/>
-        <activity android:name=".activity.group.TabDemoActivity"/>
-        <activity android:name=".activity.group.ShadeActivity"/>
-        <activity android:name=".activity.AnimationActivity"/>
+        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.group.RotateActivity" />
+        <activity android:name=".activity.group.SearchFlyActivity" />
+        <activity android:name=".activity.VerticalViewPagerActivity" />
+        <activity android:name=".activity.FloatCycleViewActivity" />
+        <activity android:name=".activity.SwitchButtonActivity" />
+        <activity android:name=".activity.SwipeCardActivity" />
+        <activity android:name=".activity.group.Image3DShowActivity" />
+        <activity android:name=".activity.group.TabDemoActivity" />
+        <activity android:name=".activity.group.ShadeActivity" />
+        <activity android:name=".activity.AnimationActivity" />
         <activity android:name=".activity.ProgressBarsActivity" />
-        <activity android:name=".activity.FragmentsActivity"/>
-        <activity android:name=".activity.GroupsActivity"/>
-        <activity android:name=".activity.CreditRoundActivity"/>
-        <activity android:name=".activity.KeybordActivity"/>
-        <activity android:name=".activity.XRecyleviewActivity"/>
-        <activity android:name=".activity.InfiniteViewActivity"/>
-        <activity android:name=".activity.BannerActivity"/>
-        <activity android:name=".activity.DrawAnimActivity"/>
-        <activity android:name=".activity.FlexboxLayoutActivity"/>
-        <activity android:name=".activity.MaterialDesignActivity"
-                  android:theme="@style/AppTheme_NoAppBar"/>
-        <activity android:name=".activity.MarqueeTextActivity"/>
-        <activity android:name=".activity.ProxyActivity"/>
-        <activity android:name=".activity.SVGActivity"/>
-        <activity android:name=".activity.WebViewActivity"/>
-        <activity android:name=".activity.VueFrameActivity"/>
-        <activity android:name=".activity.LottieActivity"/>
-        <activity android:name=".activity.VideoAnimPlayerActivity"/>
-        <activity android:name=".activity.ShowLogActivity"/>
-        <activity android:name=".activity.LogcatActivity"/>
-        <activity android:name=".activity.LargeImageViewActivity"/>
-
+        <activity android:name=".activity.FragmentsActivity" />
+        <activity android:name=".activity.GroupsActivity" />
+        <activity android:name=".activity.CreditRoundActivity" />
+        <activity android:name=".activity.KeybordActivity" />
+        <activity android:name=".activity.XRecyleviewActivity" />
+        <activity android:name=".activity.InfiniteViewActivity" />
+        <activity android:name=".activity.BannerActivity" />
+        <activity android:name=".activity.DrawAnimActivity" />
+        <activity android:name=".activity.FlexboxLayoutActivity" />
+        <activity
+            android:name=".activity.MaterialDesignActivity"
+            android:theme="@style/AppTheme_NoAppBar" />
+        <activity android:name=".activity.MarqueeTextActivity" />
+        <activity android:name=".activity.ProxyActivity" />
+        <activity android:name=".activity.SVGActivity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.VueFrameActivity" />
+        <activity android:name=".activity.LottieActivity" />
+        <activity android:name=".activity.VideoAnimPlayerActivity" />
+        <activity android:name=".activity.ShowLogActivity" />
+        <activity android:name=".activity.LogcatActivity" />
+        <activity android:name=".activity.LargeImageViewActivity" />
+        <activity android:name=".activity.ViewPagerAnimActivity" />
     </application>
 
 </manifest>

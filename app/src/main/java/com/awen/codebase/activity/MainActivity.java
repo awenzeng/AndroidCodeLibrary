@@ -46,7 +46,7 @@ public class MainActivity extends BaseActivity {
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
             "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity",
             "MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity",
-            "LottieActivity","VideoAnimPlayerActivity","LogcatActivity","LargeImageViewActivity"};
+            "LottieActivity","VideoAnimPlayerActivity","LogcatActivity","LargeImageViewActivity","ViewPagerAnimActivity"};
 
 
     @Override
@@ -150,6 +150,9 @@ public class MainActivity extends BaseActivity {
                         break;
                     case "LargeImageViewActivity":
                         intent = new Intent(MainActivity.this, LargeImageViewActivity.class);
+                        break;
+                    case "ViewPagerAnimActivity":
+                        intent = new Intent(MainActivity.this, ViewPagerAnimActivity.class);
                         break;
                     default:
                         break;
