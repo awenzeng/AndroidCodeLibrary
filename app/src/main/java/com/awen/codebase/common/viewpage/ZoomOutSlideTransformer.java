@@ -16,6 +16,8 @@
 
 package com.awen.codebase.common.viewpage;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.view.View;
 
 public class ZoomOutSlideTransformer extends ABaseTransformer {
@@ -23,6 +25,7 @@ public class ZoomOutSlideTransformer extends ABaseTransformer {
 	private static final float MIN_SCALE = 0.85f;
 	private static final float MIN_ALPHA = 0.5f;
 
+	@RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onTransform(View view, float position) {
 		if (position >= -1 || position <= 1) {

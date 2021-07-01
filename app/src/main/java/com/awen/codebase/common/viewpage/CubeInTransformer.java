@@ -16,10 +16,13 @@
 
 package com.awen.codebase.common.viewpage;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.view.View;
 
 public class CubeInTransformer extends ABaseTransformer {
 
+	@RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onTransform(View view, float position) {
 		// Rotate the fragment on the left or right edge

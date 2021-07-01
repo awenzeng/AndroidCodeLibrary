@@ -16,10 +16,13 @@
 
 package com.awen.codebase.common.viewpage;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.view.View;
 
 public class ZoomInTransformer extends ABaseTransformer {
 
+	@RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onTransform(View view, float position) {
 		final float scale = position < 0 ? position + 1f : Math.abs(1f - position);

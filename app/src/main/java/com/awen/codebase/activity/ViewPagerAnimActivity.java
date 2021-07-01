@@ -1,24 +1,28 @@
 package com.awen.codebase.activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.PagerTabStrip;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 
 import com.awen.codebase.R;
+import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.viewpage.AccordionTransformer;
 import com.awen.codebase.common.viewpage.BackgroundToForegroundTransformer;
+import com.awen.codebase.common.viewpage.BookFlippageFadePageTransormer;
+import com.awen.codebase.common.viewpage.CardFlipoverPageTransormer;
+import com.awen.codebase.common.viewpage.CardStackPaegTransformer;
+import com.awen.codebase.common.viewpage.CascadeZoomPageTransformer;
 import com.awen.codebase.common.viewpage.CubeInTransformer;
 import com.awen.codebase.common.viewpage.CubeOutTransformer;
+import com.awen.codebase.common.viewpage.CubesPageTransformer;
+import com.awen.codebase.common.viewpage.DepthCardTransformer;
 import com.awen.codebase.common.viewpage.DepthPageTransformer;
+import com.awen.codebase.common.viewpage.FilpPageRotationPageTransformer;
 import com.awen.codebase.common.viewpage.FlipHorizontalTransformer;
 import com.awen.codebase.common.viewpage.FlipVerticalTransformer;
 import com.awen.codebase.common.viewpage.ForegroundToBackgroundTransformer;
@@ -26,24 +30,25 @@ import com.awen.codebase.common.viewpage.RotateDownTransformer;
 import com.awen.codebase.common.viewpage.ScaleInOutTransformer;
 import com.awen.codebase.common.viewpage.StackTransformer;
 import com.awen.codebase.common.viewpage.TabletTransformer;
+import com.awen.codebase.common.viewpage.TurntablePageTransformer;
 import com.awen.codebase.common.viewpage.ZoomInTransformer;
 import com.awen.codebase.common.viewpage.ZoomOutSlideTransformer;
 import com.awen.codebase.common.viewpage.ZoomOutTranformer;
+import com.awen.codebase.common.viewpage.ZoominPagerTransFormer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class ViewPagerAnimActivity extends Activity {
+public class ViewPagerAnimActivity extends BaseActivity {
 
 	private View view1, view2, view3;
 	private ViewPager viewPager;
 
-	private PagerTabStrip pagerTabStrip;
 	private List<View> viewList;
 	private List<String> titleList;
 	private Button changeButton;
-    private String[] animStrs= {"0.左右黏贴平移","1.左右黏合滑动", "2.快速消失切入","3.3D向前飞出屏幕", "4.3D箱子旋转","5.平移", "6.卡片左右翻页", "7.卡片上下翻页",
+	private String[] animStrs= {"0.左右黏贴平移","1.左右黏合滑动", "2.快速消失切入","3.3D向前飞出屏幕", "4.3D箱子旋转","5.平移", "6.卡片左右翻页", "7.卡片上下翻页",
 			"8.等比放大缩小", "9.左右带角度平移", "10.左右带角度平移", "11.好像没有写","12.遮盖翻页", "13.内旋3D翻页", "14.不翻页中心缩小",
 			"15.左右半透明平移", "16.改变透明度变换"};
 
@@ -52,20 +57,13 @@ public class ViewPagerAnimActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-				WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		setContentView(R.layout.activity_view_pager);
+		setActivityContentView(R.layout.activity_view_pager);
 		initView();
 	}
 
 	private void initView() {
 		viewPager = (ViewPager) findViewById(R.id.viewpager);
 
-		pagerTabStrip = (PagerTabStrip) findViewById(R.id.pagertab);
-		pagerTabStrip.setDrawFullUnderline(false);
-
-		pagerTabStrip.setTextSpacing(50);
 
 		LayoutInflater lf = getLayoutInflater().from(this);
 		view1 = lf.inflate(R.layout.layout1, null);
@@ -86,10 +84,10 @@ public class ViewPagerAnimActivity extends Activity {
 
 			public void onClick(View v) {
 				index++;
-				if (index == 17) {
+				if (index == 26) {
 					index = 0;
 				}
-               setPageAnim(index);
+				setPageAnim(index);
 			}
 		});
 
@@ -109,7 +107,7 @@ public class ViewPagerAnimActivity extends Activity {
 
 			@Override
 			public void destroyItem(ViewGroup container, int position,
-                                    Object object) {
+									Object object) {
 				container.removeView(viewList.get(position));
 
 			}
@@ -201,10 +199,53 @@ public class ViewPagerAnimActivity extends Activity {
 				viewPager.setPageTransformer(true,
 						new ZoomOutTranformer());
 				break;
+			case 17:
+				viewPager.setPageTransformer(true,
+						new BookFlippageFadePageTransormer());
+				break;
+			case 18:
+				viewPager.setPageTransformer(true,
+						new CardFlipoverPageTransormer());
+				break;
+			case 19:
+				viewPager.setPageTransformer(true,
+						new CardStackPaegTransformer());
+				break;
+			case 20:
+				viewPager.setPageTransformer(true,
+						new CascadeZoomPageTransformer());
+				break;
+			case 21:
+				viewPager.setPageTransformer(true,
+						new CubesPageTransformer());
+				break;
+			case 22:
+				viewPager.setPageTransformer(true,
+						new DepthCardTransformer());
+				break;
+			case 23:
+				viewPager.setPageTransformer(true,
+						new FilpPageRotationPageTransformer());
+				break;
+			case 24:
+				viewPager.setPageTransformer(true,
+						new TurntablePageTransformer());
+				break;
+			case 25:
+				viewPager.setPageTransformer(true,
+						new ZoominPagerTransFormer());
+				break;
 			default:
 				break;
 		}
-		changeButton.setText("当前效果："+animStrs[index]+"  共16种效果");
+		if(index == 0){
+			changeButton.setText("当前效果：默认效果"+"  共16种效果");
+		}else{
+			if(index <= 16){
+				changeButton.setText("当前效果："+animStrs[index]+"  共16种效果");
+			}else{
+				changeButton.setText("当前效果："+index+"  共25种效果");
+			}
+		}
 	}
-
 }

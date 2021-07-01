@@ -16,8 +16,6 @@
 
 package com.awen.codebase.common.viewpage;
 
-import android.os.Build;
-import android.support.annotation.RequiresApi;
 import android.support.v4.view.ViewPager.PageTransformer;
 import android.view.View;
 
@@ -84,7 +82,6 @@ public abstract class ABaseTransformer implements PageTransformer {
 	 *            Position of page relative to the current front-and-center position of the pager. 0 is front and
 	 *            center. 1 is one full page position to the right, and -1 is one page position to the left.
 	 */
-	@RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
 	protected void onPreTransform(View page, float position) {
 		final float width = page.getWidth();
 

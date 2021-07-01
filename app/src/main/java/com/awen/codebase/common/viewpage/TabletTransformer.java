@@ -18,6 +18,8 @@ package com.awen.codebase.common.viewpage;
 
 import android.graphics.Camera;
 import android.graphics.Matrix;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.view.View;
 
 public class TabletTransformer extends ABaseTransformer {
@@ -26,6 +28,7 @@ public class TabletTransformer extends ABaseTransformer {
 	private static final Camera OFFSET_CAMERA = new Camera();
 	private static final float[] OFFSET_TEMP_FLOAT = new float[2];
 
+	@RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onTransform(View view, float position) {
 		final float rotation = (position < 0 ? 30f : -30f) * Math.abs(position);

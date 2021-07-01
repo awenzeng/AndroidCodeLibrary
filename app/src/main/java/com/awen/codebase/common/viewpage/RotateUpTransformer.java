@@ -16,12 +16,15 @@
 
 package com.awen.codebase.common.viewpage;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.view.View;
 
 public class RotateUpTransformer extends ABaseTransformer {
 
 	private static final float ROT_MOD = -15f;
 
+	@RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
 	@Override
 	protected void onTransform(View view, float position) {
 		final float width = view.getWidth();
