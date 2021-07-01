@@ -20,6 +20,7 @@ import com.awen.codebase.common.viewpage.CascadeZoomPageTransformer;
 import com.awen.codebase.common.viewpage.CubeInTransformer;
 import com.awen.codebase.common.viewpage.CubeOutTransformer;
 import com.awen.codebase.common.viewpage.CubesPageTransformer;
+import com.awen.codebase.common.viewpage.DefaultTransformer;
 import com.awen.codebase.common.viewpage.DepthCardTransformer;
 import com.awen.codebase.common.viewpage.DepthPageTransformer;
 import com.awen.codebase.common.viewpage.FilpPageRotationPageTransformer;
@@ -236,6 +237,8 @@ public class ViewPagerAnimActivity extends BaseActivity {
 						new ZoominPagerTransFormer());
 				break;
 			default:
+				viewPager.setPageTransformer(true,
+						new DefaultTransformer());
 				break;
 		}
 		if(index == 0){
