@@ -126,7 +126,7 @@ public class MediaPlayerActivity extends BaseActivity{
             return;
         }
         try {
-            String url = CodeBaseApp.httpProxyCacheServer.getProxyUrl(resId[ipx%4]);
+            String url = CodeBaseApp.httpProxyCacheServer.getProxyUrl(resId[ipx%size]);
             LogUtil.androidLog("video url:"+url);
             url = resId[ipx%size];
             mMediaPlayer.setDataSource(this,Uri.parse(url));
@@ -138,7 +138,7 @@ public class MediaPlayerActivity extends BaseActivity{
                     ipx++;
                     mp.reset();
                     //循环播放下一个
-                    String url = CodeBaseApp.httpProxyCacheServer.getProxyUrl(resId[ipx%4]);
+                    String url = CodeBaseApp.httpProxyCacheServer.getProxyUrl(resId[ipx%size]);
                     LogUtil.androidLog("video url:"+url);
                     try {
                         url = resId[ipx%size];
@@ -217,7 +217,6 @@ public class MediaPlayerActivity extends BaseActivity{
 
     public void back(View v) {
         finish();
-        onDestroy();
     }
 
     private void stop() {

@@ -50,24 +50,6 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="stop"
-            android:background="@android:color/holo_blue_light"
-            android:textColor="@android:color/white"
-            android:text="停止" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@android:color/holo_blue_light"
-            android:textColor="@android:color/white"
-            android:onClick="replay"
-            android:text="重播" />
-
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
             android:background="@android:color/holo_blue_light"
             android:textColor="@android:color/white"
             android:onClick="back"
