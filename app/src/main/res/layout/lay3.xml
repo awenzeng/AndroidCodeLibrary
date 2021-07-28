@@ -14,8 +14,8 @@
 
     <SurfaceView
         android:id="@+id/mSurfaceView1"
-        android:layout_width="320px"
-        android:layout_height="240px" >
+        android:layout_width="540px"
+        android:layout_height="960px" >
     </SurfaceView>
 
     <RelativeLayout

@@ -10,16 +10,19 @@ import com.awen.codebase.activity.ProxyActivity;
 import com.awen.codebase.common.utils.AutoScreenUtils;
 import com.awen.codebase.common.utils.HookAmsUtil;
 import com.awen.codebase.common.utils.LogUtil;
+import com.awen.codebase.common.utils.PlayerCacheManager;
 import com.awen.messagebus.IHandleMessage;
 import com.awen.messagebus.MessageBus;
+import com.danikula.videocache.HttpProxyCacheServer;
 
 
 public class CodeBaseApp extends Application {
     private static CodeBaseApp instance;
     private Typeface mGobalFont = null;
-    public static final boolean DEBUG = BuildConfig.DEBUG;
+    public static final boolean DEBUG = true;
     public static boolean bUseFont = true;
     public static int SDK_VERSION = android.os.Build.VERSION.SDK_INT;
+    public static HttpProxyCacheServer httpProxyCacheServer;
 
     @Override
     public void onCreate() {
@@ -32,6 +35,10 @@ public class CodeBaseApp extends Application {
 //        HookAmsUtil hookAmsUtil = new HookAmsUtil(ProxyActivity.class, this);
 //        hookAmsUtil.hookSystemHandler();
 //        hookAmsUtil.hookAms();
+        httpProxyCacheServer = new HttpProxyCacheServer.Builder(getAppContext())
+                .maxCacheFilesCount(30)
+                .maxCacheSize(1024 * 1024 * 1024)     // 设置可存储1G资源
+                .build();
     }
 
     public static CodeBaseApp getInstance() {

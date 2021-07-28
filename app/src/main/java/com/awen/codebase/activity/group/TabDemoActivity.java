@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.view.PagerAdapter;
@@ -31,7 +32,10 @@ import android.widget.SlidingDrawer.OnDrawerCloseListener;
 import android.widget.SlidingDrawer.OnDrawerOpenListener;
 import android.widget.TextView;
 
+import com.awen.codebase.CodeBaseApp;
 import com.awen.codebase.R;
+import com.awen.codebase.common.utils.LogUtil;
+
 public class TabDemoActivity extends Activity {
 	private ViewPager mPager;//页卡内容
 	private List<View> listViews; // Tab页面列表
@@ -130,7 +134,7 @@ public class TabDemoActivity extends Activity {
 			
 			@Override
 			public void onClick(View v) {
-				palyVideo("/sdcard/test.mp4");
+				palyVideo("android.resource://"+getPackageName()+"/"+ R.raw.video_1);
 			}
 		});
     	
@@ -154,6 +158,7 @@ public class TabDemoActivity extends Activity {
 			public void onClick(View v) {
 				mediaPlayer.seekTo(0); //定位到开始位置(从头开始播放)
 				//此处可以和SeekBar(拖动)控件结合使用，将当前刻度传递给seekTo
+				mediaPlayer.start();
 			}
 		});
     	
@@ -193,7 +198,11 @@ public class TabDemoActivity extends Activity {
 			mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
 			// 设置Video影片以SurfaceHolder播放
 			mediaPlayer.setDisplay(surfaceHolder);
-			mediaPlayer.setDataSource(path);
+			String url = CodeBaseApp.httpProxyCacheServer.getProxyUrl(path);
+			LogUtil.androidLog("video url:"+url);
+			url = path;
+			mediaPlayer.setDataSource(this, Uri.parse(url));
+			mediaPlayer.setLooping(true);
 			mediaPlayer.prepare();
 			mediaPlayer.start();
 			myTextView1.setText("开始播放");
