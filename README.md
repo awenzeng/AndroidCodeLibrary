@@ -46,6 +46,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2021-06-30]增加了ViewPager切换动画效果
 
+[2021-07-28]增加了MediaPlayer视频播放
+
 
 # Demo
 
