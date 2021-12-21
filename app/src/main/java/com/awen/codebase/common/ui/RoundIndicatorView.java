@@ -110,8 +110,8 @@ public class RoundIndicatorView extends View {
     private void initAttr(AttributeSet attrs) {
         TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.RoundIndicatorView);
         maxNum = array.getInt(R.styleable.RoundIndicatorView_maxNum,800);
-        startAngle = array.getInt(R.styleable.RoundIndicatorView_startAngle,160);
-        sweepAngle = array.getInt(R.styleable.RoundIndicatorView_sweepAngle,220);
+        startAngle = array.getInt(R.styleable.RoundIndicatorView_startAngle1,160);
+        sweepAngle = array.getInt(R.styleable.RoundIndicatorView_sweepAngle1,220);
         //内外圆的宽度
         sweepInWidth = dp2px(8);
         sweepOutWidth = dp2px(3);

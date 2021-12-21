@@ -112,6 +112,7 @@
         <activity android:name=".activity.LargeImageViewActivity" />
         <activity android:name=".activity.ViewPagerAnimActivity" />
         <activity android:name=".activity.MediaPlayerActivity" />
+        <activity android:name=".activity.CircleProgressActivity" />
     </application>
 
 </manifest>

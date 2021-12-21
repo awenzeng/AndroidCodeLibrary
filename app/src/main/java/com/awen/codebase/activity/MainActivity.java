@@ -42,7 +42,7 @@ public class MainActivity extends BaseActivity {
     private ImageView animationImageView;
     private AnimationDrawable animationDrawable;
     private FPSFrameCallback mFpsFrameCallback;
-    private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity",
+    private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity","CircleProgressActivity",
             "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
             "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity",
             "MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity",
@@ -93,6 +93,9 @@ public class MainActivity extends BaseActivity {
                         break;
                     case "ProgressBarsActivity":
                         intent = new Intent(MainActivity.this,ProgressBarsActivity.class);
+                        break;
+                    case "CircleProgressActivity":
+                        intent = new Intent(MainActivity.this,CircleProgressActivity.class);
                         break;
                     case "SwitchButtoonActivity":
                         intent = new Intent(MainActivity.this,SwitchButtonActivity.class);

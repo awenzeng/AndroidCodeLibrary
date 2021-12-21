@@ -48,6 +48,8 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2021-07-28]增加了MediaPlayer视频播放
 
+[2021-12-21]增加了CircleProgress的进度条
+
 
 # Demo
 

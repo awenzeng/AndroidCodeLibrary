@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.awen.codebase.activity.CircleProgressActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_reset_all"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="重置" />
+
+        <com.awen.codebase.common.widget.circleprogress.CircleProgress
+            android:id="@+id/circle_progress_bar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            app:antiAlias="true"
+            app:arcWidth="5dp"
+            app:bgArcColor="@color/colorAccent"
+            app:bgArcWidth="5dp"
+            app:hint="截止当前已走"
+            app:hintSize="15sp"
+            app:maxValue="10000"
+            app:startAngle="135"
+            app:sweepAngle="270"
+            app:unit="步"
+            app:unitSize="15sp"
+            app:value="10000"
+            app:valueSize="25sp" />
+
+        <com.awen.codebase.common.widget.circleprogress.CircleProgress
+            android:id="@+id/circle_progress_bar2"
+            android:layout_width="100dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            app:antiAlias="true"
+            app:arcWidth="5dp"
+            app:bgArcColor="@color/colorAccent"
+            app:bgArcWidth="5dp"
+            app:hint="百分比"
+            app:hintSize="15sp"
+            app:maxValue="100"
+            app:startAngle="135"
+            app:sweepAngle="270"
+            app:textOffsetPercentInRadius="0.5"
+            app:unit="%"
+            app:unitSize="15sp"
+            app:value="75"
+            app:valueSize="20sp" />
+
+        <com.awen.codebase.common.widget.circleprogress.CircleProgress
+            android:id="@+id/circle_progress_bar3"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            app:antiAlias="true"
+            app:arcWidth="5dp"
+            app:bgArcColor="@android:color/darker_gray"
+            app:bgArcWidth="5dp"
+            app:hint="当前进度"
+            app:hintSize="25sp"
+            app:maxValue="100"
+            app:startAngle="270"
+            app:sweepAngle="360"
+            app:unit="%"
+            app:unitSize="25sp"
+            app:value="100"
+            app:valueSize="35sp" />
+
+        <com.awen.codebase.common.widget.circleprogress.DialProgress
+            android:id="@+id/dial_progress_bar"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            app:animTime="1000"
+            app:arcColors="@array/gradient_arc_color"
+            app:arcWidth="20dp"
+            app:dialIntervalDegree="3"
+            app:dialWidth="2dp"
+            app:hint="当前时速"
+            app:hintSize="25sp"
+            app:maxValue="300"
+            app:startAngle="135"
+            app:sweepAngle="270"
+            app:unit="km/h"
+            app:unitSize="25sp"
+            app:value="300"
+            app:valueSize="35sp" />
+
+        <com.awen.codebase.common.widget.circleprogress.WaveProgress
+            android:id="@+id/wave_progress_bar"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center_horizontal"
+            app:darkWaveAnimTime="1000"
+            app:darkWaveColor="#803cbcb7"
+            app:lightWaveAnimTime="2000"
+            app:lightWaveColor="#800de6e8"
+            app:lightWaveDirect="R2L"
+            app:lockWave="false"
+            app:valueSize="35sp"
+            app:waveHeight="30dp"
+            app:waveNum="1" />
+
+    </LinearLayout>
+</ScrollView>
