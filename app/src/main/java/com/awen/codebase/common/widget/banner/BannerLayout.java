@@ -52,7 +52,7 @@ public class BannerLayout extends FrameLayout {
     protected int currentIndex;
     protected boolean isPlaying = false;
 
-    protected boolean isAutoPlaying = true;
+    protected boolean isAutoPlaying = false;
 
     MzBannerAdapter mMzBannerAdapter;
     protected Handler mHandler = new Handler(new Handler.Callback() {
@@ -85,7 +85,7 @@ public class BannerLayout extends FrameLayout {
         TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.RecyclerViewBannerBase);
         showIndicator = a.getBoolean(R.styleable.RecyclerViewBannerBase_showIndicator, true);
         autoPlayDuration = a.getInt(R.styleable.RecyclerViewBannerBase_interval, 4000);
-        isAutoPlaying = a.getBoolean(R.styleable.RecyclerViewBannerBase_autoPlaying, true);
+        isAutoPlaying = a.getBoolean(R.styleable.RecyclerViewBannerBase_autoPlaying, false);
         mSelectedDrawable = a.getDrawable(R.styleable.RecyclerViewBannerBase_indicatorSelectedSrc);
         mUnselectedDrawable = a.getDrawable(R.styleable.RecyclerViewBannerBase_indicatorUnselectedSrc);
         if (mSelectedDrawable == null) {

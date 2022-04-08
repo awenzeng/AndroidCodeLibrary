@@ -29,7 +29,6 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.MainActivity2"></activity>
 
         <receiver android:name=".common.widget.CodeBaseWidget">
 
@@ -76,7 +75,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleTask"/>
         <activity android:name=".activity.group.RotateActivity" />
         <activity android:name=".activity.group.SearchFlyActivity" />
         <activity android:name=".activity.VerticalViewPagerActivity" />

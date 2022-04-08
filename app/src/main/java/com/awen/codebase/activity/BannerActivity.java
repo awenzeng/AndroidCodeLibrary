@@ -33,10 +33,10 @@ public class BannerActivity extends BaseActivity implements BannerLayout.OnBanne
         setActivityContentView(R.layout.activity_banner);
         ButterKnife.bind(this);
         List<String> list = new ArrayList<>();
-        list.add("http://imglf2.nosdn.127.net/img/MUgydEdvOEdHeHZ4NjYwRjB5NDZBN3dmYUVXT2NyNXdpV2NleHhQeFNkWkwyTE4xVlF1MHB3PT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg");
-        list.add("http://imglf.nosdn.127.net/img/MUgydEdvOEdHeHVybFhRMkdKRW9KMVpOZFppSk5IdExBb3FHQzRaODZZM0ZDRENOT3crRWRBPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg");
-        list.add("http://imglf0.nosdn.127.net/img/MUgydEdvOEdHeHVybFhRMkdKRW9KeG1QZ0hvQWxwSVgxNWszbTA0cHA1V3lncEJNdFY1OUZnPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg");
-        list.add("http://imglf.nosdn.127.net/img/MUgydEdvOEdHeHVybFhRMkdKRW9KL2RESEdVQXI0ZjFHc3RFcjRtSFhibW1zSzkyMWZ3OXJ3PT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg");
+        list.add("https://imglf3.lf127.net/img/MUgydEdvOEdHeHZ0NWpjMU5mNVFEVGx4TlJDU1dvMzlzY0hIM2Y2Q2NWekFLTk0xWHdGVWhRPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg");
+        list.add("https://imglf5.lf127.net/img/MUgydEdvOEdHeHZSdlBLSGtzT3VMSWIrUmxuQksrSWVNN0RsRjM4VEp5RURlUmZhUnJSU1hnPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg");
+        list.add("https://imglf5.lf127.net/img/MUgydEdvOEdHeHR3U2UzYThFaGZHZEdMSmlyLzlpd2JNajgrOWUyWkVUQzUzVFBSaUpLeWpnPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg");
+        list.add("https://imglf6.lf127.net/img/MUgydEdvOEdHeHVBaldEZThUbzNxMmh0VjFTRXh2bUExdTU1OFJFYXh2UTVXR3hybHRIWmJBPT0.jpg?imageView&thumbnail=1680x0&quality=96&stripmeta=0&type=jpg");
         banner.initBannerImageView(list);
         banner1.initBannerImageView(list);
         banner.setOnBannerItemClickListener(this);

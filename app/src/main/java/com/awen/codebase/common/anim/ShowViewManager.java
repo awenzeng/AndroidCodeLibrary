@@ -35,7 +35,7 @@ public class ShowViewManager {
 			final int height = dm.heightPixels;
 			mParams.width = width;
 			mParams.height = height;
-			mParams.type = WindowManager.LayoutParams.TYPE_PHONE;
+			mParams.type = WindowManager.LayoutParams.TYPE_APPLICATION;
 			mParams.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
 					| WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
 			mParams.format = PixelFormat.RGBA_8888;
