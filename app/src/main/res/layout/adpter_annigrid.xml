@@ -10,18 +10,19 @@
         android:id="@+id/imageView_ItemImage"
         android:layout_width="100dp"
         android:layout_height="100dp"
+        android:padding="5dp"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/ic_launcher" >
+        android:src="@drawable/ball" >
     </ImageView>
 
     <TextView
-        android:id="@+id/txt_userAge"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageView_ItemImage"
         android:layout_centerHorizontal="true"
         android:text="TextView"
-        android:textColor="#fff"
+        android:textColor="#4682B4"
         android:textSize="18sp" >
     </TextView>
 

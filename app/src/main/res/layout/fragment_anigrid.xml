@@ -2,19 +2,14 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/notesbackground"
     android:gravity="center" >
 
-    <com.awen.codebase.common.ui.AniGridDragGrid
-        android:id="@+id/gridview"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:numColumns="3"
-        android:scrollbars="vertical"
-        android:stretchMode="columnWidth"
-        android:verticalSpacing="25dp" >
-    </com.awen.codebase.common.ui.AniGridDragGrid>
-    <!-- android:listSelector="@android:color/transparent" -->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp" />
 
 </RelativeLayout>

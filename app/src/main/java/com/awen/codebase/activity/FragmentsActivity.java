@@ -2,7 +2,6 @@ package com.awen.codebase.activity;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -10,7 +9,7 @@ import android.widget.FrameLayout;
 import android.widget.RadioButton;
 
 import com.awen.codebase.R;
-import com.awen.codebase.activity.fragment.AniGridFragment;
+import com.awen.codebase.activity.fragment.DragRecyclerViewFragment;
 import com.awen.codebase.activity.fragment.ExplosionFragment;
 import com.awen.codebase.activity.fragment.MultiTouchScaleFragment;
 import com.awen.codebase.activity.fragment.PopupWindowFragment;
@@ -82,7 +81,7 @@ public class FragmentsActivity extends BaseActivity implements OnClickListener {
                 break;
             case R.id.button05:
                 layout.removeAllViews();
-                fragment = new AniGridFragment();
+                fragment = new DragRecyclerViewFragment();
                 ft.replace(R.id.layout_groups, fragment);
                 ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
                 ft.commit();
