@@ -181,8 +181,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void saveMMKVTest(){
-        MMKVDataUtil.getInstance().getWithIdMMKV().encode(MMKVDataUtil.KEY_SAVE_PATTERN_JSON,"sjkdfksdj");
-        MMKVDataUtil.getInstance().getDefaultMMKV().decodeString(MMKVDataUtil.KEY_SAVE_PATTERN_JSON,"demo");
+//        MMKVDataUtil.getInstance().getWithIdMMKV().encode(MMKVDataUtil.KEY_SAVE_PATTERN_JSON,"sjkdfksdj");
+//        MMKVDataUtil.getInstance().getDefaultMMKV().decodeString(MMKVDataUtil.KEY_SAVE_PATTERN_JSON,"demo");
     }
 
     /**

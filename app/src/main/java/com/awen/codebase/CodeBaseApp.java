@@ -4,19 +4,10 @@ import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
 import android.graphics.Typeface;
-import android.os.Message;
 import android.text.TextUtils;
 
-import com.alibaba.fastjson.JSONObject;
-import com.awen.codebase.activity.ProxyActivity;
 import com.awen.codebase.common.utils.AutoScreenUtils;
-import com.awen.codebase.common.utils.HookAmsUtil;
-import com.awen.codebase.common.utils.LogUtil;
-import com.awen.codebase.common.utils.PlayerCacheManager;
-import com.awen.messagebus.IHandleMessage;
-import com.awen.messagebus.MessageBus;
 import com.danikula.videocache.HttpProxyCacheServer;
-import com.tencent.mmkv.MMKV;
 
 
 public class CodeBaseApp extends Application {
@@ -47,7 +38,6 @@ public class CodeBaseApp extends Application {
                 .maxCacheFilesCount(30)
                 .maxCacheSize(1024 * 1024 * 1024)     // 设置可存储1G资源
                 .build();
-        MMKV.initialize(this);
     }
 
     public static CodeBaseApp getInstance() {
