@@ -22,6 +22,7 @@ import com.awen.codebase.common.badge.BadgeNumberManagerXiaoMi;
 import com.awen.codebase.common.badge.MobileBrand;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.utils.FPSFrameCallback;
+import com.awen.codebase.common.utils.MMKVDataUtil;
 import com.awen.codebase.model.algorithm.CommonSort;
 import com.awen.codebase.model.algorithm.MergeSort;
 import com.awen.codebase.model.algorithm.SortTestHelper;
@@ -57,7 +58,6 @@ public class MainActivity extends BaseActivity {
         setBarTitle("AWENCODEBASE");
         initView();
         initData();
-
     }
 
 
@@ -177,8 +177,12 @@ public class MainActivity extends BaseActivity {
 //        testAIDL();
 //        testSynchronized();
         testAlgorithm();
+        saveMMKVTest();
+    }
 
-
+    private void saveMMKVTest(){
+        MMKVDataUtil.getInstance().getWithIdMMKV().encode(MMKVDataUtil.KEY_SAVE_PATTERN_JSON,"sjkdfksdj");
+        MMKVDataUtil.getInstance().getDefaultMMKV().decodeString(MMKVDataUtil.KEY_SAVE_PATTERN_JSON,"demo");
     }
 
     /**

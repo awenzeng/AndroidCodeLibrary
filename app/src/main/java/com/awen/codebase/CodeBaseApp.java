@@ -16,6 +16,7 @@ import com.awen.codebase.common.utils.PlayerCacheManager;
 import com.awen.messagebus.IHandleMessage;
 import com.awen.messagebus.MessageBus;
 import com.danikula.videocache.HttpProxyCacheServer;
+import com.tencent.mmkv.MMKV;
 
 
 public class CodeBaseApp extends Application {
@@ -46,6 +47,7 @@ public class CodeBaseApp extends Application {
                 .maxCacheFilesCount(30)
                 .maxCacheSize(1024 * 1024 * 1024)     // 设置可存储1G资源
                 .build();
+        MMKV.initialize(this);
     }
 
     public static CodeBaseApp getInstance() {

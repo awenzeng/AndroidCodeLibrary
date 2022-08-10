@@ -4,7 +4,6 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion 16
@@ -71,6 +70,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
     implementation "org.reactivestreams:reactive-streams:1.0.2"
     implementation 'com.danikula:videocache:2.7.1'
+    implementation 'com.tencent:mmkv-static:1.2.9'
     implementation project(':infinitelib')
     implementation "com.egame.vap:animplayer:2.0.13"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
