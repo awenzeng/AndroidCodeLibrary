@@ -8,6 +8,7 @@ import android.text.TextUtils;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.awen.codebase.common.utils.AutoScreenUtils;
+import com.awen.codebase.common.utils.CrashHandler;
 import com.danikula.videocache.HttpProxyCacheServer;
 
 import xyz.doikki.videoplayer.player.AndroidMediaPlayerFactory;
@@ -47,6 +48,8 @@ public class CodeBaseApp extends Application {
 
         initARouter();
         initDKPlayer();
+
+        CrashHandler.getInstance().init(this);
 
     }
 
