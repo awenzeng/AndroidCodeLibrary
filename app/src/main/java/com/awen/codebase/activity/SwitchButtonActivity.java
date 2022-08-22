@@ -5,10 +5,13 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.CompoundButton;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.kyleduo.switchbutton.SwitchButton;
 
+
+@Route(path = ActivityRouter.AROUTER_SwitchButtonActivity)
 public class SwitchButtonActivity extends BaseActivity {
 
 	private SwitchButton mFlymeSb, mMiuiSb, mCustomSb, mDefaultSb, mSB;

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 
 import java.io.BufferedReader;
@@ -19,6 +20,8 @@ import java.io.InputStreamReader;
  * Describe:
  * Created by AwenZeng on 2021/03/03
  */
+
+@Route(path = ActivityRouter.AROUTER_ShowLogActivity)
 public class ShowLogActivity extends Activity {
 
     private TextView mContentTv;

@@ -8,9 +8,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 
+
+@Route(path = ActivityRouter.AROUTER_SVGActivity)
 public class SVGActivity extends BaseActivity {
 
     @Override

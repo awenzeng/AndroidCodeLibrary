@@ -8,6 +8,7 @@ import android.view.View.OnClickListener;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.activity.fragment.DragRecyclerViewFragment;
 import com.awen.codebase.activity.fragment.ExplosionFragment;
@@ -16,6 +17,8 @@ import com.awen.codebase.activity.fragment.PopupWindowFragment;
 import com.awen.codebase.activity.fragment.ProgressBarFragment;
 import com.awen.codebase.common.base.BaseActivity;
 
+
+@Route(path = ActivityRouter.AROUTER_FragmentsActivity)
 public class FragmentsActivity extends BaseActivity implements OnClickListener {
     private FrameLayout layout;
 

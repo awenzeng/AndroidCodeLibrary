@@ -14,6 +14,7 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.awen.codebase.CodeBaseApp;
 import com.awen.codebase.R;
 import com.awen.codebase.activity.adapter.MainAdapter;
@@ -44,10 +45,10 @@ public class MainActivity extends BaseActivity {
     private AnimationDrawable animationDrawable;
     private FPSFrameCallback mFpsFrameCallback;
     private String[] iStrings = {"FloatCycleViewActivity", "GroupsActivity", "FragmentsActivity", "AnimationActivity", "ProgressBarsActivity","CircleProgressActivity",
-            "SwitchButtoonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecycleView",
+            "SwitchButtonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecyleviewActivity",
             "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity",
             "MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity",
-            "LottieActivity","VideoAnimPlayerActivity","LogcatActivity","LargeImageViewActivity","ViewPagerAnimActivity","MediaPlayerActivity"};
+            "LottieActivity","VideoAnimPlayerActivity","LogcatActivity","LargeImageViewActivity","ViewPagerAnimActivity","MediaPlayerActivity","DKVideoPlayerActivity"};
 
 
     @Override
@@ -77,93 +78,8 @@ public class MainActivity extends BaseActivity {
         myAdapter.setItemClickListener(new MainAdapter.ItemClickListener() {
             @Override
             public void onClick(int position, String data) {
-               Intent intent = null;
-                switch (data){
-                    case "FloatCycleViewActivity":
-                        intent = new Intent(MainActivity.this,FloatCycleViewActivity.class);
-                        break;
-                    case "GroupsActivity":
-                        intent = new Intent(MainActivity.this,GroupsActivity.class);
-                        break;
-                    case "FragmentsActivity":
-                        intent = new Intent(MainActivity.this,FragmentsActivity.class);
-                        break;
-                    case "AnimationActivity":
-                        intent = new Intent(MainActivity.this,AnimationActivity.class);
-                        break;
-                    case "ProgressBarsActivity":
-                        intent = new Intent(MainActivity.this,ProgressBarsActivity.class);
-                        break;
-                    case "CircleProgressActivity":
-                        intent = new Intent(MainActivity.this,CircleProgressActivity.class);
-                        break;
-                    case "SwitchButtoonActivity":
-                        intent = new Intent(MainActivity.this,SwitchButtonActivity.class);
-                        break;
-                    case "CreditRoundActivity":
-                        intent = new Intent(MainActivity.this,CreditRoundActivity.class);
-                        break;
-                    case "SwipeCardActivity":
-                        intent = new Intent(MainActivity.this,SwipeCardActivity.class);
-                        break;
-                    case "KeybordActivity":
-                        intent = new Intent(MainActivity.this,KeybordActivity.class);
-                        break;
-                    case "XRecycleView":
-                        intent = new Intent(MainActivity.this,XRecyleviewActivity.class);
-                        break;
-                    case "VerticalViewPagerActivity":
-                        intent = new Intent(MainActivity.this,VerticalViewPagerActivity.class);
-                        break;
-                    case "InfiniteViewActivity":
-                        intent = new Intent(MainActivity.this,InfiniteViewActivity.class);
-                        break;
-                    case "BannerActivity":
-                        intent = new Intent(MainActivity.this,BannerActivity.class);
-                        break;
-                    case "DrawAnimActivity":
-                        intent = new Intent(MainActivity.this,DrawAnimActivity.class);
-                        break;
-                    case "MaterialDesignActivity":
-                        intent = new Intent(MainActivity.this,MaterialDesignActivity.class);
-                        break;
-                    case "MarqueeTextActivity":
-                        intent = new Intent(MainActivity.this,MarqueeTextActivity.class);
-                        break;
-                    case "FlexboxLayoutActivity":
-                        intent = new Intent(MainActivity.this, FlexboxLayoutActivity.class);
-                        break;
-                    case "SVGActivity":
-                        intent = new Intent(MainActivity.this, SVGActivity.class);
-                        break;
-                    case "WebViewActivity":
-                        intent = new Intent(MainActivity.this, WebViewActivity.class);
-                        break;
-                    case "VueFrameActivity":
-                        intent = new Intent(MainActivity.this, VueFrameActivity.class);
-                        break;
-                    case "LottieActivity":
-                        intent = new Intent(MainActivity.this, LottieActivity.class);
-                        break;
-                    case "VideoAnimPlayerActivity":
-                        intent = new Intent(MainActivity.this, VideoAnimPlayerActivity.class);
-                        break;
-                    case "LogcatActivity":
-                        intent = new Intent(MainActivity.this, LogcatActivity.class);
-                        break;
-                    case "LargeImageViewActivity":
-                        intent = new Intent(MainActivity.this, LargeImageViewActivity.class);
-                        break;
-                    case "ViewPagerAnimActivity":
-                        intent = new Intent(MainActivity.this, ViewPagerAnimActivity.class);
-                        break;
-                    case "MediaPlayerActivity":
-                        intent = new Intent(MainActivity.this, MediaPlayerActivity.class);
-                        break;
-                    default:
-                        break;
-                }
-               startActivity(intent);
+               String arouterPath = "/main/" + iStrings[position];
+               ARouter.getInstance().build(arouterPath).navigation(MainActivity.this);
             }
         });
     }
@@ -173,7 +89,7 @@ public class MainActivity extends BaseActivity {
         MessageBus.getDefault().sendEmptyMessageDelayed(0,300);
         new ClassLoadModel();
         testAnnotationReflect();
-        addFPSMornitor();
+//        addFPSMornitor();
 //        testAIDL();
 //        testSynchronized();
         testAlgorithm();

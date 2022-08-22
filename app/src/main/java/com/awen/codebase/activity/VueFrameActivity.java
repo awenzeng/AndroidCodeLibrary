@@ -5,10 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.activity.adapter.MainAdapter;
 import com.awen.codebase.common.base.BaseActivity;
 
+
+@Route(path = ActivityRouter.AROUTER_VueFrameActivity)
 public class VueFrameActivity extends BaseActivity {
     private ListView listView;
     private String[] iStrings = {"Vue移动端框架","Vant-有赞", "Mint-饿了么", "WotDesign-京东", "NutUI-京东", "vux",

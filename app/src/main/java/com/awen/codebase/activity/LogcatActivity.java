@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.activity.adapter.ScanFileAdapter;
 import com.awen.codebase.common.base.BaseActivity;
@@ -27,6 +28,8 @@ import java.util.TimerTask;
  * Describe:日志文件Activity
  * Created by AwenZeng on 2021/03/02
  */
+
+@Route(path = ActivityRouter.AROUTER_LogcatActivity)
 public class LogcatActivity extends BaseActivity {
     private TextView scanTv;
     private ProgressBar scanProgressbar;

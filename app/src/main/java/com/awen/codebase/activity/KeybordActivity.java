@@ -18,6 +18,7 @@ import android.view.View.OnTouchListener;
 import android.view.WindowManager;
 import android.widget.EditText;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.utils.KeyboardUtil;
@@ -27,6 +28,8 @@ import java.lang.reflect.Method;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+
+@Route(path = ActivityRouter.AROUTER_KeybordActivity)
 public class KeybordActivity extends BaseActivity {
     @BindView(R.id.keyboard_view)
     KeyboardView keyboardView;

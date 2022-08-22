@@ -11,6 +11,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.ProgressBar;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.activity.webview.AppletJavascriptInterface;
 import com.awen.codebase.activity.webview.AppletWebChromeClient;
@@ -24,6 +25,8 @@ import com.awen.codebase.common.base.BaseActivity;
  * @CreateDate: 2020/11/6 20:59
  * @Description:
  */
+
+@Route(path = ActivityRouter.AROUTER_WebViewActivity)
 public class WebViewActivity extends BaseActivity implements IAppletJsPushListener {
     public static final String TAG = "WebView";
     private WebView mWebView;

@@ -10,6 +10,8 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.OvershootInterpolator;
 import android.widget.BaseAdapter;
 import android.widget.Toast;
+
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 
 import com.awen.codebase.common.base.BaseActivity;
@@ -26,6 +28,7 @@ import com.awen.infinitelib.transformer.DefaultZIndexTransformerCommon;
  * Created by Administrator on 2017/9/29.
  */
 
+@Route(path = ActivityRouter.AROUTER_InfiniteViewActivity)
 public class InfiniteViewActivity extends BaseActivity {
     private InfiniteCardView mCardView;
     private BaseAdapter mAdapter1, mAdapter2;

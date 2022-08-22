@@ -14,11 +14,13 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.FloatCycleView;
 import com.awen.codebase.common.utils.ToastUtil;
 
+@Route(path = ActivityRouter.AROUTER_FloatCycleViewActivity)
 public class FloatCycleViewActivity extends BaseActivity {
 
     private FloatCycleView cycleView;

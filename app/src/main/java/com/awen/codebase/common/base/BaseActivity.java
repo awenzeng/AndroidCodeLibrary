@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.FrameLayout;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.awen.codebase.R;
 import com.awen.codebase.common.ui.statusbar.ActivityTitleBar;
 import com.awen.codebase.common.ui.statusbar.StatusBarCompat;
@@ -18,6 +19,7 @@ public class BaseActivity extends FragmentActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ARouter.getInstance().inject(this);
         StatusBarCompat.setStatusBarColor(this,getResources().getColor(R.color.main_color));
         setContentView(R.layout.act_base);
         mActTitileBar = findViewById(R.id.titleBar);

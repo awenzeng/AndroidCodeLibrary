@@ -10,6 +10,7 @@ import android.text.style.ForegroundColorSpan;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.MarqueeView;
@@ -21,6 +22,8 @@ import java.util.List;
  * Describe:
  * Created by AwenZeng on 2019/3/26
  */
+
+@Route(path = ActivityRouter.AROUTER_MarqueeTextActivity)
 public class MarqueeTextActivity extends BaseActivity {
 
     private MarqueeView marqueeView;

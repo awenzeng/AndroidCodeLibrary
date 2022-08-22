@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.event.MessageEvent;
 import com.awen.codebase.common.ui.statusbar.StatusBarCompat;
@@ -38,6 +39,7 @@ import io.reactivex.schedulers.Schedulers;
  * Created by AwenZeng on 2018/3/13.
  */
 
+@Route(path = ActivityRouter.AROUTER_MaterialDesignActivity)
 public class MaterialDesignActivity extends AppCompatActivity {
     private DrawerLayout mDrawerLayout;
     private TabLayout mTabLayout;

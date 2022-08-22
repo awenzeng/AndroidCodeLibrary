@@ -8,9 +8,11 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 
+@Route(path = ActivityRouter.AROUTER_AnimationActivity)
 public class AnimationActivity extends BaseActivity implements OnClickListener {
 
 	/** Called when the activity is first created. */

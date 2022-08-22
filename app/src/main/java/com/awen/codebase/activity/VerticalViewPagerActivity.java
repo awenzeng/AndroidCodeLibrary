@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.VerticalViewPager;
@@ -19,7 +20,7 @@ import java.util.Locale;
 /**
  * Created by Administrator on 2017/9/14.
  */
-
+@Route(path = ActivityRouter.AROUTER_VerticalViewPagerActivity)
 public class VerticalViewPagerActivity extends BaseActivity {
 
     private static final float MIN_SCALE = 0.75f;

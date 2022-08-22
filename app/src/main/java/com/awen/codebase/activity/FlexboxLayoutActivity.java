@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.google.android.flexbox.AlignItems;
@@ -26,6 +27,8 @@ import java.util.Random;
  * @CreateDate: 2020/8/18 19:03
  * @Description:
  */
+
+@Route(path = ActivityRouter.AROUTER_FlexboxLayoutActivity)
 public class FlexboxLayoutActivity extends BaseActivity {
 
     private RecyclerView mRecyclerView;

@@ -50,6 +50,10 @@ AndroidCodeLibrary项目，既是笔记也是积累，不定期也会更新。�
 
 [2021-12-21]增加了CircleProgress的进度条
 
+[2022-8-22]增加了DKVideoPlayer播放视频的调用
+
+[2022-8-22]增加了ARouter路由启动Activity，利用组件可以实现组件化框架
+
 
 # Demo
 

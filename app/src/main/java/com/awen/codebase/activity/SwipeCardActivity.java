@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.swipecard.SwipeFlingAdapterView;
@@ -22,7 +23,7 @@ import butterknife.OnClick;
 /**
  * Created by AwenZeng on 2017/3/6.
  */
-
+@Route(path = ActivityRouter.AROUTER_SwipeCardActivity)
 public class SwipeCardActivity extends BaseActivity {
     @BindView(R.id.frame)
     SwipeFlingAdapterView flingContainer;

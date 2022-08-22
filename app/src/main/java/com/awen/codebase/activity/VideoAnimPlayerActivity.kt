@@ -23,6 +23,7 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.View
+import com.alibaba.android.arouter.facade.annotation.Route
 import com.awen.codebase.R
 import com.awen.codebase.common.base.BaseActivity
 import com.awen.codebase.common.utils.AssetsFileUtil
@@ -38,6 +39,8 @@ import java.io.File
 /**
  * 简单使用demo
  */
+
+@Route(path = ActivityRouter.AROUTER_VideoAnimPlayerActivity)
 class VideoAnimPlayerActivity : BaseActivity(), IAnimListener {
 
     companion object {

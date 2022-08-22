@@ -14,6 +14,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.viewpage.AccordionTransformer;
@@ -46,6 +47,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+@Route(path = ActivityRouter.AROUTER_ViewPagerAnimActivity)
 public class ViewPagerAnimActivity extends BaseActivity {
 
 		private View view1, view2, view3;

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.widget.banner.BannerLayout;
@@ -16,6 +17,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+@Route(path = ActivityRouter.AROUTER_BannerActivity)
 public class BannerActivity extends BaseActivity implements BannerLayout.OnBannerItemClickListener,RecyclerViewBannerBase.OnBannerItemClickListener{
 
     @BindView(R.id.banner)

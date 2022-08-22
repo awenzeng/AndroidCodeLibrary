@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.activity.group.Image3DShowActivity;
 import com.awen.codebase.activity.group.RotateActivity;
@@ -26,6 +27,7 @@ import com.awen.codebase.common.ui.statusbar.StatusBarCompat;
 import com.awen.codebase.common.utils.AnimatioinUtil;
 import com.awen.codebase.common.utils.DimensionUtil;
 
+@Route(path = ActivityRouter.AROUTER_GroupsActivity)
 public class GroupsActivity extends ActivityGroup implements OnClickListener {
     private FrameLayout layout;
     private TextView sideButton;

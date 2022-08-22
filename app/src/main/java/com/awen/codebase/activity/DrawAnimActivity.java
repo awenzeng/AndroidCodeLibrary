@@ -19,6 +19,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.anim.BoomView;
 import com.awen.codebase.common.anim.ChipsView;
@@ -37,7 +38,7 @@ import butterknife.OnClick;
  * Describe:
  * Created by AwenZeng on 2018/2/26.
  */
-
+@Route(path = ActivityRouter.AROUTER_DrawAnimActivity)
 public class DrawAnimActivity extends BaseActivity {
 
     @BindView(R.id.layout01)

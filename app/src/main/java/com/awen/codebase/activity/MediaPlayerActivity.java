@@ -1,7 +1,7 @@
 package com.awen.codebase.activity;
 
-import android.app.Activity;
-import android.content.pm.ActivityInfo;
+import static android.media.MediaPlayer.SEEK_CLOSEST_SYNC;
+
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
@@ -11,24 +11,15 @@ import android.view.Gravity;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
-import android.widget.SeekBar;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.CodeBaseApp;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.utils.LogUtil;
-import com.awen.codebase.common.utils.ScreenSizeUtil;
 
 import java.io.IOException;
-import java.util.Timer;
-import java.util.TimerTask;
-
-import static android.media.MediaPlayer.SEEK_CLOSEST_SYNC;
 
 /**
  * @ClassName: MediaPlayerActivity
@@ -36,6 +27,7 @@ import static android.media.MediaPlayer.SEEK_CLOSEST_SYNC;
  * @CreateDate: 2021/7/16 17:54
  * @Description:
  */
+@Route(path = ActivityRouter.AROUTER_MediaPlayerActivity)
 public class MediaPlayerActivity extends BaseActivity{
 
     private SurfaceView mSurfaceView;//能够播放图像的控件

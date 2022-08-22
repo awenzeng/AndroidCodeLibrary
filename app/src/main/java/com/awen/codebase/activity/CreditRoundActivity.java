@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.RoundIndicatorView;
@@ -23,7 +24,7 @@ import rx.schedulers.Schedulers;
 /**
  * Created by AwenZeng on 2017/2/28.
  */
-
+@Route(path = ActivityRouter.AROUTER_CreditRoundActivity)
 public class CreditRoundActivity extends BaseActivity {
     private RoundIndicatorView roundIndicatorView;
     private EditText editText;

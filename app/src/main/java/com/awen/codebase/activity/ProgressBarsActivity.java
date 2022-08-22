@@ -10,9 +10,11 @@ import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 
+@Route(path = ActivityRouter.AROUTER_ProgressBarsActivity)
 public class ProgressBarsActivity extends BaseActivity {
 	
     private ProgressBar mColor = null;

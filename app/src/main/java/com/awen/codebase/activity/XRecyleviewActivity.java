@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.activity.adapter.SwipeAdapter;
 import com.awen.codebase.common.base.BaseActivity;
@@ -17,7 +18,7 @@ import butterknife.ButterKnife;
 /**
  * Created by AwenZeng on 2017/6/19.
  */
-
+@Route(path = ActivityRouter.AROUTER_XRecyleviewActivity)
 public class XRecyleviewActivity extends BaseActivity {
     @BindView(R.id.mRecycleView)
     SwipeRecycleView mRecycleView;

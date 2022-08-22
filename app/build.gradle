@@ -1,19 +1,26 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
 
         packagingOptions {
             //解决编译时com.android.builder.merge.DuplicateRelativeFileException: More than one file was found with OS independent path 'META-INF/rxjava.properties'这个错误
             exclude 'META-INF/rxjava.properties'
+        }
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", "${project.getName()}")
+            }
         }
     }
 
@@ -56,24 +63,38 @@ dependencies {
     implementation 'com.kyleduo.switchbutton:library:1.4.5'
     implementation 'io.reactivex:rxjava:1.1.0'
     implementation 'io.reactivex:rxandroid:1.1.0'
-    implementation 'com.android.support:appcompat-v7:27.+'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.google.android:flexbox:0.3.0-alpha3'
     implementation 'com.zhy:base-rvadapter:3.0.3'
     implementation 'com.alibaba:fastjson:1.2.55'
     implementation 'com.github.awenzeng:MessageBus:v1.0'
-    implementation 'com.android.support:recyclerview-v7:27.1.0'
-    implementation 'com.android.support:cardview-v7:27.1.0'
-    implementation "com.android.support:design:27.1.0"
+    implementation 'com.android.support:recyclerview-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation "com.android.support:design:28.0.0"
     implementation 'com.github.bumptech.glide:glide:4.2.0'
     implementation 'com.airbnb.android:lottie:1.0.1'
     implementation 'io.reactivex.rxjava2:rxjava:2.0.4'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
     implementation "org.reactivestreams:reactive-streams:1.0.2"
-    implementation 'com.danikula:videocache:2.7.1'
+//    implementation 'com.danikula:videocache:2.7.1'
 //    implementation 'com.tencent:mmkv-static:1.2.9'
     implementation project(':infinitelib')
     implementation "com.egame.vap:animplayer:2.0.13"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //必选，内部默认使用系统mediaplayer进行解码
+    implementation 'xyz.doikki.android.dkplayer:dkplayer-java:3.3.5'
+    //可选，包含StandardVideoController的实现
+    implementation 'xyz.doikki.android.dkplayer:dkplayer-ui:3.3.5'
+//    //可选，使用exoplayer进行解码
+//    implementation 'xyz.doikki.android.dkplayer:player-exo:3.3.5'
+//    //可选，使用ijkplayer进行解码
+//    implementation 'xyz.doikki.android.dkplayer:player-ijk:3.3.5'
+    //可选，如需要缓存或者抖音预加载功能请引入此库
+    implementation 'xyz.doikki.android.dkplayer:videocache:3.3.5'
+
+    implementation 'com.alibaba:arouter-api:1.5.2'
+    kapt 'com.alibaba:arouter-compiler:1.5.2'
 }
 repositories {
     mavenCentral()

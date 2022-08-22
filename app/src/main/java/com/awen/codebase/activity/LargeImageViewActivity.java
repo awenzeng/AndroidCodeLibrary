@@ -3,6 +3,7 @@ package com.awen.codebase.activity;
 import android.os.Bundle;
 
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.awen.codebase.R;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.ui.LargeImageView;
@@ -10,6 +11,8 @@ import com.awen.codebase.common.ui.LargeImageView;
 import java.io.IOException;
 import java.io.InputStream;
 
+
+@Route(path = ActivityRouter.AROUTER_LargeImageViewActivity)
 public class LargeImageViewActivity extends BaseActivity {
     private LargeImageView mLargeImageView;
 
