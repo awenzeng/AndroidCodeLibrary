@@ -48,7 +48,7 @@ public class MainActivity extends BaseActivity {
             "SwitchButtonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecyleviewActivity",
             "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity",
             "MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity",
-            "LottieActivity","VideoAnimPlayerActivity","LogcatActivity","LargeImageViewActivity","ViewPagerAnimActivity","MediaPlayerActivity","DKVideoPlayerActivity"};
+            "LottieActivity","VideoAnimPlayerActivity","LogcatActivity","LargeImageViewActivity","ViewPagerAnimActivity","MediaPlayerActivity","DKVideoPlayerActivity","ARouterActivity"};
 
 
     @Override

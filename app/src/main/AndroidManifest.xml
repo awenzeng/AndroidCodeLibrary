@@ -117,6 +117,8 @@
             android:name=".activity.DKVideoPlayerActivity"
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:screenOrientation="portrait" />
+
+        <activity android:name=".activity.ARouterActivity" />
     </application>
 
 </manifest>
