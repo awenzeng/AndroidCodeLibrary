@@ -58,7 +58,7 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     implementation files('libs/zxing-core-2.3.jar')
     implementation 'com.jakewharton:butterknife:8.4.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+    kapt 'com.jakewharton:butterknife-compiler:8.4.0'
     implementation 'com.orhanobut:logger:2.2.0'
     implementation 'com.kyleduo.switchbutton:library:1.4.5'
     implementation 'io.reactivex:rxjava:1.1.0'
@@ -76,8 +76,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxjava:2.0.4'
     implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
     implementation "org.reactivestreams:reactive-streams:1.0.2"
-//    implementation 'com.danikula:videocache:2.7.1'
-//    implementation 'com.tencent:mmkv-static:1.2.9'
+//    implementation 'com.tencent:mmkv:1.0.23'
     implementation project(':infinitelib')
     implementation "com.egame.vap:animplayer:2.0.13"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
