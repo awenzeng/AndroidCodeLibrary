@@ -3,12 +3,15 @@ package com.awen.codebase;
 import android.app.ActivityManager;
 import android.app.Application;
 import android.content.Context;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.text.TextUtils;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.awen.codebase.common.utils.AutoScreenUtils;
-import com.awen.codebase.common.utils.CrashHandler;
+import com.awen.codebase.model.crash.AppUncaughtExceptionHandler;
+import com.awen.codebase.model.crash.SdcardConfig;
 import com.danikula.videocache.HttpProxyCacheServer;
 
 import xyz.doikki.videoplayer.player.AndroidMediaPlayerFactory;
@@ -48,9 +51,7 @@ public class CodeBaseApp extends Application {
 
         initARouter();
         initDKPlayer();
-
-        CrashHandler.getInstance().init(this);
-
+        initCrashHandle();
     }
 
     public static CodeBaseApp getInstance() {
@@ -64,7 +65,6 @@ public class CodeBaseApp extends Application {
     public static CodeBaseApp getApplication() {
         return instance;
     }
-
 
     /**
      * 判断是不是UI主进程，因为有些东西只能在UI主进程初始化
@@ -90,6 +90,16 @@ public class CodeBaseApp extends Application {
         ARouter.openLog();     // 打印日志
         ARouter.openDebug();   // 开启调试模式(如果在InstantRun模式下运行，必须开启调试模式！线上版本需要关闭,否则有安全风险)
         ARouter.init(this); // 尽可能早，推荐在Application中初始化
+    }
+
+    /**
+     * 异常日志捕捉
+     */
+    private void initCrashHandle(){
+        SdcardConfig.getInstance().initSdcard();
+        // 捕捉异常
+        AppUncaughtExceptionHandler crashHandler = AppUncaughtExceptionHandler.getInstance();
+        crashHandler.init(getApplicationContext());
     }
 
 
@@ -129,6 +139,30 @@ public class CodeBaseApp extends Application {
             CodeBaseApp.getInstance().mGobalFont = Typeface.createFromAsset(CodeBaseApp.getInstance().getAssets(), "font/umfont.ttf");
         }
         return CodeBaseApp.getInstance().mGobalFont;
+    }
+
+    /**
+     * 获取自身App安装包信息
+     *
+     * @return
+     */
+    public PackageInfo getLocalPackageInfo() {
+        return getPackageInfo(getPackageName());
+    }
+
+    /**
+     * 获取App安装包信息
+     *
+     * @return
+     */
+    public PackageInfo getPackageInfo(String packageName) {
+        PackageInfo info = null;
+        try {
+            info = getPackageManager().getPackageInfo(packageName, 0);
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return info;
     }
 
 }

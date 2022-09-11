@@ -119,6 +119,10 @@
             android:screenOrientation="portrait" />
 
         <activity android:name=".activity.ARouterActivity" />
+        <activity
+            android:name=".model.crash.PatchDialogActivity"
+            android:theme="@style/Theme.Patch.Dialog"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
