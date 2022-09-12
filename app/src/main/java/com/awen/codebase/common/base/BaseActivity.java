@@ -18,6 +18,7 @@ public class BaseActivity extends FragmentActivity {
     private FrameLayout mContentView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
+        setTheme(R.style.AppActivityTheme);
         super.onCreate(savedInstanceState);
         ARouter.getInstance().inject(this);
         StatusBarCompat.setStatusBarColor(this,getResources().getColor(R.color.main_color));

@@ -22,6 +22,7 @@ import com.awen.codebase.common.badge.BadgeNumberManager;
 import com.awen.codebase.common.badge.BadgeNumberManagerXiaoMi;
 import com.awen.codebase.common.badge.MobileBrand;
 import com.awen.codebase.common.base.BaseActivity;
+import com.awen.codebase.common.utils.EmptyUtils;
 import com.awen.codebase.common.utils.FPSFrameCallback;
 import com.awen.codebase.common.utils.MMKVDataUtil;
 import com.awen.codebase.model.algorithm.CommonSort;
@@ -48,7 +49,7 @@ public class MainActivity extends BaseActivity {
             "SwitchButtonActivity","CreditRoundActivity", "SwipeCardActivity", "KeybordActivity", "XRecyleviewActivity",
             "VerticalViewPagerActivity","InfiniteViewActivity","BannerActivity","DrawAnimActivity","MaterialDesignActivity",
             "MarqueeTextActivity","FlexboxLayoutActivity","SVGActivity","WebViewActivity","VueFrameActivity",
-            "LottieActivity","VideoAnimPlayerActivity","LogcatActivity","LargeImageViewActivity","ViewPagerAnimActivity","MediaPlayerActivity","DKVideoPlayerActivity","ARouterActivity"};
+            "LottieActivity","VideoAnimPlayerActivity","LogcatActivity","LargeImageViewActivity","ViewPagerAnimActivity","MediaPlayerActivity","DKVideoPlayerActivity","ARouterActivity","PluginActivity"};
 
 
     @Override
@@ -209,6 +210,8 @@ public class MainActivity extends BaseActivity {
     protected void onDestroy() {
         super.onDestroy();
         stopService(new Intent(this, WorkService.class));
-        Choreographer.getInstance().removeFrameCallback(mFpsFrameCallback);
+        if(EmptyUtils.isNotEmpty(mFpsFrameCallback)){
+            Choreographer.getInstance().removeFrameCallback(mFpsFrameCallback);
+        }
     }
 }

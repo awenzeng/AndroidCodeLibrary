@@ -43,6 +43,8 @@ public class CodeBaseApp extends Application {
 //        HookAmsUtil hookAmsUtil = new HookAmsUtil(ProxyActivity.class, this);
 //        hookAmsUtil.hookSystemHandler();
 //        hookAmsUtil.hookAms();
+
+
         httpProxyCacheServer = new HttpProxyCacheServer.Builder(getAppContext())
                 .maxCacheFilesCount(30)
                 .maxCacheSize(1024 * 1024 * 1024)     // 设置可存储1G资源

@@ -101,7 +101,6 @@
             android:name=".activity.MaterialDesignActivity"
             android:theme="@style/AppTheme_NoAppBar" />
         <activity android:name=".activity.MarqueeTextActivity" />
-        <activity android:name=".activity.ProxyActivity" />
         <activity android:name=".activity.SVGActivity" />
         <activity android:name=".activity.WebViewActivity" />
         <activity android:name=".activity.VueFrameActivity" />
@@ -119,10 +118,13 @@
             android:screenOrientation="portrait" />
 
         <activity android:name=".activity.ARouterActivity" />
+        <activity android:name=".activity.PluginActivity" />
         <activity
             android:name=".model.crash.PatchDialogActivity"
             android:theme="@style/Theme.Patch.Dialog"
             android:screenOrientation="portrait"/>
+        <activity android:name=".model.plugin.ProxyActivity"></activity>
+        <service android:name=".model.plugin.ProxyService"/>
     </application>
 
 </manifest>

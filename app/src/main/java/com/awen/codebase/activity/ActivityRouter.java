@@ -32,6 +32,7 @@ public class ActivityRouter {
     public static final String AROUTER_WebViewActivity = "/main/WebViewActivity";
     public static final String AROUTER_XRecyleviewActivity = "/main/XRecyleviewActivity";
     public static final String AROUTER_ARouterActivity = "/main/ARouterActivity";
+    public static final String AROUTER_PluginActivity = "/main/PluginActivity";
 
 
 }
