@@ -35,7 +35,12 @@ public class PluginManager {
     }
 
     /**
-     * 加载插件
+     ***插件加载管理器****
+     * 加载插件步骤
+     * 1.从插件apk加载packageInfo包信息
+     * 2.利用dexClassLoader从插件apk路径，加载插件，初始化dexClassLoader加载器
+     * 3.根据插件apk路径，模拟解析静态配置文件，注册相关静态广播
+     * 4.利用AssetManager类，利用反射方法，加载插件apk中的资源，生产新的Resources
      */
     public void loadPlugin(Context context, String plugPath) {
         this.context = context.getApplicationContext();
