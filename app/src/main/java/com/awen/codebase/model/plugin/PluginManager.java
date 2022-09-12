@@ -9,8 +9,13 @@ import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
 import android.util.Log;
+import android.view.View;
+
+import com.awen.plugin_lib.IPluginReceiver;
+import com.awen.plugin_lib.IPluginView;
 
 import java.io.File;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -141,5 +146,4 @@ public class PluginManager {
             Log.d("awen-plugin", "注册插件静态广播异常:" + e.getMessage());
         }
     }
-
 }

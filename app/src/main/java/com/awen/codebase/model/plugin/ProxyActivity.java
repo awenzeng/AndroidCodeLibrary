@@ -27,7 +27,6 @@ public class ProxyActivity extends FragmentActivity {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        StatusBarCompat.setStatusBarColor(this,getResources().getColor(R.color.main_color));
         activityName = getIntent().getStringExtra("activity_name");
         try {
             Class activityClass = getClassLoader().loadClass(activityName);

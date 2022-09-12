@@ -22,8 +22,6 @@ public class ProxyReceiver extends BroadcastReceiver {
             Constructor<?> constructor = aClass.getConstructor(new Class[]{});
             Object obj = constructor.newInstance(new Object[]{});
             pluginReceiverInterface = (IPluginReceiver) obj;
-
-
         } catch (Exception e) {
             e.printStackTrace();
         }

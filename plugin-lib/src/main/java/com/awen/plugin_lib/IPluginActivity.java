@@ -9,7 +9,6 @@ import android.view.MotionEvent;
  * Activity插件接口
  */
 public interface IPluginActivity {
-
     public void attachActivity(Activity activity);
     public void onCreate(Bundle savedInstanceState);
     public void onResume();
