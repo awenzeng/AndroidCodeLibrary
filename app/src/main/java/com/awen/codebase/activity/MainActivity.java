@@ -31,6 +31,7 @@ import com.awen.codebase.model.algorithm.SortTestHelper;
 import com.awen.codebase.model.classload.AnnotationReflectModel;
 import com.awen.codebase.model.classload.ClassLoadModel;
 import com.awen.codebase.model.thread.SynchronizedTest;
+import com.awen.codebase.model.thread.ThreadTest;
 import com.awen.codebase.service.AIDLService;
 import com.awen.codebase.service.AIDLServiceConnection;
 import com.awen.codebase.service.WorkService;
@@ -60,7 +61,12 @@ public class MainActivity extends BaseActivity {
         setBarTitle("AWENCODEBASE");
         initView();
         initData();
+
+        ThreadTest.printfTwoArray();
+        ThreadTest.printfConsumerAndProduct();
     }
+
+
 
 
     private void initView() {
