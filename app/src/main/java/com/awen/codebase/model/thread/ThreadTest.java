@@ -4,6 +4,7 @@ import android.util.Log;
 
 import java.util.PriorityQueue;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @ClassName: ThreadTest

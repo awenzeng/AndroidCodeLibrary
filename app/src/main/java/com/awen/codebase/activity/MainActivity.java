@@ -24,7 +24,6 @@ import com.awen.codebase.common.badge.MobileBrand;
 import com.awen.codebase.common.base.BaseActivity;
 import com.awen.codebase.common.utils.EmptyUtils;
 import com.awen.codebase.common.utils.FPSFrameCallback;
-import com.awen.codebase.common.utils.MMKVDataUtil;
 import com.awen.codebase.model.algorithm.CommonSort;
 import com.awen.codebase.model.algorithm.MergeSort;
 import com.awen.codebase.model.algorithm.SortTestHelper;
@@ -64,6 +63,8 @@ public class MainActivity extends BaseActivity {
 
         ThreadTest.printfTwoArray();
         ThreadTest.printfConsumerAndProduct();
+//        new ProduceConsumerTest().start();
+//        new LinkListTest().startTest();
     }
 
 
